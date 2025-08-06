@@ -56,9 +56,4 @@ The project is ready for deployment on Vercel, Netlify, or any other hosting pla
 - **Lucide React**: Icon library
 - **React Hook Form**: Form handling
 - **Zod**: Schema validation
- 
-
- 
-
-
 
