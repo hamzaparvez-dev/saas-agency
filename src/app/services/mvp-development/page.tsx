@@ -14,7 +14,7 @@ const MVPDevelopmentService = () => {
       icon: "💡"
     },
     {
-      step: "02", 
+      step: "02",
       title: "Feature Prioritization",
       description: "Define core features using MoSCoW method, focusing on must-have functionality that delivers maximum value to early users.",
       icon: "🎯"
@@ -44,7 +44,7 @@ const MVPDevelopmentService = () => {
     {
       title: "Prototype MVP",
       description: "Interactive prototypes that demonstrate core functionality without full development",
-      timeline: "2-3 weeks", 
+      timeline: "2-3 weeks",
       price: "Starting at $4,999",
       features: ["Interactive Prototype", "User Flow Design", "Clickable Demo", "User Testing"]
     },
@@ -115,7 +115,7 @@ const MVPDevelopmentService = () => {
     {
       name: "Robert Chen",
       role: "CEO, FinTech Startup",
-      company: "PayForward", 
+      company: "PayForward",
       quote: "The MVP validated our assumption and helped us pivot early. Saved us $200K and 8 months of development time.",
       image: "/images/startup-meeting.jpg",
       metrics: ["Early pivot", "$200K saved", "8 months saved"]
@@ -176,7 +176,7 @@ const MVPDevelopmentService = () => {
   return (
     <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <PricingNavbar />
-      
+
       <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
         {/* Hero Section */}
         <div className="max-w-6xl mx-auto text-center mb-20">
@@ -184,7 +184,7 @@ const MVPDevelopmentService = () => {
             MVP Development <br /> That Validates
           </div>
           <p className="mt-4 text-lg font-normal text-neutral-300 max-w-3xl text-center mx-auto px-4">
-            Turn your idea into a working product in weeks, not months. Test assumptions, gather real user feedback, 
+            Turn your idea into a working product in weeks, not months. Test assumptions, gather real user feedback,
             and secure funding with a strategically built MVP.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
@@ -213,7 +213,7 @@ const MVPDevelopmentService = () => {
               Different validation stages require different MVP types. We'll help you choose the right approach.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {mvpTypes.map((type, index) => (
               <div key={index} className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-orange-500/50 transition-colors group">
@@ -252,7 +252,7 @@ const MVPDevelopmentService = () => {
               MVPs reduce risk, accelerate learning, and maximize your chances of building something users love.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-neutral-600 transition-colors text-center">
@@ -275,7 +275,7 @@ const MVPDevelopmentService = () => {
               A proven framework that maximizes learning while minimizing time and cost investment.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {process.map((item, index) => (
               <div key={index} className="relative">
@@ -303,7 +303,7 @@ const MVPDevelopmentService = () => {
               Real MVPs that became successful businesses with millions in revenue and funding.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {successStories.map((story, index) => (
               <div key={index} className="bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden hover:border-neutral-600 transition-colors">
@@ -342,7 +342,7 @@ const MVPDevelopmentService = () => {
               Professional-grade features and infrastructure to ensure your MVP can scale as you grow.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {mvpFeatures.map((category, index) => (
               <div key={index} className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-neutral-600 transition-colors">
@@ -370,7 +370,7 @@ const MVPDevelopmentService = () => {
               Hear from founders who turned their MVP into successful, funded companies.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-neutral-600 transition-colors">
@@ -407,7 +407,7 @@ const MVPDevelopmentService = () => {
             Ready to Validate Your Idea?
           </h2>
           <p className="text-neutral-300 text-lg mb-8 max-w-2xl mx-auto">
-            Don't spend months building something nobody wants. Let's create an MVP that validates your idea and sets you up for success.
+            {"Don't spend months building something nobody wants. Let's create an MVP that validates your idea and sets you up for success."}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -425,7 +425,7 @@ const MVPDevelopmentService = () => {
           </div>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );

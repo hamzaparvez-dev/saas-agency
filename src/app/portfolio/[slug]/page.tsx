@@ -20,10 +20,10 @@ const projectsData = {
     team: "8 people",
     year: "2024",
     services: ["UX Design", "Web Development", "Design Systems"],
-    
+
     // Case study sections
     projectBackground: "Our client needed a comprehensive design system to accelerate their mobile UI development process. With multiple teams working on different features, they faced inconsistencies in design implementation and slow development cycles. The challenge was to create a unified design language that could scale across multiple platforms while maintaining design consistency and developer efficiency.",
-    
+
     customerChallenges: [
       "Inconsistent UI components across different product areas",
       "Slow development cycles due to recreating common UI elements",
@@ -31,7 +31,7 @@ const projectsData = {
       "Difficulty maintaining brand consistency at scale",
       "High maintenance cost for UI components"
     ],
-    
+
     businessChallenges: [
       "Time-to-market delays affecting competitive advantage",
       "Increased development costs due to component duplication",
@@ -39,9 +39,9 @@ const projectsData = {
       "Scalability issues as the product team grew",
       "Resource allocation inefficiencies"
     ],
-    
+
     solution: "We developed Silk Design System - a comprehensive, reusable component library with developer-friendly documentation. The system included over 50 pre-built components, design tokens for consistent styling, and automated testing suites. We implemented a token-based architecture that allowed for easy theming and customization while maintaining consistency across all touchpoints.",
-    
+
     technologicalStack: [
       "React 18 with TypeScript for component development",
       "Figma for design system documentation and handoff",
@@ -51,7 +51,7 @@ const projectsData = {
       "Chromatic for visual regression testing",
       "npm registry for component distribution"
     ],
-    
+
     results: [
       {
         metric: "50%",
@@ -70,7 +70,7 @@ const projectsData = {
         description: "Developer satisfaction score"
       }
     ],
-    
+
     testimonial: {
       quote: "The Silk Design System transformed how our teams work together. We've seen remarkable improvements in both speed and quality of our product development.",
       author: "Sarah Johnson",
@@ -90,9 +90,9 @@ const projectsData = {
     team: "5 people",
     year: "2024",
     services: ["UX Design", "Web Development", "Webflow Development"],
-    
+
     projectBackground: "Polpharma API, a European CDMO partner and API manufacturer since 1951, needed to redesign and develop their API division's website to optimize lead generation while creating a modern and user-friendly experience. The existing website was outdated, difficult to navigate, and not effectively converting visitors into qualified leads in the competitive B2B pharmaceutical sector.",
-    
+
     customerChallenges: [
       "Outdated website design that didn't reflect company expertise",
       "Poor user experience leading to high bounce rates",
@@ -100,7 +100,7 @@ const projectsData = {
       "Lack of mobile responsiveness for on-the-go professionals",
       "Difficulty showcasing complex pharmaceutical processes clearly"
     ],
-    
+
     businessChallenges: [
       "Low conversion rates from website visitors to qualified leads",
       "Competitive disadvantage in digital presence",
@@ -108,9 +108,9 @@ const projectsData = {
       "Brand perception issues due to outdated web presence",
       "Limited ability to track and optimize marketing efforts"
     ],
-    
+
     solution: "We partnered with Polpharma to redesign and develop their API division's website using Webflow. Our solution focused on creating an intuitive user experience that guides visitors through their pharmaceutical manufacturing capabilities while implementing advanced lead generation mechanisms. We created clear information architecture, compelling visual storytelling, and streamlined contact processes.",
-    
+
     technologicalStack: [
       "Webflow CMS for content management and hosting",
       "Custom JavaScript for interactive elements",
@@ -120,7 +120,7 @@ const projectsData = {
       "Analytics integration for performance tracking",
       "Form automation for lead qualification"
     ],
-    
+
     results: [
       {
         metric: "65%",
@@ -139,7 +139,7 @@ const projectsData = {
         description: "Faster page load times"
       }
     ],
-    
+
     testimonial: {
       quote: "Our new website perfectly represents our pharmaceutical expertise and has significantly improved our lead generation capabilities in the competitive CDMO market.",
       author: "Dr. Michael Kowalski",
@@ -159,9 +159,9 @@ const projectsData = {
     team: "12 people",
     year: "2024",
     services: ["AI Development", "Machine Learning", "E-commerce Integration"],
-    
+
     projectBackground: "AI-driven personalization is key to next-generation retail services. Our client needed a virtual sales advisor that could provide personalized shopping experiences across multiple channels and languages. The challenge was to create an AI system that could understand customer preferences, provide relevant recommendations, and seamlessly integrate with existing e-commerce platforms.",
-    
+
     customerChallenges: [
       "Generic product recommendations lacking personalization",
       "Language barriers affecting international customer experience",
@@ -169,7 +169,7 @@ const projectsData = {
       "Difficulty in understanding complex customer preferences",
       "High cart abandonment rates due to decision paralysis"
     ],
-    
+
     businessChallenges: [
       "Low conversion rates from browsing to purchase",
       "High customer acquisition costs with poor retention",
@@ -177,9 +177,9 @@ const projectsData = {
       "Competitive pressure from AI-powered competitors",
       "Resource intensive manual customer support requirements"
     ],
-    
+
     solution: "We developed an AI-powered sales advisor that acts as an online shopper's new best friend. The system uses advanced machine learning algorithms to understand customer behavior, preferences, and shopping patterns. It provides personalized product recommendations, answers questions in multiple languages, and creates seamless omnichannel experiences that guide customers from discovery to purchase.",
-    
+
     technologicalStack: [
       "Next.js 14 for the frontend application",
       "OpenAI GPT-4 for natural language processing",
@@ -190,7 +190,7 @@ const projectsData = {
       "Stripe for payment processing integration",
       "AWS for scalable cloud infrastructure"
     ],
-    
+
     results: [
       {
         metric: "45%",
@@ -209,7 +209,7 @@ const projectsData = {
         description: "Languages supported"
       }
     ],
-    
+
     testimonial: {
       quote: "The AI sales advisor has revolutionized our customer experience. We're seeing unprecedented engagement and conversion rates across all our markets.",
       author: "Emma Rodriguez",
@@ -229,9 +229,9 @@ const projectsData = {
     team: "6 people",
     year: "2024",
     services: ["MVP Development", "Healthcare Technology", "Rapid Prototyping"],
-    
+
     projectBackground: "A healthcare startup needed to rapidly bring their telemedicine platform to market to capitalize on the growing demand for remote healthcare services. The challenge was to develop a HIPAA-compliant, secure, and user-friendly platform that could handle video consultations, patient records, and appointment scheduling within a tight 6-week deadline.",
-    
+
     customerChallenges: [
       "Need for rapid market entry in competitive telehealth space",
       "Complex HIPAA compliance requirements",
@@ -239,7 +239,7 @@ const projectsData = {
       "Ensuring high-quality video calls for medical consultations",
       "User experience design for both patients and healthcare providers"
     ],
-    
+
     businessChallenges: [
       "Limited funding requiring efficient resource utilization",
       "Competitive market with established players",
@@ -247,9 +247,9 @@ const projectsData = {
       "Need to validate product-market fit quickly",
       "Scaling challenges for growing user base"
     ],
-    
+
     solution: "We developed a comprehensive telemedicine platform MVP that included secure video consultations, patient management systems, appointment scheduling, and integrated payment processing. The platform was built with HIPAA compliance from the ground up, featuring end-to-end encryption, secure data storage, and audit trails for all medical interactions.",
-    
+
     technologicalStack: [
       "React 18 for responsive web application",
       "WebRTC for real-time video communications",
@@ -260,7 +260,7 @@ const projectsData = {
       "AWS with HIPAA BAA for cloud infrastructure",
       "Twilio for SMS notifications and communication"
     ],
-    
+
     results: [
       {
         metric: "10,000+",
@@ -279,7 +279,7 @@ const projectsData = {
         description: "HIPAA compliance score"
       }
     ],
-    
+
     testimonial: {
       quote: "They delivered our telemedicine platform in just 6 weeks without compromising on quality or compliance. The MVP exceeded our expectations and helped us secure Series A funding.",
       author: "Dr. Lisa Chen",
@@ -299,9 +299,9 @@ const projectsData = {
     team: "15 people",
     year: "2023",
     services: ["Enterprise Software", "Process Automation", "AI Integration"],
-    
+
     projectBackground: "A Fortune 500 manufacturing company was struggling with manual document processing workflows that were consuming significant resources and creating bottlenecks in their operations. They needed an intelligent automation system that could process thousands of documents daily, extract relevant information, and integrate with their existing enterprise systems.",
-    
+
     customerChallenges: [
       "Manual processing of 10,000+ documents daily",
       "High error rates in data extraction and entry",
@@ -309,7 +309,7 @@ const projectsData = {
       "Inconsistent document formats and quality",
       "Limited visibility into process bottlenecks"
     ],
-    
+
     businessChallenges: [
       "High operational costs due to manual processing",
       "Compliance risks from human errors",
@@ -317,9 +317,9 @@ const projectsData = {
       "Employee satisfaction issues with repetitive tasks",
       "Competitive disadvantage due to slow processes"
     ],
-    
+
     solution: "We developed a comprehensive enterprise automation suite that combines AI-powered document processing with intelligent workflow management. The system automatically extracts data from various document types, validates information against business rules, routes documents through approval workflows, and integrates seamlessly with existing ERP and CRM systems.",
-    
+
     technologicalStack: [
       "Python with FastAPI for microservices architecture",
       "TensorFlow and OpenCV for document analysis",
@@ -330,7 +330,7 @@ const projectsData = {
       "Elasticsearch for document search and analytics",
       "Azure Cloud for scalable infrastructure"
     ],
-    
+
     results: [
       {
         metric: "80%",
@@ -349,7 +349,7 @@ const projectsData = {
         description: "System uptime and reliability"
       }
     ],
-    
+
     testimonial: {
       quote: "This automation suite has transformed our operations. We've eliminated bottlenecks, reduced errors, and freed up our team to focus on strategic initiatives rather than manual processing.",
       author: "Robert Martinez",
@@ -369,9 +369,9 @@ const projectsData = {
     team: "20 people",
     year: "2023",
     services: ["Fintech Development", "Mobile Apps", "Real-time Systems"],
-    
+
     projectBackground: "A fintech startup needed a high-performance trading platform that could handle millions of transactions daily while providing real-time market data, advanced charting, and seamless user experience. The platform needed to support multiple asset classes including stocks, crypto, and derivatives with institutional-grade reliability and security.",
-    
+
     customerChallenges: [
       "Real-time data processing for millions of transactions",
       "Low-latency requirements for competitive trading",
@@ -379,7 +379,7 @@ const projectsData = {
       "Multi-platform deployment (iOS, Android, Web)",
       "Integration with multiple market data providers"
     ],
-    
+
     businessChallenges: [
       "Regulatory compliance across multiple jurisdictions",
       "High availability requirements (99.99% uptime)",
@@ -387,9 +387,9 @@ const projectsData = {
       "Security concerns with financial data and transactions",
       "Competitive pressure in crowded fintech market"
     ],
-    
+
     solution: "We built a comprehensive trading platform with real-time market data processing, advanced charting capabilities, and institutional-grade security. The system features low-latency order execution, sophisticated risk management tools, and seamless integration with major exchanges and liquidity providers. The platform supports both retail and institutional traders with customizable interfaces and advanced analytics.",
-    
+
     technologicalStack: [
       "React Native for cross-platform mobile development",
       "WebSocket for real-time market data streaming",
@@ -400,7 +400,7 @@ const projectsData = {
       "TradingView charts for advanced technical analysis",
       "AWS with multi-region deployment for reliability"
     ],
-    
+
     results: [
       {
         metric: "100M+",
@@ -419,7 +419,7 @@ const projectsData = {
         description: "Active users on the platform"
       }
     ],
-    
+
     testimonial: {
       quote: "Our trading platform has become the go-to choice for serious traders. The performance, reliability, and feature set are unmatched in the industry.",
       author: "David Kim",
@@ -439,9 +439,9 @@ const projectsData = {
     team: "25 people",
     year: "2024",
     services: ["E-commerce Development", "Marketplace Platform", "Payment Integration"],
-    
+
     projectBackground: "Our client envisioned creating the next-generation multi-vendor marketplace that could compete with industry giants while providing superior user experience and vendor tools. The challenge was building a scalable platform that could handle thousands of concurrent vendors, millions of products, and complex logistics while maintaining performance and reliability.",
-    
+
     customerChallenges: [
       "Managing thousands of vendors with different requirements and workflows",
       "Complex inventory management across multiple suppliers",
@@ -449,7 +449,7 @@ const projectsData = {
       "Search and discovery optimization for millions of products",
       "Mobile-first user experience expectations"
     ],
-    
+
     businessChallenges: [
       "Competing with established marketplace giants",
       "Building trust with both vendors and customers",
@@ -457,9 +457,9 @@ const projectsData = {
       "Complex revenue models and commission structures",
       "International expansion and multi-currency support"
     ],
-    
+
     solution: "We developed a comprehensive multi-vendor marketplace platform with advanced vendor management tools, intelligent product discovery, seamless payment processing, and robust analytics. The platform features automated vendor onboarding, dynamic pricing tools, integrated shipping solutions, and a mobile-first design that delivers exceptional user experiences across all devices.",
-    
+
     technologicalStack: [
       "React 18 with Next.js for high-performance frontend",
       "Node.js with Express for scalable backend API",
@@ -470,7 +470,7 @@ const projectsData = {
       "AWS S3 for product image storage",
       "Docker and Kubernetes for containerized deployment"
     ],
-    
+
     results: [
       {
         metric: "5,000+",
@@ -489,7 +489,7 @@ const projectsData = {
         description: "Platform uptime achieved"
       }
     ],
-    
+
     testimonial: {
       quote: "This marketplace platform has exceeded all our expectations. The vendor tools are intuitive, the customer experience is seamless, and the scalability has supported our rapid growth.",
       author: "Maria Gonzalez",
@@ -509,9 +509,9 @@ const projectsData = {
     team: "18 people",
     year: "2023",
     services: ["Manufacturing Systems", "IoT Integration", "Compliance Automation"],
-    
+
     projectBackground: "A leading life sciences manufacturer needed to modernize their production facilities to meet increasing regulatory requirements while improving operational efficiency. The existing manual processes were error-prone, time-consuming, and couldn't provide the real-time visibility required for FDA compliance and quality assurance.",
-    
+
     customerChallenges: [
       "Manual quality control processes leading to delays",
       "Lack of real-time production visibility and monitoring",
@@ -519,7 +519,7 @@ const projectsData = {
       "Equipment downtime affecting production schedules",
       "Data silos preventing comprehensive analysis"
     ],
-    
+
     businessChallenges: [
       "Regulatory compliance costs and audit preparation time",
       "Production inefficiencies affecting profitability",
@@ -527,9 +527,9 @@ const projectsData = {
       "Competitive pressure for faster time-to-market",
       "Sustainability requirements and waste reduction goals"
     ],
-    
+
     solution: "We implemented a comprehensive Manufacturing Execution System (MES) with IoT integration, real-time monitoring, and automated compliance reporting. The system connects all production equipment, provides real-time dashboards, automates quality control processes, and generates regulatory reports automatically while ensuring full traceability throughout the manufacturing process.",
-    
+
     technologicalStack: [
       "Python with Django for core MES application",
       "IoT sensors and edge computing for real-time data collection",
@@ -540,7 +540,7 @@ const projectsData = {
       "Grafana for operational dashboards and visualization",
       "Docker containers with Azure Cloud deployment"
     ],
-    
+
     results: [
       {
         metric: "40%",
@@ -559,7 +559,7 @@ const projectsData = {
         description: "Faster audit preparation"
       }
     ],
-    
+
     testimonial: {
       quote: "The MES implementation has transformed our manufacturing operations. We now have complete visibility, automated compliance, and significantly improved efficiency across all our production lines.",
       author: "Dr. James Patterson",
@@ -579,9 +579,9 @@ const projectsData = {
     team: "16 people",
     year: "2024",
     services: ["Mobile App Development", "Financial Technology", "AI Integration"],
-    
+
     projectBackground: "A forward-thinking regional bank wanted to revolutionize their digital presence with a mobile-first banking experience that could compete with fintech startups while maintaining enterprise-grade security and regulatory compliance. The goal was to create an intuitive, AI-powered app that would increase customer engagement and reduce branch visits.",
-    
+
     customerChallenges: [
       "Complex banking processes translated to mobile interfaces",
       "Security concerns with mobile financial transactions",
@@ -589,7 +589,7 @@ const projectsData = {
       "Integration with legacy banking systems",
       "Supporting multiple banking products and services"
     ],
-    
+
     businessChallenges: [
       "Competition from fintech startups and digital banks",
       "Regulatory compliance in mobile banking environment",
@@ -597,9 +597,9 @@ const projectsData = {
       "Reducing operational costs while improving service",
       "Maintaining security while providing convenient access"
     ],
-    
+
     solution: "We developed a comprehensive mobile banking application with AI-powered financial insights, biometric authentication, real-time transaction monitoring, and seamless integration with all banking services. The app features smart budgeting tools, investment recommendations, bill pay automation, and a conversational AI assistant for customer support.",
-    
+
     technologicalStack: [
       "React Native for cross-platform mobile development",
       "Blockchain technology for secure transaction verification",
@@ -610,7 +610,7 @@ const projectsData = {
       "Firebase for real-time notifications",
       "AWS with financial services compliance"
     ],
-    
+
     results: [
       {
         metric: "85%",
@@ -629,7 +629,7 @@ const projectsData = {
         description: "Transaction success rate"
       }
     ],
-    
+
     testimonial: {
       quote: "Our mobile banking app has become our customers' preferred way to bank. The AI insights and seamless experience have significantly improved customer satisfaction and engagement.",
       author: "Sarah Williams",
@@ -649,9 +649,9 @@ const projectsData = {
     team: "14 people",
     year: "2024",
     services: ["Compliance Technology", "AI Development", "Identity Verification"],
-    
+
     projectBackground: "Financial institutions face increasing regulatory pressure for Know Your Customer (KYC) compliance while customers demand faster onboarding processes. Our client needed an intelligent system that could automate identity verification, reduce manual review time, and maintain the highest standards of compliance across multiple jurisdictions.",
-    
+
     customerChallenges: [
       "Manual KYC processes causing customer onboarding delays",
       "High false positive rates in fraud detection",
@@ -659,7 +659,7 @@ const projectsData = {
       "Ongoing monitoring and compliance reporting requirements",
       "Integration with existing compliance and banking systems"
     ],
-    
+
     businessChallenges: [
       "Regulatory fines and penalties for compliance failures",
       "Customer abandonment during lengthy onboarding processes",
@@ -667,9 +667,9 @@ const projectsData = {
       "Scalability challenges with growing customer base",
       "Keeping up with evolving regulatory requirements"
     ],
-    
+
     solution: "We developed an AI-powered KYC and compliance platform that combines computer vision for document verification, machine learning for risk assessment, and blockchain for secure audit trails. The system automates identity verification, performs real-time risk scoring, monitors ongoing transactions, and generates comprehensive compliance reports while maintaining full regulatory compliance.",
-    
+
     technologicalStack: [
       "Computer Vision AI for document analysis and verification",
       "Machine Learning models for risk assessment and fraud detection",
@@ -680,7 +680,7 @@ const projectsData = {
       "PostgreSQL for compliance data storage",
       "AWS with financial services security compliance"
     ],
-    
+
     results: [
       {
         metric: "90%",
@@ -699,7 +699,7 @@ const projectsData = {
         description: "Regulatory compliance maintained"
       }
     ],
-    
+
     testimonial: {
       quote: "The AI-powered KYC solution has transformed our compliance operations. We've dramatically reduced onboarding time while maintaining the highest standards of regulatory compliance.",
       author: "Michael Zhang",
@@ -719,9 +719,9 @@ const projectsData = {
     team: "22 people",
     year: "2023",
     services: ["Business Software", "CRM Development", "ERP Integration"],
-    
+
     projectBackground: "Small and medium enterprises (SMEs) struggle with managing multiple disconnected systems for different business functions. Our client wanted to create a unified platform that would integrate CRM, ERP, project management, and analytics into a single, affordable solution specifically designed for growing businesses.",
-    
+
     customerChallenges: [
       "Managing multiple disconnected business systems",
       "Lack of integrated data and business insights",
@@ -729,7 +729,7 @@ const projectsData = {
       "Difficulty tracking customer interactions and sales pipeline",
       "Limited reporting and analytics capabilities"
     ],
-    
+
     businessChallenges: [
       "High costs of multiple software subscriptions",
       "Inefficient operations due to system fragmentation",
@@ -737,9 +737,9 @@ const projectsData = {
       "Limited visibility into overall business performance",
       "Training complexity with multiple different systems"
     ],
-    
+
     solution: "We developed a comprehensive business management platform that unifies CRM, ERP, project management, and analytics into a single, intuitive interface. The platform provides automated workflows, real-time reporting, integrated communication tools, and customizable dashboards that give business owners complete visibility and control over their operations.",
-    
+
     technologicalStack: [
       "Vue.js 3 with Composition API for responsive frontend",
       "Laravel 10 with PHP 8 for robust backend development",
@@ -750,7 +750,7 @@ const projectsData = {
       "Elasticsearch for advanced search capabilities",
       "AWS with auto-scaling for reliable cloud deployment"
     ],
-    
+
     results: [
       {
         metric: "65%",
@@ -769,7 +769,7 @@ const projectsData = {
         description: "User satisfaction rating"
       }
     ],
-    
+
     testimonial: {
       quote: "This unified platform has revolutionized how we manage our business. Everything is connected, automated, and we finally have the insights we need to make data-driven decisions.",
       author: "Jennifer Adams",
@@ -789,9 +789,9 @@ const projectsData = {
     team: "30 people",
     year: "2022",
     services: ["Custom ERP", "Enterprise Software", "System Integration"],
-    
+
     projectBackground: "A global manufacturing corporation with operations in 15 countries needed a custom ERP solution to replace their aging systems and unify operations across all locations. The challenge was creating a flexible, scalable system that could handle complex manufacturing processes, multi-currency operations, and regulatory requirements across different countries.",
-    
+
     customerChallenges: [
       "Legacy systems causing operational inefficiencies",
       "Lack of real-time visibility across global operations",
@@ -799,7 +799,7 @@ const projectsData = {
       "Inconsistent processes and data across different locations",
       "Difficulty in financial consolidation and reporting"
     ],
-    
+
     businessChallenges: [
       "High maintenance costs of legacy systems",
       "Competitive pressure requiring operational efficiency",
@@ -807,9 +807,9 @@ const projectsData = {
       "Scalability limitations affecting business growth",
       "Risk of system failures impacting global operations"
     ],
-    
+
     solution: "We developed a comprehensive custom ERP solution with modular architecture that could be configured for different business units and countries. The system includes advanced manufacturing execution, supply chain optimization, financial management, human resources, and business intelligence modules, all integrated into a unified platform with role-based access and multi-language support.",
-    
+
     technologicalStack: [
       "Java 17 with Spring Boot for enterprise-grade backend",
       "Angular 15 for modern, responsive user interfaces",
@@ -820,7 +820,7 @@ const projectsData = {
       "Redis for distributed caching and session management",
       "Jenkins for continuous integration and deployment"
     ],
-    
+
     results: [
       {
         metric: "50%",
@@ -839,7 +839,7 @@ const projectsData = {
         description: "Improvement in supply chain efficiency"
       }
     ],
-    
+
     testimonial: {
       quote: "Our custom ERP system has unified our global operations like never before. We now have real-time visibility, streamlined processes, and the flexibility to adapt to changing business needs.",
       author: "Thomas Mueller",
@@ -865,12 +865,12 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
   return (
     <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <PricingNavbar />
-      
+
       <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
         {/* Back Navigation */}
         <div className="max-w-7xl mx-auto mb-8">
-          <LoadingLink 
-            href="/portfolio" 
+          <LoadingLink
+            href="/portfolio"
             className="inline-flex items-center gap-2 text-neutral-400 hover:text-white transition-colors group"
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
@@ -885,11 +885,11 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
               <div className="inline-block px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-600/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium mb-6">
                 {project.subtitle}
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 mb-6 leading-tight">
                 {project.title}
               </h1>
-              
+
               <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
                 {project.description}
               </p>
@@ -1033,7 +1033,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
           <div className="bg-gradient-to-r from-blue-500/5 to-purple-600/5 border border-blue-500/20 rounded-2xl p-8 text-center">
             <Award className="w-12 h-12 text-blue-400 mx-auto mb-6" />
             <blockquote className="text-xl md:text-2xl text-neutral-200 mb-6 leading-relaxed italic">
-              "{project.testimonial.quote}"
+              {`"${project.testimonial.quote}"`}
             </blockquote>
             <div className="text-neutral-400">
               <p className="font-semibold text-white">{project.testimonial.author}</p>
@@ -1067,7 +1067,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
           </div>
         </section>
       </div>
-      
+
       <Footer />
     </div>
   );

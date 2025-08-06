@@ -62,7 +62,7 @@ const LoadingLink = ({
         clearTimeout(navigationTimeout.current);
       }
     };
-  }, [stopLoading]);
+  }, [stopLoading, isClient]); // <-- FIX: Added 'isClient' to the dependency array
 
   // Also listen for popstate (back/forward navigation)
   useEffect(() => {

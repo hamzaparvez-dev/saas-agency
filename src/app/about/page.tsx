@@ -8,11 +8,11 @@ const About = () => {
   return (
     <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <PricingNavbar />
-      
+
       <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
         {/* Hero Section */}
         <div className="text-4xl pb-5 md:text-7xl px-6 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-        Digital acceleration company
+          Digital acceleration company
         </div>
         <p className="mt-4 text-lg font-normal text-neutral-300 max-w-3xl text-center mx-auto px-4">
           We are a dedicated team of software developers, architects, and AI specialists committed to transforming ideas into powerful digital solutions that scale businesses worldwide.
@@ -55,7 +55,7 @@ const About = () => {
               Our Story
             </h2>
             <p className="text-neutral-300 text-lg max-w-3xl mx-auto">
-              Founded in 2019 by a team of experienced developers who saw the need for more agile, 
+              Founded in 2019 by a team of experienced developers who saw the need for more agile,
               AI-powered software development in the rapidly evolving digital landscape.
             </p>
           </div>
@@ -121,11 +121,11 @@ const About = () => {
                 Our Mission
               </h2>
               <p className="text-neutral-300 text-lg leading-relaxed mb-6">
-                To empower businesses with cutting-edge software solutions that drive growth, efficiency, and innovation. 
+                To empower businesses with cutting-edge software solutions that drive growth, efficiency, and innovation.
                 We believe in turning complex problems into elegant, scalable solutions.
               </p>
               <p className="text-neutral-300 text-lg leading-relaxed mb-6">
-                From rapid MVP development to enterprise-scale applications, we partner with our clients 
+                From rapid MVP development to enterprise-scale applications, we partner with our clients
                 to build the technology that powers their success.
               </p>
               <div className="space-y-3">
@@ -398,7 +398,7 @@ const About = () => {
                 </div>
               </div>
               <p className="text-neutral-300 text-sm mb-4">
-                "They delivered our SaaS platform 2 weeks ahead of schedule. The quality exceeded our expectations and their AI integration boosted our efficiency by 40%."
+                {"\"They delivered our SaaS platform 2 weeks ahead of schedule. The quality exceeded our expectations and their AI integration boosted our efficiency by 40%.\""}
               </p>
               <div className="flex text-yellow-400 text-sm">
                 ⭐⭐⭐⭐⭐
@@ -561,8 +561,8 @@ const About = () => {
                 Our Culture
               </h2>
               <p className="text-neutral-300 text-lg leading-relaxed mb-6">
-                We believe that great software comes from great teams. Our culture emphasizes continuous learning, 
-                innovation, and work-life balance. We're not just colleagues – we're a community of passionate 
+                We believe that great software comes from great teams. Our culture emphasizes continuous learning,
+                innovation, and work-life balance. We're not just colleagues – we're a community of passionate
                 technologists who love what we do.
               </p>
               <div className="space-y-4">
@@ -631,7 +631,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      
+
       <Footer />
     </div>
   );
