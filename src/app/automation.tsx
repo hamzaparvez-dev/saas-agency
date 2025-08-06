@@ -1,14 +1,13 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import { Lora } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Bot, Zap, Clock, TrendingUp, ArrowRight, CheckCircle } from "lucide-react";
 import LoadingLink from "@/components/loading-link";
 
-const font = Lora({
-  subsets: ["latin"],
-  weight: ["400"],
-});
+// Local font configuration
+const font = {
+  className: 'font-lora'
+};
 
 const automationFeatures = [
   {

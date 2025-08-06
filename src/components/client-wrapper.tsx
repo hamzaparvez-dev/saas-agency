@@ -1,8 +1,9 @@
 "use client";
 
-import { ReactNode, useEffect } from "react";
+import { ReactNode, useEffect, useState } from "react";
 import { LoadingProvider } from "@/contexts/loading-context";
 import Loading from "@/components/loading";
+import ClientOnly from "@/components/client-only";
 import { useLoading } from "@/contexts/loading-context";
 import { useRouter } from "next/navigation";
 
@@ -55,7 +56,9 @@ function LoadingWrapper({ children }: { children: ReactNode }) {
   
   return (
     <>
-      <Loading isLoading={isLoading} />
+      <ClientOnly>
+        <Loading isLoading={isLoading} />
+      </ClientOnly>
       {children}
     </>
   );

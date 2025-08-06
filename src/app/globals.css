@@ -57,4 +57,13 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Font Classes */
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-lora {
+  font-family: 'Lora', serif;
+}
  

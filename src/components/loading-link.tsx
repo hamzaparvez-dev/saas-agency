@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useLoading } from "@/contexts/loading-context";
-import { ReactNode, MouseEvent, useEffect, useRef } from "react";
+import { ReactNode, MouseEvent, useEffect, useRef, useState } from "react";
 
 interface LoadingLinkProps {
   href: string;
@@ -23,11 +23,17 @@ const LoadingLink = ({
   const { startLoading, stopLoading } = useLoading();
   const currentUrl = useRef('');
   const navigationTimeout = useRef<NodeJS.Timeout | null>(null);
+  const [isClient, setIsClient] = useState(false);
+
+  // Ensure we're on the client side
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   // Monitor URL changes to detect navigation completion
   useEffect(() => {
     // Only run on client side
-    if (typeof window === 'undefined') return;
+    if (!isClient || typeof window === 'undefined') return;
     
     // Initialize currentUrl on mount
     currentUrl.current = window.location.pathname;
@@ -61,7 +67,7 @@ const LoadingLink = ({
   // Also listen for popstate (back/forward navigation)
   useEffect(() => {
     // Only run on client side
-    if (typeof window === 'undefined') return;
+    if (!isClient || typeof window === 'undefined') return;
     
     const handlePopState = () => {
       setTimeout(() => {
@@ -71,7 +77,7 @@ const LoadingLink = ({
 
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
-  }, [stopLoading]);
+  }, [stopLoading, isClient]);
 
   const handleClick = async (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
@@ -82,7 +88,7 @@ const LoadingLink = ({
     }
 
     // Don't show loading for external links or same page navigation
-    if (external || (typeof window !== 'undefined' && href === window.location.pathname)) {
+    if (external || (isClient && typeof window !== 'undefined' && href === window.location.pathname)) {
       if (external) {
         window.open(href, '_blank');
       }
@@ -99,7 +105,7 @@ const LoadingLink = ({
 
     try {
       // Store current URL for comparison
-      if (typeof window !== 'undefined') {
+      if (isClient && typeof window !== 'undefined') {
         currentUrl.current = window.location.pathname;
       }
       

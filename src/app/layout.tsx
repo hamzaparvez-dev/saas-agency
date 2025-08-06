@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
 import "./globals.css";
+import "./fonts.css";
 import ClientWrapper from "@/components/client-wrapper";
 
-const font = Poppins({
-  subsets: ["latin"],
-  weight: ['400', '500', '600', '700'],
-  display: 'swap',
-  preload: true,
+// Local font configuration
+const font = {
+  className: 'font-poppins',
   variable: '--font-poppins'
-});
+};
 
 export const metadata: Metadata = {
+  // Add this line
+  metadataBase: new URL('https://your-domain.com'), 
+  
   title: "SaaS Agency - Custom Software Development & AI Solutions",
   description: "Professional SaaS development agency specializing in custom software, API development, MVP creation, enterprise websites, and AI automation solutions.",
 };

@@ -226,7 +226,7 @@ const EndToEndDevelopmentService = () => {
       role: "CTO, HealthCare Innovations",
       company: "Healthcare Technology", 
       quote: "The end-to-end development service was exactly what we needed. From initial planning to deployment, every phase was handled professionally. The HIPAA-compliant system serves 50K+ patients flawlessly.",
-      image: "/images/ai-automation.jpg",
+              image: "/images/ai-automation.webp",
       project: "Healthcare Management System",
       outcome: "50K+ patients served"
     },

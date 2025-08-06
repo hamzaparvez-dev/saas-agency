@@ -25,7 +25,7 @@ const Portfolio = () => {
       title: "Scalability with Webflow: Designing and Developing Polpharma API Website",
       subtitle: "WEBFLOW",
       description: "Creating a user-friendly digital experience to support lead generation in the B2B pharmaceutical sector",
-      image: "/images/api-development.jpg",
+      image: "/images/api-development.webp",
       tags: ["Webflow", "JavaScript", "API Integration", "B2B"],
       category: "WEBFLOW",
       duration: "4 months", 

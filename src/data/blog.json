@@ -16,7 +16,7 @@
     "author": {
       "name": "Sarah Johnson",
       "bio": "Senior SaaS Architect with 10+ years of experience in enterprise software development.",
-      "avatar": "/images/ai-automation.jpg"
+              "avatar": "/images/ai-automation.webp"
     },
     "category": "Technology Trends",
     "tags": [
@@ -25,7 +25,7 @@
       "Architecture",
       "Trends"
     ],
-    "featuredImage": "/images/ai-automation.jpg",
+    "featuredImage": "/images/ai-automation.webp",
     "publishedAt": "2024-01-15T10:00:00Z",
     "updatedAt": "2024-01-15T10:00:00Z",
     "readTime": 8,
@@ -50,7 +50,7 @@
     "author": {
       "name": "Michael Chen",
       "bio": "Lead Backend Engineer specializing in high-performance API development and system architecture.",
-      "avatar": "/images/api-development.jpg"
+              "avatar": "/images/api-development.webp"
     },
     "category": "API Development",
     "tags": [
@@ -59,7 +59,7 @@
       "Performance",
       "Security"
     ],
-    "featuredImage": "/images/api-development.jpg",
+    "featuredImage": "/images/api-development.webp",
     "publishedAt": "2024-01-20T14:30:00Z",
     "updatedAt": "2024-01-20T14:30:00Z",
     "readTime": 12,

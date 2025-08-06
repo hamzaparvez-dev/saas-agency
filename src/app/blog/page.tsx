@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: 'SaaS Agency',
     images: [
       {
-        url: '/images/blog/blog-og-image.jpg',
+        url: '/images/software-dev.jpg',
         width: 1200,
         height: 630,
         alt: 'SaaS Development Blog',

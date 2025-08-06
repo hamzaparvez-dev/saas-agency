@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { BlogPost, getAllBlogPosts, addBlogPost, updateBlogPost, deleteBlogPost, generateSlug, calculateReadTime } from '@/lib/blog';
+import { BlogPost } from '@/lib/blog';
 import { Plus, Edit, Trash2, Eye, Save, X, Calendar, Clock, User, Tag } from 'lucide-react';
 import Image from 'next/image';
 
@@ -29,7 +29,7 @@ export default function AdminBlogPage() {
     author: {
       name: '',
       bio: '',
-      avatar: '/images/team/default-avatar.jpg'
+      avatar: '/images/software-dev.jpg'
     },
     category: '',
     tags: [],
@@ -48,9 +48,18 @@ export default function AdminBlogPage() {
     }
   };
 
-  const loadPosts = () => {
-    const allPosts = getAllBlogPosts(true);
-    setPosts(allPosts);
+  const loadPosts = async () => {
+    try {
+      const response = await fetch('/api/blog?includeUnpublished=true');
+      if (response.ok) {
+        const allPosts = await response.json();
+        setPosts(allPosts);
+      } else {
+        console.error('Failed to load posts');
+      }
+    } catch (error) {
+      console.error('Error loading posts:', error);
+    }
   };
 
   const resetForm = () => {
@@ -64,7 +73,7 @@ export default function AdminBlogPage() {
       author: {
         name: '',
         bio: '',
-        avatar: '/images/team/default-avatar.jpg'
+        avatar: '/images/software-dev.jpg'
       },
       category: '',
       tags: [],
@@ -92,10 +101,25 @@ export default function AdminBlogPage() {
 
     try {
       // Generate slug if not provided
-      const slug = formData.slug || generateSlug(formData.title);
+      let slug = formData.slug;
+      if (!slug) {
+        const slugResponse = await fetch('/api/blog', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: 'generateSlug', data: { title: formData.title } })
+        });
+        const slugData = await slugResponse.json();
+        slug = slugData.slug;
+      }
       
       // Calculate read time
-      const readTime = calculateReadTime(formData.content);
+      const readTimeResponse = await fetch('/api/blog', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action: 'calculateReadTime', data: { content: formData.content } })
+      });
+      const readTimeData = await readTimeResponse.json();
+      const readTime = readTimeData.readTime;
 
       const postData = {
         ...formData,
@@ -105,19 +129,47 @@ export default function AdminBlogPage() {
         updatedAt: new Date().toISOString()
       };
 
-      let success = false;
       if (editingPost) {
-        success = updateBlogPost(editingPost.id, postData);
+        // Update existing post
+        const response = await fetch('/api/blog', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            action: 'update',
+            data: {
+              id: editingPost.id,
+              ...postData
+            }
+          })
+        });
+        
+        const result = await response.json();
+        if (result.success) {
+          loadPosts();
+          resetForm();
+          alert('Post updated successfully!');
+        } else {
+          alert('Failed to update post');
+        }
       } else {
-        success = addBlogPost(postData);
-      }
-
-      if (success) {
-        loadPosts();
-        resetForm();
-        alert(editingPost ? 'Post updated successfully!' : 'Post created successfully!');
-      } else {
-        alert('Error saving post. Please try again.');
+        // Add new post
+        const response = await fetch('/api/blog', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            action: 'add',
+            data: postData
+          })
+        });
+        
+        const result = await response.json();
+        if (result.success) {
+          loadPosts();
+          resetForm();
+          alert('Post created successfully!');
+        } else {
+          alert('Failed to create post');
+        }
       }
     } catch (error) {
       console.error('Error saving post:', error);
@@ -127,24 +179,55 @@ export default function AdminBlogPage() {
     }
   };
 
-  const handleDelete = (id: string, title: string) => {
+  const handleDelete = async (id: string, title: string) => {
     if (confirm(`Are you sure you want to delete "${title}"?`)) {
-      const success = deleteBlogPost(id);
-      if (success) {
-        loadPosts();
-        alert('Post deleted successfully!');
-      } else {
+      try {
+        const response = await fetch('/api/blog', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            action: 'delete',
+            data: { id }
+          })
+        });
+        
+        const result = await response.json();
+        if (result.success) {
+          loadPosts();
+          alert('Post deleted successfully!');
+        } else {
+          alert('Error deleting post. Please try again.');
+        }
+      } catch (error) {
+        console.error('Error deleting post:', error);
         alert('Error deleting post. Please try again.');
       }
     }
   };
 
-  const handleTitleChange = (title: string) => {
+  const handleTitleChange = async (title: string) => {
     setFormData(prev => ({
       ...prev,
-      title,
-      slug: generateSlug(title)
+      title
     }));
+    
+    // Generate slug asynchronously
+    if (title) {
+      try {
+        const response = await fetch('/api/blog', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: 'generateSlug', data: { title } })
+        });
+        const data = await response.json();
+        setFormData(prev => ({
+          ...prev,
+          slug: data.slug
+        }));
+      } catch (error) {
+        console.error('Error generating slug:', error);
+      }
+    }
   };
 
   const handleKeywordsChange = (keywords: string) => {
@@ -327,7 +410,7 @@ export default function AdminBlogPage() {
                       value={formData.featuredImage}
                       onChange={(e) => setFormData(prev => ({ ...prev, featuredImage: e.target.value }))}
                       className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                      placeholder="/images/blog/post-image.jpg"
+                      placeholder="/images/software-dev.jpg"
                     />
                   </div>
                 </div>

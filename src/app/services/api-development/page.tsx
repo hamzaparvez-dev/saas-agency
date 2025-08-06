@@ -99,7 +99,7 @@ const APIDeveopmentService = () => {
       role: "Lead Developer, PayFlow",
       company: "PayFlow Systems",
       quote: "Their API handles 50M+ transactions daily with 99.99% uptime. The architecture is incredibly robust and scales effortlessly.",
-      image: "/images/api-development.jpg"
+              image: "/images/api-development.webp"
     },
     {
       name: "Lisa Zhang",

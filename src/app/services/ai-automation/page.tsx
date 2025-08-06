@@ -140,7 +140,7 @@ const AIAutomationService = () => {
       role: "Operations Director, LogisticsPro",
       company: "Global Logistics Solutions",
       quote: "AI automation reduced our invoice processing time from 8 hours to 15 minutes. We now process 10,000+ invoices monthly with 99.8% accuracy.",
-      image: "/images/ai-automation.jpg",
+              image: "/images/ai-automation.webp",
       metrics: ["97% time savings", "99.8% accuracy", "10K+ invoices processed"],
       industry: "Logistics"
     },

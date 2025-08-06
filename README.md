@@ -1,43 +1,61 @@
-## The challenge
+# SaaS Agency Website
 
-This is a modern web application built with Next.js and TypeScript, enabling users to seamlessly book meetings, process payments through Stripe, and send a message on the mail about what kind of service they want
-
-### Installation
-
-1. Clone the repository: `https://github.com/Beka-Merebashvili/Digital-Marketing-Agency.git`
-2. Navigate to the project directory: `Digital-Marketing-Agency`
-3. Install dependencies: `npm install`
-
-### Usage
-
-1. Start the development server: `npm run dev`
-2. Open your web browser and go to: `http://localhost:3000`
+A modern SaaS development agency website built with Next.js, TypeScript, and Tailwind CSS.
 
 ## Features
 
-- User-friendly Interface: Designed with modern UI components and animations using Tailwind CSS and Framer Motion.
-- Booking System: Users can easily book meetings through the web interface.
-- SMS Notifications: Users receive SMS notifications via email after booking a meeting.
-- Company Information Submission: Users can conveniently submit their company information via email.
+- **Modern Design**: Clean, professional design with smooth animations
+- **Responsive**: Fully responsive across all devices
+- **Performance Optimized**: Fast loading with optimized images and fonts
+- **SEO Ready**: Built with SEO best practices
+- **Blog System**: Complete blog with admin panel
+- **Portfolio**: Showcase of projects and case studies
+- **Contact Forms**: Integrated contact and booking forms
 
+## Fonts
+
+This project uses **self-hosted fonts** to ensure reliable loading and better performance:
+
+- **Poppins**: Primary font family (Regular, Medium, SemiBold, Bold)
+- **Lora**: Secondary font family (Regular)
+
+Font files are stored in `public/fonts/` and loaded via CSS `@font-face` declarations in `src/app/fonts.css`.
+
+## Getting Started
+
+1. Install dependencies:
+   ```bash
+   pnpm install
+   ```
+
+2. Run the development server:
+   ```bash
+   pnpm dev
+   ```
+
+3. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Build
+
+To create a production build:
+
+```bash
+pnpm build
+```
+
+## Deployment
+
+The project is ready for deployment on Vercel, Netlify, or any other hosting platform.
 
 ## Technologies Used
-- Next.js 14
-- TypeScript
-- Tailwind CSS
-- Shandian UI
-- Framer Motion
-- Nodemailer
 
-## Links
-
-- Solution URL: [GitHub Code](https://github.com/Beka-Merebashvili/Digital-Marketing-Agency)
-- Live Site URL :[Vercel Live](https://digital-marketing-agency-psi.vercel.app)
-
-
-## Author 
-
-- Linkdin [Beka Merebashvili](https://www.linkedin.com/in/beka-merebashvili/)
+- **Next.js 14**: React framework with App Router
+- **TypeScript**: Type-safe development
+- **Tailwind CSS**: Utility-first CSS framework
+- **Framer Motion**: Animation library
+- **Lucide React**: Icon library
+- **React Hook Form**: Form handling
+- **Zod**: Schema validation
  
 
  

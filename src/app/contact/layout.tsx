@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     siteName: 'SaaS Development Agency',
     images: [
       {
-        url: '/images/contact-og-image.jpg',
+        url: '/images/software-dev.jpg',
         width: 1200,
         height: 630,
         alt: 'Contact SaaS Development Agency',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Contact Our SaaS Development Team',
     description: 'Ready to build something amazing? Contact our expert developers today.',
-    images: ['/images/contact-twitter-card.jpg'],
+    images: ['/images/software-dev.jpg'],
   },
   alternates: {
     canonical: '/contact',

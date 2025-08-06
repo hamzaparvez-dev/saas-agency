@@ -79,7 +79,7 @@ const SliderOne = () => {
           <div className="rounded-md px-2 md:p-10">
             <Image
               priority
-              src="/images/api-development.jpg"
+                              src="/images/api-development.webp"
               alt="API Development"
               width={500}
               height={500}

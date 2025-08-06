@@ -86,11 +86,11 @@ The SaaS landscape in 2024 is defined by intelligence, scalability, and security
         author: {
           name: 'Sarah Johnson',
           bio: 'Senior SaaS Architect with 10+ years of experience in enterprise software development.',
-          avatar: '/images/team/sarah-johnson.jpg'
+          avatar: '/images/ai-automation.webp'
         },
         category: 'Technology Trends',
         tags: ['SaaS', 'AI', 'Architecture', 'Trends'],
-        featuredImage: '/images/blog/saas-trends-2024.jpg',
+        featuredImage: '/images/ai-automation.webp',
         publishedAt: '2024-01-15T10:00:00Z',
         updatedAt: '2024-01-15T10:00:00Z',
         readTime: 8,
@@ -161,11 +161,11 @@ Scalable API development requires careful planning, robust architecture, and con
         author: {
           name: 'Michael Chen',
           bio: 'Lead Backend Engineer specializing in high-performance API development and system architecture.',
-          avatar: '/images/team/michael-chen.jpg'
+          avatar: '/images/api-development.webp'
         },
         category: 'API Development',
         tags: ['API', 'Backend', 'Performance', 'Security'],
-        featuredImage: '/images/blog/scalable-apis.jpg',
+        featuredImage: '/images/api-development.webp',
         publishedAt: '2024-01-20T14:30:00Z',
         updatedAt: '2024-01-20T14:30:00Z',
         readTime: 12,
@@ -264,11 +264,11 @@ The key is finding the right balance between automation and human expertise, ens
         author: {
           name: 'Dr. Emily Rodriguez',
           bio: 'AI Research Scientist and Software Development Consultant with expertise in machine learning applications.',
-          avatar: '/images/team/emily-rodriguez.jpg'
+          avatar: '/images/software-dev.jpg'
         },
         category: 'Artificial Intelligence',
         tags: ['AI', 'Machine Learning', 'Development Tools', 'Automation'],
-        featuredImage: '/images/blog/ai-powered-development.jpg',
+        featuredImage: '/images/software-dev.jpg',
         publishedAt: '2024-01-25T09:15:00Z',
         updatedAt: '2024-01-25T09:15:00Z',
         readTime: 10,
@@ -377,14 +377,14 @@ export function deleteBlogPost(id: string): boolean {
 export function getAllCategories(): string[] {
   const posts = getAllBlogPosts();
   const categories = posts.map(post => post.category);
-  return [...new Set(categories)].sort();
+  return Array.from(new Set(categories)).sort();
 }
 
 // Get all tags
 export function getAllTags(): string[] {
   const posts = getAllBlogPosts();
   const tags = posts.flatMap(post => post.tags);
-  return [...new Set(tags)].sort();
+  return Array.from(new Set(tags)).sort();
 }
 
 // Generate slug from title
