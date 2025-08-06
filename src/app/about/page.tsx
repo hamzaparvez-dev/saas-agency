@@ -419,7 +419,7 @@ const About = () => {
                 </div>
               </div>
               <p className="text-neutral-300 text-sm mb-4">
-                "Their expertise in healthcare compliance was invaluable. They built a HIPAA-compliant platform that our patients love using."
+                &ldquo;Their expertise in healthcare compliance was invaluable. They built a HIPAA-compliant platform that our patients love using.&rdquo;
               </p>
               <div className="flex text-yellow-400 text-sm">
                 ⭐⭐⭐⭐⭐
@@ -440,7 +440,7 @@ const About = () => {
                 </div>
               </div>
               <p className="text-neutral-300 text-sm mb-4">
-                "From MVP to enterprise scale in 8 months. Their development process is incredibly efficient and their support is outstanding."
+                &ldquo;From MVP to enterprise scale in 8 months. Their development process is incredibly efficient and their support is outstanding.&rdquo;
               </p>
               <div className="flex text-yellow-400 text-sm">
                 ⭐⭐⭐⭐⭐
@@ -562,7 +562,7 @@ const About = () => {
               </h2>
               <p className="text-neutral-300 text-lg leading-relaxed mb-6">
                 We believe that great software comes from great teams. Our culture emphasizes continuous learning,
-                innovation, and work-life balance. We're not just colleagues – we're a community of passionate
+                innovation, and work-life balance. We&apos;re not just colleagues – we&apos;re a community of passionate
                 technologists who love what we do.
               </p>
               <div className="space-y-4">
@@ -610,7 +610,7 @@ const About = () => {
             Ready to Build Something Amazing?
           </h2>
           <p className="text-neutral-300 text-lg mb-8">
-            Let's discuss your project and see how we can help bring your vision to life with cutting-edge technology and expert development.
+            Let&apos;s discuss your project and see how we can help bring your vision to life with cutting-edge technology and expert development.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

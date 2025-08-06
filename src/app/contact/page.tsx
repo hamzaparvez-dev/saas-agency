@@ -139,10 +139,10 @@ export default function ContactForm() {
       <div className="md:flex items-start justify-center md:py-20 px-6">
         <div className="">
           <div className="text-5xl font-medium  w-full md:w-2/3  pb-5 md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-            Let's Build Your Vision
+            Let&apos;s Build Your Vision
           </div>
           <div className=" py-4 text-gray-300 text-lg">
-            Ready to transform your ideas into powerful software solutions? Let's discuss your project and create something extraordinary together.
+            Ready to transform your ideas into powerful software solutions? Let&apos;s discuss your project and create something extraordinary together.
           </div>
 
           <div className="bg-gradient-to-r from-neutral-900/50 to-neutral-800/50 border border-neutral-700 md:w-4/5 space-y-6 p-6 rounded-2xl my-4 hidden md:flex md:flex-col">
@@ -177,7 +177,7 @@ export default function ContactForm() {
              {/* Form Header */}
              <div className="text-center border-b border-neutral-700 pb-6 mb-8">
                <h2 className="text-2xl font-bold text-white mb-2">Start Your Project</h2>
-               <p className="text-neutral-400 text-sm">Tell us about your vision and let's build something amazing together</p>
+               <p className="text-neutral-400 text-sm">Tell us about your vision and let&apos;s build something amazing together</p>
              </div>
 
              <div className="md:flex items-center gap-6 ">

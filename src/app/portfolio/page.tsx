@@ -165,7 +165,7 @@ const Portfolio = () => {
         </div>
         <p className="mt-4 text-lg font-normal text-neutral-300 max-w-3xl text-center mx-auto px-4">
           Explore our successful projects across various industries. From MVPs to enterprise solutions, 
-          we've helped businesses transform their ideas into powerful software.
+          we&apos;ve helped businesses transform their ideas into powerful software.
         </p>
 
         {/* Portfolio Grid */}
@@ -296,7 +296,7 @@ const Portfolio = () => {
             Ready to Start Your Project?
           </h2>
           <p className="text-neutral-300 text-lg mb-8">
-            Join our portfolio of successful projects. Let's build something extraordinary together.
+            Join our portfolio of successful projects. Let&apos;s build something extraordinary together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <LoadingLink

@@ -479,7 +479,7 @@ const EnterpriseWebsiteService = () => {
                     <p className="text-purple-400 text-sm">{testimonial.company}</p>
                   </div>
                 </div>
-                <p className="text-neutral-300 leading-relaxed italic mb-4">"{testimonial.quote}"</p>
+                <p className="text-neutral-300 leading-relaxed italic mb-4">&ldquo;{testimonial.quote}&rdquo;</p>
                 <div className="flex flex-wrap gap-2">
                   {testimonial.metrics.map((metric, idx) => (
                     <span key={idx} className="px-2 py-1 text-xs bg-purple-500/20 text-purple-400 rounded-full">
@@ -498,7 +498,7 @@ const EnterpriseWebsiteService = () => {
             Ready for Enterprise Scale?
           </h2>
           <p className="text-neutral-300 text-lg mb-8 max-w-2xl mx-auto">
-            Let's discuss your enterprise requirements and build a solution that scales with your business growth.
+            Let&apos;s discuss your enterprise requirements and build a solution that scales with your business growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

@@ -1033,7 +1033,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
           <div className="bg-gradient-to-r from-blue-500/5 to-purple-600/5 border border-blue-500/20 rounded-2xl p-8 text-center">
             <Award className="w-12 h-12 text-blue-400 mx-auto mb-6" />
             <blockquote className="text-xl md:text-2xl text-neutral-200 mb-6 leading-relaxed italic">
-              {`"${project.testimonial.quote}"`}
+              {`&ldquo;${project.testimonial.quote}&rdquo;`}
             </blockquote>
             <div className="text-neutral-400">
               <p className="font-semibold text-white">{project.testimonial.author}</p>
@@ -1049,7 +1049,7 @@ export default function CaseStudyPage({ params }: CaseStudyPageProps) {
             Ready to start your project?
           </h2>
           <p className="text-lg text-neutral-300 mb-8">
-            Let's discuss how we can help transform your business with custom software solutions.
+            Let&apos;s discuss how we can help transform your business with custom software solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <LoadingLink

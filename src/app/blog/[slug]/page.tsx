@@ -361,7 +361,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-600/10 border border-blue-500/20 rounded-2xl p-8">
               <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your Ideas?</h2>
               <p className="text-lg text-neutral-300 mb-8">
-                Let's discuss how we can help bring your software vision to life with our expert development team.
+                Let&apos;s discuss how we can help bring your software vision to life with our expert development team.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <LoadingLink

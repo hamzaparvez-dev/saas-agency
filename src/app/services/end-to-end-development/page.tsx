@@ -605,7 +605,7 @@ const EndToEndDevelopmentService = () => {
                     <p className="text-pink-400 text-sm">{testimonial.company}</p>
                   </div>
                 </div>
-                <p className="text-neutral-300 leading-relaxed italic mb-4">"{testimonial.quote}"</p>
+                <p className="text-neutral-300 leading-relaxed italic mb-4">&ldquo;{testimonial.quote}&rdquo;</p>
                 <div className="border-t border-neutral-800 pt-4 mt-4">
                   <div className="flex justify-between text-sm">
                     <span className="text-neutral-400">Project:</span>
@@ -627,7 +627,7 @@ const EndToEndDevelopmentService = () => {
             Ready to Build Something Amazing?
           </h2>
           <p className="text-neutral-300 text-lg mb-8 max-w-2xl mx-auto">
-            Let's discuss your project and create a comprehensive development plan that takes you from idea to market success.
+            Let&apos;s discuss your project and create a comprehensive development plan that takes you from idea to market success.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

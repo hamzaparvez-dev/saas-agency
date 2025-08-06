@@ -147,7 +147,7 @@ const SoftwareDevelopmentService = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-semibold mb-2">Legacy Systems Holding You Back</h3>
-                    <p className="text-neutral-300 text-sm">Outdated software that can't scale, integrate, or adapt to modern business needs.</p>
+                    <p className="text-neutral-300 text-sm">Outdated software that can&apos;t scale, integrate, or adapt to modern business needs.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -309,7 +309,7 @@ const SoftwareDevelopmentService = () => {
                     <p className="text-blue-400 text-sm">{testimonial.company}</p>
                   </div>
                 </div>
-                <p className="text-neutral-300 leading-relaxed italic">"{testimonial.quote}"</p>
+                <p className="text-neutral-300 leading-relaxed italic">&ldquo;{testimonial.quote}&rdquo;</p>
                 <div className="flex text-yellow-400 mt-4">
                   ⭐⭐⭐⭐⭐
                 </div>
@@ -324,7 +324,7 @@ const SoftwareDevelopmentService = () => {
             Ready to Build Something Amazing?
           </h2>
           <p className="text-neutral-300 text-lg mb-8 max-w-2xl mx-auto">
-            Let's discuss your software development needs and create a solution that drives your business forward.
+            Let&apos;s discuss your software development needs and create a solution that drives your business forward.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

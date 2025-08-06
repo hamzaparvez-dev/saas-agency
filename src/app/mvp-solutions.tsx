@@ -241,7 +241,7 @@ const MvpSolutions = () => {
             <div className="bg-white rounded-2xl p-8 shadow-xl border border-neutral-200">
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-purple-600 mb-4">
-                  "{mvpProjects[activeTestimonial].quote}"
+                  &ldquo;{mvpProjects[activeTestimonial].quote}&rdquo;
                 </div>
                 <div className="mb-6">
                   <div className="text-xl font-semibold text-neutral-800">

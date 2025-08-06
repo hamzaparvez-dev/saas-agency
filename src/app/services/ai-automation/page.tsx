@@ -530,7 +530,7 @@ const AIAutomationService = () => {
                     {testimonial.industry}
                   </span>
                 </div>
-                <p className="text-neutral-300 leading-relaxed italic mb-4">"{testimonial.quote}"</p>
+                <p className="text-neutral-300 leading-relaxed italic mb-4">&ldquo;{testimonial.quote}&rdquo;</p>
                 <div className="flex flex-wrap gap-2">
                   {testimonial.metrics.map((metric, idx) => (
                     <span key={idx} className="px-2 py-1 text-xs bg-green-500/20 text-green-400 rounded-full">
@@ -549,7 +549,7 @@ const AIAutomationService = () => {
             Ready to Automate with AI?
           </h2>
           <p className="text-neutral-300 text-lg mb-8 max-w-2xl mx-auto">
-            Transform your business operations with intelligent automation. Let's identify opportunities 
+            Transform your business operations with intelligent automation. Let&apos;s identify opportunities 
             and calculate the ROI for your specific use cases.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

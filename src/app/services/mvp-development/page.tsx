@@ -210,7 +210,7 @@ const MVPDevelopmentService = () => {
               Choose Your MVP Approach
             </h2>
             <p className="text-neutral-300 text-lg max-w-2xl mx-auto">
-              Different validation stages require different MVP types. We'll help you choose the right approach.
+              Different validation stages require different MVP types. We&apos;ll help you choose the right approach.
             </p>
           </div>
 
@@ -336,7 +336,7 @@ const MVPDevelopmentService = () => {
         <div className="max-w-6xl mx-auto py-20">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-teal-500 to-emerald-400 mb-4">
-              What's Included in Your MVP
+              What&apos;s Included in Your MVP
             </h2>
             <p className="text-neutral-300 text-lg max-w-2xl mx-auto">
               Professional-grade features and infrastructure to ensure your MVP can scale as you grow.
@@ -388,7 +388,7 @@ const MVPDevelopmentService = () => {
                     <p className="text-orange-400 text-sm">{testimonial.company}</p>
                   </div>
                 </div>
-                <p className="text-neutral-300 leading-relaxed italic mb-4">"{testimonial.quote}"</p>
+                <p className="text-neutral-300 leading-relaxed italic mb-4">&ldquo;{testimonial.quote}&rdquo;</p>
                 <div className="flex flex-wrap gap-2">
                   {testimonial.metrics.map((metric, idx) => (
                     <span key={idx} className="px-2 py-1 text-xs bg-orange-500/20 text-orange-400 rounded-full">
@@ -407,7 +407,7 @@ const MVPDevelopmentService = () => {
             Ready to Validate Your Idea?
           </h2>
           <p className="text-neutral-300 text-lg mb-8 max-w-2xl mx-auto">
-            {"Don't spend months building something nobody wants. Let's create an MVP that validates your idea and sets you up for success."}
+            Don&apos;t spend months building something nobody wants. Let&apos;s create an MVP that validates your idea and sets you up for success.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

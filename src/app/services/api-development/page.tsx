@@ -352,7 +352,7 @@ const APIDeveopmentService = () => {
                     <p className="text-emerald-400 text-sm">{testimonial.company}</p>
                   </div>
                 </div>
-                <p className="text-neutral-300 leading-relaxed italic">"{testimonial.quote}"</p>
+                <p className="text-neutral-300 leading-relaxed italic">&ldquo;{testimonial.quote}&rdquo;</p>
                 <div className="flex text-yellow-400 mt-4">
                   ⭐⭐⭐⭐⭐
                 </div>
@@ -367,7 +367,7 @@ const APIDeveopmentService = () => {
             Ready to Build Your API?
           </h2>
           <p className="text-neutral-300 text-lg mb-8 max-w-2xl mx-auto">
-            Let's design and develop APIs that will power your applications and integrations for years to come.
+            Let&apos;s design and develop APIs that will power your applications and integrations for years to come.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
