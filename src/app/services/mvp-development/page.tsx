@@ -407,7 +407,7 @@ const MVPDevelopmentService = () => {
             Ready to Validate Your Idea?
           </h2>
           <p className="text-neutral-300 text-lg mb-8 max-w-2xl mx-auto">
-            Don&apos;t spend months building something nobody wants. Let&apos;s create an MVP that validates your idea and sets you up for success.
+            &quot;Don&apos;t spend months building something nobody wants.&quot; Let&apos;s create an MVP that validates your idea and sets you up for success.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

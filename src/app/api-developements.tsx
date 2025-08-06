@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ThreeDCardExample } from "./snippets/3d-card-snippet";
-import { EvervaultCardSnippet } from "./snippets/evervault-card-snippet";
 import { 
   Code, 
   Zap, 
