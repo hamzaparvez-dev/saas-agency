@@ -136,30 +136,30 @@ export default function ContactForm() {
   return (
     <div className=" w-full   md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden ">
       <PricingNavbar />
-      <div className="md:flex items-start justify-center md:py-20 px-6">
-        <div className="">
-          <div className="text-5xl font-medium  w-full md:w-2/3  pb-5 md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
+      <div className="md:flex items-start justify-center gap-12 md:py-20 px-6 max-w-7xl mx-auto">
+        <div className="md:w-1/2 md:max-w-2xl">
+          <div className="text-4xl md:text-5xl lg:text-6xl font-medium pb-5 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
             Let&apos;s Build Your Vision
           </div>
-          <div className=" py-4 text-gray-300 text-lg">
+          <div className="py-4 text-gray-300 text-lg leading-relaxed">
             Ready to transform your ideas into powerful software solutions? Let&apos;s discuss your project and create something extraordinary together.
           </div>
 
-          <div className="bg-gradient-to-r from-neutral-900/50 to-neutral-800/50 border border-neutral-700 md:w-4/5 space-y-6 p-6 rounded-2xl my-4 hidden md:flex md:flex-col">
-            <div className="flex gap-4 border-b border-neutral-600 ">
-              <div className="text-neutral-200 font-normal pb-4 ">
+          <div className="bg-gradient-to-r from-neutral-900/50 to-neutral-800/50 border border-neutral-700 space-y-6 p-6 rounded-2xl my-8 hidden md:block">
+            <div className="flex gap-4 border-b border-neutral-600 pb-4">
+              <div className="text-neutral-200 font-normal">
                 <strong className="text-white">Custom Software Development:</strong> From web applications to mobile apps, we build scalable solutions tailored to your business needs.
               </div>
             </div>
 
-            <div className="flex gap-4 border-b border-neutral-600 ">
-              <div className="text-neutral-200 font-normal pb-4 ">
+            <div className="flex gap-4 border-b border-neutral-600 pb-4">
+              <div className="text-neutral-200 font-normal">
                 <strong className="text-white">AI & Cloud Solutions:</strong> Leverage cutting-edge AI agents, automation, and cloud infrastructure to stay ahead of the competition.
               </div>
             </div>
 
-            <div className="flex gap-4  ">
-              <div className="text-neutral-200 font-normal pb-4 ">
+            <div className="flex gap-4">
+              <div className="text-neutral-200 font-normal">
                 <strong className="text-white">End-to-End Support:</strong> From MVP to enterprise solutions, we provide comprehensive development services with dedicated support throughout your journey.
               </div>
             </div>
@@ -172,7 +172,7 @@ export default function ContactForm() {
           {!submitted ? (
              <form
              onSubmit={form.handleSubmit(onSubmit)}
-             className="space-y-6 h-full bg-gradient-to-b from-neutral-900/50 to-neutral-800/50 border border-neutral-700 rounded-3xl p-8 md:w-1/3 backdrop-blur-sm"
+             className="space-y-6 bg-gradient-to-b from-neutral-900/50 to-neutral-800/50 border border-neutral-700 rounded-3xl p-8 md:p-10 md:w-1/2 md:max-w-lg backdrop-blur-sm shadow-2xl shadow-black/20"
            >
              {/* Form Header */}
              <div className="text-center border-b border-neutral-700 pb-6 mb-8">
@@ -180,12 +180,12 @@ export default function ContactForm() {
                <p className="text-neutral-400 text-sm">Tell us about your vision and let&apos;s build something amazing together</p>
              </div>
 
-             <div className="md:flex items-center gap-6 ">
+             <div className="grid md:grid-cols-2 gap-4">
                <FormField
                  control={form.control}
                  name="first_name"
                  render={({ field }) => (
-                   <FormItem className="items-center justify-center  w-full">
+                   <FormItem className="w-full">
                      <FormLabel className="text-sm text-white">First name *</FormLabel>
                      <FormControl>
                        <Input {...field} required placeholder="John" className="bg-neutral-800 border-neutral-600 text-white" />
@@ -198,8 +198,8 @@ export default function ContactForm() {
                  control={form.control}
                  name="last_name"
                  render={({ field }) => (
-                   <FormItem className="items-center justify-center  w-full">
-                     <FormLabel className="w-60 text-sm text-white">Last name *</FormLabel>
+                   <FormItem className="w-full">
+                     <FormLabel className="text-sm text-white">Last name *</FormLabel>
                      <FormControl>
                        <Input {...field} required placeholder="Doe" className="bg-neutral-800 border-neutral-600 text-white" />
                      </FormControl>
@@ -212,8 +212,8 @@ export default function ContactForm() {
                control={form.control}
                name="email"
                render={({ field }) => (
-                 <FormItem className="items-center justify-center  w-full">
-                   <FormLabel className=" text-sm text-white">Email address *</FormLabel>
+                 <FormItem className="w-full">
+                   <FormLabel className="text-sm text-white">Email address *</FormLabel>
                    <FormControl>
                      <Input {...field} type="email" required placeholder="john@company.com" className="bg-neutral-800 border-neutral-600 text-white" />
                    </FormControl>
@@ -225,8 +225,8 @@ export default function ContactForm() {
                control={form.control}
                name="company_name"
                render={({ field }) => (
-                 <FormItem className="items-center justify-center  w-full">
-                   <FormLabel className="w-60 text-sm text-white">Company name *</FormLabel>
+                 <FormItem className="w-full">
+                   <FormLabel className="text-sm text-white">Company name *</FormLabel>
                    <FormControl>
                      <Input {...field} required placeholder="Acme Inc." className="bg-neutral-800 border-neutral-600 text-white" />
                    </FormControl>
@@ -238,8 +238,8 @@ export default function ContactForm() {
                control={form.control}
                name="job_title"
                render={({ field }) => (
-                 <FormItem className="items-center justify-center  w-full">
-                   <FormLabel className="w-60 text-sm text-white">Job title</FormLabel>
+                 <FormItem className="w-full">
+                   <FormLabel className="text-sm text-white">Job title</FormLabel>
                    <FormControl>
                      <Input {...field} placeholder="e.g. CTO, Founder, Product Manager" className="bg-neutral-800 border-neutral-600 text-white" />
                    </FormControl>
@@ -251,8 +251,8 @@ export default function ContactForm() {
                control={form.control}
                name="services"
                render={({ field }) => (
-                 <FormItem className="items-center justify-center w-full">
-                   <FormLabel className="w-60 text-sm text-white">Services you are interested in *</FormLabel>
+                 <FormItem className="w-full">
+                   <FormLabel className="text-sm text-white">Services you are interested in *</FormLabel>
                    <Select onValueChange={field.onChange} defaultValue={field.value}>
                      <FormControl>
                        <SelectTrigger>
@@ -330,8 +330,8 @@ export default function ContactForm() {
                control={form.control}
                name="help"
                render={({ field }) => (
-                 <FormItem className="items-center justify-center  w-full">
-                   <FormLabel className="w-60 text-sm text-white">
+                 <FormItem className="w-full">
+                   <FormLabel className="text-sm text-white">
                      How can we help you? *
                    </FormLabel>
                    <Select onValueChange={field.onChange} defaultValue={field.value} required>
@@ -387,8 +387,8 @@ export default function ContactForm() {
                control={form.control}
                name="info"
                render={({ field }) => (
-                 <FormItem className="items-center justify-center w-full">
-                   <FormLabel className="w-60 text-sm text-white">
+                 <FormItem className="w-full">
+                   <FormLabel className="text-sm text-white">
                      Tell us about your project
                    </FormLabel>
                    <FormControl>
@@ -403,19 +403,19 @@ export default function ContactForm() {
                )}
              />
            
-             <div className="flex gap-4 items-center">
-               <div>
+             <div className="flex gap-3 items-start">
+               <div className="mt-1">
                  <Checkbox className="text-[#6c6684]" required />
                </div>
-               <div className="text-white font-light  md:w-3/4 mb-1">
+               <div className="text-white font-light text-sm">
                  I agree to receive project updates and relevant communication about software development services.
                </div>
              </div>
            
-             <div className="flex items-center gap-4">
+             <div className="flex items-center justify-center pt-4">
                <Button
                  type="submit"
-                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-medium px-8 py-3 text-sm transition-all duration-200"
+                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-medium px-8 py-3 text-sm transition-all duration-200 w-full"
                  disabled={loading}
                  onClick={() => form.handleSubmit(onSubmit)}
                >
