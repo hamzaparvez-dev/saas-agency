@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { AlignJustify, X, ChevronDown } from "lucide-react";
 import { usePathname } from "next/navigation";
@@ -27,6 +27,7 @@ const Navbar = ({
 }: NavbarProps) => {
   const [isDropDownVisible, setIsDropDownVisible] = useState(false);
   const [isServicesDropdownVisible, setIsServicesDropdownVisible] = useState(false);
+  const [servicesDropdownTimeout, setServicesDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
 
   const toggleDropDown = () => {
@@ -38,12 +39,28 @@ const Navbar = ({
   };
 
   const showServicesDropdown = () => {
+    if (servicesDropdownTimeout) {
+      clearTimeout(servicesDropdownTimeout);
+      setServicesDropdownTimeout(null);
+    }
     setIsServicesDropdownVisible(true);
   };
 
   const hideServicesDropdown = () => {
-    setIsServicesDropdownVisible(false);
+    const timeout = setTimeout(() => {
+      setIsServicesDropdownVisible(false);
+    }, 150); // 150ms delay to prevent accidental closing
+    setServicesDropdownTimeout(timeout);
   };
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (servicesDropdownTimeout) {
+        clearTimeout(servicesDropdownTimeout);
+      }
+    };
+  }, [servicesDropdownTimeout]);
 
   // Check if current page is a service page
   const isServicePage = pathname?.startsWith('/services/');
@@ -84,14 +101,16 @@ const Navbar = ({
             >
               <span>Services</span>
               <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
-          </div>
+            </div>
 
             {isServicesDropdownVisible && (
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="absolute top-full left-0 mt-2 w-64 bg-neutral-900 border border-neutral-800 rounded-lg shadow-xl z-[100]"
+                className="absolute top-full left-0 mt-1 w-64 bg-neutral-900 border border-neutral-800 rounded-lg shadow-xl z-[100]"
+                onMouseEnter={showServicesDropdown}
+                onMouseLeave={hideServicesDropdown}
               >
                 <div className="py-2">
                   <LoadingLink 
