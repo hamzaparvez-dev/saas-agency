@@ -238,37 +238,37 @@ const MvpSolutions = () => {
           </h2>
           
           <div className="relative">
-            <div className="bg-white rounded-2xl p-8 shadow-xl border border-neutral-200">
+            <div className="bg-gradient-to-br from-white to-neutral-50 rounded-2xl p-8 md:p-12 shadow-xl border border-neutral-200">
               <div className="text-center">
-                <div className="text-2xl md:text-3xl font-bold text-purple-600 mb-4">
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-neutral-800 leading-relaxed mb-6 px-4">
                   &ldquo;{mvpProjects[activeTestimonial].quote}&rdquo;
                 </div>
-                <div className="mb-6">
-                  <div className="text-xl font-semibold text-neutral-800">
+                <div className="mb-8">
+                  <div className="text-xl font-semibold text-neutral-900">
                     {mvpProjects[activeTestimonial].name}
                   </div>
-                  <div className="text-neutral-600">
+                  <div className="text-neutral-700 font-medium">
                     {mvpProjects[activeTestimonial].role}
                   </div>
                 </div>
                 
                 {/* Project Metrics */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-neutral-800">{mvpProjects[activeTestimonial].industry}</div>
-                    <div className="text-sm text-neutral-600">Industry</div>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+                  <div className="text-center p-4 bg-neutral-50 rounded-lg">
+                    <div className="text-xl font-bold text-neutral-900">{mvpProjects[activeTestimonial].industry}</div>
+                    <div className="text-sm text-neutral-700 font-medium">Industry</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-green-600">{mvpProjects[activeTestimonial].funding}</div>
-                    <div className="text-sm text-neutral-600">Funding Raised</div>
+                  <div className="text-center p-4 bg-green-50 rounded-lg">
+                    <div className="text-xl font-bold text-green-700">{mvpProjects[activeTestimonial].funding}</div>
+                    <div className="text-sm text-green-600 font-medium">Funding Raised</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600">{mvpProjects[activeTestimonial].timeframe}</div>
-                    <div className="text-sm text-neutral-600">Time to Market</div>
+                  <div className="text-center p-4 bg-blue-50 rounded-lg">
+                    <div className="text-xl font-bold text-blue-700">{mvpProjects[activeTestimonial].timeframe}</div>
+                    <div className="text-sm text-blue-600 font-medium">Time to Market</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-purple-600">{mvpProjects[activeTestimonial].users}</div>
-                    <div className="text-sm text-neutral-600">Users Acquired</div>
+                  <div className="text-center p-4 bg-purple-50 rounded-lg">
+                    <div className="text-xl font-bold text-purple-700">{mvpProjects[activeTestimonial].users}</div>
+                    <div className="text-sm text-purple-600 font-medium">Users Acquired</div>
                   </div>
                 </div>
               </div>
@@ -290,8 +290,8 @@ const MvpSolutions = () => {
         </div>
 
          {/* Call to Action */}
-         <div className="text-center">
-          <LoadingLink href="/book" className="inline-flex h-12 items-center justify-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-600 px-8 font-medium text-white transition-colors hover:from-cyan-600 hover:to-blue-700">
+         <div className="text-center mt-16">
+          <LoadingLink href="/book" className="group relative inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-white font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/25 hover:scale-105 cursor-pointer">
 
             <span className="relative z-10 flex items-center gap-4">
               Start Your Project Today

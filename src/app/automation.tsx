@@ -169,7 +169,7 @@ const Automation = () => {
         </div>
 
         {/* Interactive Demo Button */}
-        <div className="text-center">
+        <div className="text-center mt-16">
           <LoadingLink href="/services/ai-automation" className="group relative inline-block px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg text-white font-semibold text-lg transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/25 hover:scale-105 cursor-pointer">
             <span className="relative z-10 flex items-center gap-2">
             See AI Automation in Action
