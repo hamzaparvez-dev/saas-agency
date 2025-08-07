@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { AlignJustify, X, ChevronDown } from "lucide-react";
 import { usePathname } from "next/navigation";
@@ -28,6 +28,8 @@ const Navbar = ({
   const [isDropDownVisible, setIsDropDownVisible] = useState(false);
   const [isServicesDropdownVisible, setIsServicesDropdownVisible] = useState(false);
   const [servicesDropdownTimeout, setServicesDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
+  const [justOpened, setJustOpened] = useState(false);
+  const justOpenedTimeout = useRef<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
 
   const toggleDropDown = () => {
@@ -43,24 +45,55 @@ const Navbar = ({
       clearTimeout(servicesDropdownTimeout);
       setServicesDropdownTimeout(null);
     }
+    if (justOpenedTimeout.current) {
+      clearTimeout(justOpenedTimeout.current);
+    }
     setIsServicesDropdownVisible(true);
+    setJustOpened(true);
+    justOpenedTimeout.current = setTimeout(() => {
+      setJustOpened(false);
+    }, 200);
   };
 
   const hideServicesDropdown = () => {
+    if (servicesDropdownTimeout) {
+      clearTimeout(servicesDropdownTimeout);
+      setServicesDropdownTimeout(null);
+    }
+    if (justOpened) {
+      // Prevent closing if just opened
+      return;
+    }
     const timeout = setTimeout(() => {
       setIsServicesDropdownVisible(false);
-    }, 150); // 150ms delay to prevent accidental closing
+    }, 150);
     setServicesDropdownTimeout(timeout);
   };
 
-  // Cleanup timeout on unmount
+  // Cleanup timeouts on unmount
   useEffect(() => {
     return () => {
       if (servicesDropdownTimeout) {
         clearTimeout(servicesDropdownTimeout);
       }
+      if (justOpenedTimeout.current) {
+        clearTimeout(justOpenedTimeout.current);
+      }
     };
   }, [servicesDropdownTimeout]);
+
+  // Reset dropdown state on navigation
+  useEffect(() => {
+    setIsServicesDropdownVisible(false);
+    setJustOpened(false);
+    if (servicesDropdownTimeout) {
+      clearTimeout(servicesDropdownTimeout);
+      setServicesDropdownTimeout(null);
+    }
+    if (justOpenedTimeout.current) {
+      clearTimeout(justOpenedTimeout.current);
+    }
+  }, [pathname]);
 
   // Check if current page is a service page
   const isServicePage = pathname?.startsWith('/services/');

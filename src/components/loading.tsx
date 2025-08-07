@@ -17,9 +17,9 @@ const Loading = ({ isLoading }: LoadingProps) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/[0.96] backdrop-blur-sm"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-md"
         >
-          <div className="text-center">
+          <div className="text-center bg-black/70 rounded-2xl shadow-xl border border-white/10 px-10 py-8">
             {/* Logo with spinning animation */}
             <motion.div
               animate={{ 
@@ -50,7 +50,6 @@ const Loading = ({ isLoading }: LoadingProps) => {
               className="space-y-4"
             >
               <h3 className="text-xl font-semibold text-white">Loading...</h3>
-              
               {/* Animated dots */}
               <div className="flex justify-center space-x-1">
                 {[0, 1, 2].map((index) => (
@@ -70,7 +69,6 @@ const Loading = ({ isLoading }: LoadingProps) => {
                   />
                 ))}
               </div>
-
               {/* Progress bar */}
               <div className="w-64 h-1 bg-neutral-800 rounded-full mx-auto overflow-hidden">
                 <motion.div
