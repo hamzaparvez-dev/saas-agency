@@ -2,21 +2,21 @@ import { MetadataRoute } from 'next'
 import { getAllBlogPosts } from '@/lib/blog'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.genuinestack.com/' // Replace with your actual domain
+  const baseUrl = 'https://www.genuinestack.com' // Your actual domain
   
-  // Static pages
+  // Static pages - High priority core pages
   const staticPages = [
     {
       url: baseUrl,
       lastModified: new Date(),
       changeFrequency: 'daily' as const,
-      priority: 1,
+      priority: 1.0,
     },
     {
       url: `${baseUrl}/about`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
-      priority: 0.8,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/portfolio`,
@@ -34,26 +34,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/pricing`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
-      priority: 0.8,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/contact`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/book`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
-      priority: 0.7,
+      priority: 0.8,
     },
   ]
 
-  // Service pages
+  // Service pages - High value conversion pages
   const servicePages = [
     'software-development',
-    'api-development',
+    'api-development', 
     'mvp-development',
     'enterprise-websites',
     'ai-automation',
@@ -62,10 +62,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/services/${service}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
-    priority: 0.8,
+    priority: 0.9,
   }))
 
-  // Portfolio case study pages
+  // Additional service-related pages for better coverage
+  const additionalServicePages = [
+    {
+      url: `${baseUrl}/services`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+  ]
+
+  // Portfolio case study pages - Showcase our work
   const portfolioPages = [
     'silk-design-system',
     'polpharma-api-website',
@@ -83,21 +93,80 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/portfolio/${project}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
-    priority: 0.7,
+    priority: 0.8,
   }))
 
-  // Blog posts
+  // SEO and conversion focused pages
+  const seoPages = [
+    {
+      url: `${baseUrl}/faq`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/testimonials`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/automation`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/mvp-solutions`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/api-developements`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/shopify-stores`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/SoftwareDevelopment`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+  ]
+
+  // Blog posts - Fresh content for SEO
   const blogPosts = getAllBlogPosts().map(post => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post.updatedAt),
     changeFrequency: 'weekly' as const,
-    priority: 0.6,
+    priority: 0.7,
   }))
+
+  // Admin pages (if accessible publicly)
+  const adminPages = [
+    {
+      url: `${baseUrl}/admin/blog`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.3,
+    },
+  ]
 
   return [
     ...staticPages,
     ...servicePages,
+    ...additionalServicePages,
     ...portfolioPages,
+    ...seoPages,
     ...blogPosts,
+    ...adminPages,
   ]
 }
