@@ -362,7 +362,7 @@ const projectsData = {
     title: "High-Performance Trading Platform",
     subtitle: "FINTECH",
     description: "Real-time trading application processing 100M+ transactions daily with advanced analytics",
-    image: "/images/mobile-dev.jpg",
+    image: "/images/High-Performance Trading Platform.png",
     tags: ["React Native", "WebSocket", "Blockchain", "Analytics"],
     category: "FINTECH",
     duration: "10 months",
@@ -424,7 +424,7 @@ const projectsData = {
       quote: "Our trading platform has become the go-to choice for serious traders. The performance, reliability, and feature set are unmatched in the industry.",
       author: "David Kim",
       position: "Chief Technology Officer",
-      company: "TradeTech Solutions"
+      company: "CMC MARKETS"
     }
   },
 
@@ -432,7 +432,7 @@ const projectsData = {
     title: "Multi-Vendor E-commerce Marketplace Revolution",
     subtitle: "E-COMMERCE PLATFORM",
     description: "Comprehensive marketplace platform connecting thousands of vendors with millions of customers worldwide",
-    image: "/images/ecom-project.png",
+    image: "/images/multi-vendor-ecom.png",
     tags: ["React", "Node.js", "PostgreSQL", "Redis"],
     category: "E-COMMERCE PLATFORM",
     duration: "14 months",
@@ -494,7 +494,7 @@ const projectsData = {
       quote: "This marketplace platform has exceeded all our expectations. The vendor tools are intuitive, the customer experience is seamless, and the scalability has supported our rapid growth.",
       author: "Maria Gonzalez",
       position: "Chief Product Officer",
-      company: "MarketHub Global"
+      company: "Vinted.com"
     }
   },
 
@@ -502,7 +502,7 @@ const projectsData = {
     title: "Digital Transformation in Life Sciences Manufacturing",
     subtitle: "MANUFACTURING SYSTEMS",
     description: "Advanced manufacturing execution system for pharmaceutical and life sciences companies",
-    image: "/images/strand-life-science(manufacturing-site).png",
+    image: "/images/strand-life-science.png",
     tags: ["Python", "IoT", "Machine Learning", "Compliance"],
     category: "MANUFACTURING SYSTEMS",
     duration: "18 months",
