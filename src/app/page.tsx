@@ -11,6 +11,7 @@ import Automation from "./automation";
 import Services from "./services";
 import { useRef } from "react";
 import FAQS from "./faq";
+import { AnimatedTestimonialsDemo } from "./testimonials";
 import Footer from "@/components/footer";
 
 export default function Home() {
@@ -90,6 +91,7 @@ export default function Home() {
         <div ref={AutomationRef}>
           <Automation/>
         </div>
+        <AnimatedTestimonialsDemo />
         <FAQS />
         <Footer />
       </div>

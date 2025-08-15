@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { getAllBlogPosts } from '@/lib/blog'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://yourdomain.com' // Replace with your actual domain
+  const baseUrl = 'https://www.genuinestack.com/' // Replace with your actual domain
   
   // Static pages
   const staticPages = [
