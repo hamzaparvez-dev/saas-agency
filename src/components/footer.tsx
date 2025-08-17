@@ -28,7 +28,7 @@ const Footer = () => {
                 className="w-10 h-10"
               />
               <span className="ml-3 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-                SaaS Agency
+                Genuine Stack
               </span>
             </div>
             <p className="text-neutral-300 text-sm leading-relaxed mb-6">
@@ -174,7 +174,7 @@ const Footer = () => {
         <div className="py-8 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
             <p className="text-neutral-400 text-sm">
-              © 2024 SaaS Agency. All rights reserved.
+              © 2024 Genuine Stack. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <Link href="/privacy" className="text-neutral-400 hover:text-blue-400 text-sm transition-colors">
