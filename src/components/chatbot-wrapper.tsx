@@ -3,87 +3,95 @@
 import { useEffect, useState } from 'react';
 
 export default function ChatbotWrapper() {
-  const [isProduction, setIsProduction] = useState(false);
   const [chatbotLoaded, setChatbotLoaded] = useState(false);
+  const [showFallback, setShowFallback] = useState(false);
 
   useEffect(() => {
-    // Detect if we're in production
-    const isProd = process.env.NODE_ENV === 'production' || 
-                   (window.location.hostname !== 'localhost' && 
-                    window.location.hostname !== '127.0.0.1');
-    setIsProduction(isProd);
+    // Check if we're on Vercel production
+    const isVercel = window.location.hostname.includes('vercel.app') || 
+                     window.location.hostname.includes('genuinestack.com') ||
+                     process.env.NODE_ENV === 'production';
 
-    if (isProd) {
-      // In production, try to load the chatbot with error handling
-      const loadChatbot = async () => {
+    if (isVercel) {
+      // On Vercel, try a different approach
+      const loadChatbotVercel = () => {
         try {
-          // Try to create a simple iframe first
+          // Create a container div first
+          const container = document.createElement('div');
+          container.id = 'chatbot-container';
+          container.style.cssText = 'position:fixed;bottom:20px;right:20px;width:350px;height:500px;z-index:9999;';
+          
+          // Create the iframe with minimal attributes
           const iframe = document.createElement('iframe');
-          iframe.style.cssText = 'position:fixed;bottom:20px;right:20px;width:350px;height:500px;border:none;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.3);z-index:9999;background-color:transparent;';
+          iframe.style.cssText = 'width:100%;height:100%;border:none;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.3);background-color:transparent;';
           iframe.frameBorder = '0';
           iframe.src = 'https://widget.botsonic.com/CDN/index.html?token=f9d5fa2f-3062-4676-a8e2-3b66cf2d5bcd&standalone=true';
           iframe.title = 'WriteSonic Chatbot';
-          iframe.allow = 'microphone; camera; geolocation';
-          iframe.referrerPolicy = 'no-referrer';
-          iframe.sandbox = 'allow-scripts allow-same-origin allow-forms allow-popups allow-modals';
+          
+          // Remove problematic attributes that Vercel blocks
+          // iframe.allow = 'microphone; camera; geolocation';
+          // iframe.referrerPolicy = 'no-referrer';
+          // iframe.sandbox = 'allow-scripts allow-same-origin allow-forms allow-popups allow-modals';
+          
+          container.appendChild(iframe);
+          document.body.appendChild(container);
+          
+          // Set success state
+          setChatbotLoaded(true);
           
           // Add error handling
           iframe.onerror = () => {
-            console.warn('Chatbot iframe failed to load');
-            setChatbotLoaded(false);
+            console.warn('Chatbot failed to load on Vercel');
+            setShowFallback(true);
+            container.remove();
           };
           
+          // Add load success
           iframe.onload = () => {
             setChatbotLoaded(true);
+            setShowFallback(false);
           };
           
-          document.body.appendChild(iframe);
-          
-          // Set a timeout to check if it loaded
+          // Timeout fallback
           setTimeout(() => {
             if (!chatbotLoaded) {
-              console.warn('Chatbot loading timeout, removing iframe');
-              iframe.remove();
-              setChatbotLoaded(false);
+              console.warn('Chatbot timeout on Vercel, showing fallback');
+              setShowFallback(true);
+              if (container.parentNode) {
+                container.remove();
+              }
             }
-          }, 10000); // 10 second timeout
+          }, 8000);
           
         } catch (error) {
-          console.warn('Failed to load chatbot:', error);
-          setChatbotLoaded(false);
+          console.warn('Failed to load chatbot on Vercel:', error);
+          setShowFallback(true);
         }
       };
       
-      loadChatbot();
+      // Delay loading to ensure DOM is ready
+      setTimeout(loadChatbotVercel, 1000);
     }
   }, [chatbotLoaded]);
 
-  // In development, show the normal iframe
-  if (!isProduction) {
+  // Show fallback message if chatbot fails on Vercel
+  if (showFallback) {
     return (
       <div className="fixed bottom-4 right-4 z-50">
-        <iframe 
-          style={{ 
-            height: '500px', 
-            width: '350px', 
-            border: 'none', 
-            borderRadius: '12px', 
-            boxShadow: '0 10px 30px rgba(0,0,0,0.3)',
-            backgroundColor: 'transparent'
-          }}
-          frameBorder="0" 
-          src="https://widget.botsonic.com/CDN/index.html?token=f9d5fa2f-3062-4676-a8e2-3b66cf2d5bcd&standalone=true"
-          title="WriteSonic Chatbot"
-          allow="microphone; camera; geolocation"
-          loading="lazy"
-          referrerPolicy="no-referrer"
-          sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals"
-        />
+        <div className="bg-white rounded-lg p-4 shadow-lg max-w-xs">
+          <div className="text-center">
+            <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-2">
+              <span className="text-white text-sm">💬</span>
+            </div>
+            <p className="text-sm text-gray-600 mb-2">Chatbot temporarily unavailable</p>
+            <p className="text-xs text-gray-400">Please contact us directly</p>
+          </div>
+        </div>
       </div>
     );
   }
 
-  // In production, show loading state or nothing if failed
+  // Show loading state while attempting to load
   if (!chatbotLoaded) {
     return (
       <div className="fixed bottom-4 right-4 z-50">
@@ -97,6 +105,6 @@ export default function ChatbotWrapper() {
     );
   }
 
-  // Chatbot loaded successfully in production
+  // Chatbot loaded successfully
   return null;
 }
