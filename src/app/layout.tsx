@@ -24,6 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="referrer" content="no-referrer-when-downgrade" />
+        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://widget.botsonic.com https://widget.writesonic.com https://api-bot.writesonic.com; frame-src 'self' https://widget.botsonic.com https://widget.writesonic.com; connect-src 'self' https://api-bot.writesonic.com; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; font-src 'self' data: https:;" />
+      </head>
       <body className={`${font.className} ${font.variable}`}>
         <ClientWrapper>
           {children}

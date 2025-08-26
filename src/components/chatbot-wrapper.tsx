@@ -13,7 +13,7 @@ export default function ChatbotWrapper() {
           backgroundColor: 'transparent'
         }}
         frameBorder="0" 
-        src="https://widget.botsonic.com/CDN/index.html?service-base-url=https%3A%2F%2Fapi-bot.writesonic.com&token=f9d5fa2f-3062-4676-a8e2-3b66cf2d5bcd&instance-name=Botsonic&standalone=true"
+        src="https://widget.botsonic.com/CDN/index.html?token=f9d5fa2f-3062-4676-a8e2-3b66cf2d5bcd&standalone=true"
         title="WriteSonic Chatbot"
         allow="microphone; camera; geolocation"
         loading="lazy"
