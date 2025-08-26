@@ -1,0 +1,282 @@
+---
+alwaysApply: true
+---
+# Cursor AI Rules - Strict Development Guidelines
+
+## CORE PRINCIPLES
+- ONLY make changes explicitly requested by the user
+- NEVER remove, modify, or refactor existing code unless specifically asked
+- PRESERVE all existing functionality and structure
+- NO unsolicited improvements, optimizations, or "best practices"
+- MINIMAL changes only - do exactly what's asked, nothing more
+
+## CODE MODIFICATION RULES
+
+### What NOT to do:
+- Do NOT refactor existing code without explicit request
+- Do NOT rename variables, functions, or files
+- Do NOT change existing CSS classes or IDs
+- Do NOT remove comments or documentation
+- Do NOT reorganize file structure
+- Do NOT add dependencies unless required for the specific request
+- Do NOT change indentation, formatting, or code style unless asked
+- Do NOT optimize existing code unless specifically requested
+- Do NOT add error handling unless required for the feature
+- Do NOT change HTML structure if adding CSS/JS changes
+
+### What TO do:
+- Add ONLY the requested functionality
+- Keep new code minimal and focused
+- Use existing patterns and conventions from the codebase
+- Preserve all existing classes, IDs, and structure
+- Add code in logical locations without disrupting existing flow
+- Comment new additions clearly and briefly
+
+## COMMUNICATION RULES
+
+### Response Format:
+```
+## Changes Made:
+- Added [specific change] to [file]
+- Modified [specific element] in [location]
+- Created [new file/function] for [purpose]
+
+## Files Modified:
+- filename.ext (line X-Y: brief description)
+
+[Brief explanation if needed - max 2 sentences]
+```
+
+### Token Conservation:
+- Provide concise summaries of changes
+- Use bullet points for clarity
+- Avoid verbose explanations
+- Focus on what was added/changed, not why
+- No redundant information
+
+## FILE HANDLING RULES
+
+### New Files:
+- Only create new files when explicitly requested
+- Use naming conventions from existing codebase
+- Keep file structure consistent with project
+
+### Existing Files:
+- Append new code at appropriate locations
+- Do NOT rewrite entire files unless specifically asked
+- Preserve existing imports, variables, and functions
+- Add minimal necessary code only
+
+## CSS/STYLING RULES
+- Add new CSS rules without modifying existing ones
+- Use specific selectors to avoid conflicts
+- Preserve existing class names and structure
+- Add new classes with clear, non-conflicting names
+- Do NOT change existing color schemes unless requested
+
+## JAVASCRIPT RULES
+- Add new functions without modifying existing ones
+- Preserve existing event listeners and handlers
+- Use existing variable naming patterns
+- Do NOT change existing DOM manipulation code
+- Add minimal necessary JavaScript only
+
+## HTML RULES
+- Add new elements in requested locations only
+- Preserve existing structure and hierarchy
+- Keep existing classes and IDs intact
+- Use consistent markup patterns from existing code
+
+## TESTING & VALIDATION
+- Ensure new code doesn't break existing functionality
+- Test only the specific changes made
+- Verify existing features still work
+- Do NOT refactor for testing purposes
+
+## ERROR HANDLING
+- Address only errors directly related to new code
+- Do NOT fix unrelated bugs unless specifically asked
+- Preserve existing error handling patterns
+- Add minimal necessary error handling only
+
+## DEPENDENCIES & IMPORTS
+- Use existing dependencies when possible
+- Only add new dependencies if absolutely required
+- Preserve existing import statements
+- Add new imports at appropriate locations without reorganizing
+
+## VERSION CONTROL BEST PRACTICE
+- Make focused, single-purpose changes
+- Preserve git history and existing commits
+- Do NOT squash or reorganize existing commits
+- Keep changes atomic and specific
+
+## DOCUMENTATION RULES
+- Add brief comments for new code only
+- Do NOT update existing documentation unless asked
+- Keep documentation minimal and focused
+- Use existing documentation style and format
+
+## SECURITY CONSIDERATIONS
+- Maintain existing security patterns
+- Do NOT modify authentication/authorization code
+- Preserve existing input validation
+- Add security measures only if specifically requested
+
+## PERFORMANCE RULES
+- Do NOT optimize existing code without request
+- Keep new code performance-neutral
+- Preserve existing loading patterns
+- Add performance improvements only when asked
+
+## FRAMEWORK-SPECIFIC RULES (React/Vue/Angular)
+- Preserve existing component structure
+- Do NOT refactor components unless requested
+- Keep existing state management patterns
+- Add new components/hooks minimally
+
+## FINAL REMINDERS
+- User's explicit request is the ONLY requirement
+- Existing codebase is sacred - modify minimally
+- When in doubt, ask for clarification
+- Less is more - minimal changes preferred
+- Preserve, don't replace# Cursor AI Rules - Strict Development Guidelines
+
+## CORE PRINCIPLES
+- ONLY make changes explicitly requested by the user
+- NEVER remove, modify, or refactor existing code unless specifically asked
+- PRESERVE all existing functionality and structure
+- NO unsolicited improvements, optimizations, or "best practices"
+- MINIMAL changes only - do exactly what's asked, nothing more
+
+## CODE MODIFICATION RULES
+
+### What NOT to do:
+- Do NOT refactor existing code without explicit request
+- Do NOT rename variables, functions, or files
+- Do NOT change existing CSS classes or IDs
+- Do NOT remove comments or documentation
+- Do NOT reorganize file structure
+- Do NOT add dependencies unless required for the specific request
+- Do NOT change indentation, formatting, or code style unless asked
+- Do NOT optimize existing code unless specifically requested
+- Do NOT add error handling unless required for the feature
+- Do NOT change HTML structure if adding CSS/JS changes
+
+### What TO do:
+- Add ONLY the requested functionality
+- Keep new code minimal and focused
+- Use existing patterns and conventions from the codebase
+- Preserve all existing classes, IDs, and structure
+- Add code in logical locations without disrupting existing flow
+- Comment new additions clearly and briefly
+
+## COMMUNICATION RULES
+
+### Response Format:
+```
+## Changes Made:
+- Added [specific change] to [file]
+- Modified [specific element] in [location]
+- Created [new file/function] for [purpose]
+
+## Files Modified:
+- filename.ext (line X-Y: brief description)
+
+[Brief explanation if needed - max 2 sentences]
+```
+
+### Token Conservation:
+- Provide concise summaries of changes
+- Use bullet points for clarity
+- Avoid verbose explanations
+- Focus on what was added/changed, not why
+- No redundant information
+
+## FILE HANDLING RULES
+
+### New Files:
+- Only create new files when explicitly requested
+- Use naming conventions from existing codebase
+- Keep file structure consistent with project
+
+### Existing Files:
+- Append new code at appropriate locations
+- Do NOT rewrite entire files unless specifically asked
+- Preserve existing imports, variables, and functions
+- Add minimal necessary code only
+
+## CSS/STYLING RULES
+- Add new CSS rules without modifying existing ones
+- Use specific selectors to avoid conflicts
+- Preserve existing class names and structure
+- Add new classes with clear, non-conflicting names
+- Do NOT change existing color schemes unless requested
+
+## JAVASCRIPT RULES
+- Add new functions without modifying existing ones
+- Preserve existing event listeners and handlers
+- Use existing variable naming patterns
+- Do NOT change existing DOM manipulation code
+- Add minimal necessary JavaScript only
+
+## HTML RULES
+- Add new elements in requested locations only
+- Preserve existing structure and hierarchy
+- Keep existing classes and IDs intact
+- Use consistent markup patterns from existing code
+
+## TESTING & VALIDATION
+- Ensure new code doesn't break existing functionality
+- Test only the specific changes made
+- Verify existing features still work
+- Do NOT refactor for testing purposes
+
+## ERROR HANDLING
+- Address only errors directly related to new code
+- Do NOT fix unrelated bugs unless specifically asked
+- Preserve existing error handling patterns
+- Add minimal necessary error handling only
+
+## DEPENDENCIES & IMPORTS
+- Use existing dependencies when possible
+- Only add new dependencies if absolutely required
+- Preserve existing import statements
+- Add new imports at appropriate locations without reorganizing
+
+## VERSION CONTROL BEST PRACTICE
+- Make focused, single-purpose changes
+- Preserve git history and existing commits
+- Do NOT squash or reorganize existing commits
+- Keep changes atomic and specific
+
+## DOCUMENTATION RULES
+- Add brief comments for new code only
+- Do NOT update existing documentation unless asked
+- Keep documentation minimal and focused
+- Use existing documentation style and format
+
+## SECURITY CONSIDERATIONS
+- Maintain existing security patterns
+- Do NOT modify authentication/authorization code
+- Preserve existing input validation
+- Add security measures only if specifically requested
+
+## PERFORMANCE RULES
+- Do NOT optimize existing code without request
+- Keep new code performance-neutral
+- Preserve existing loading patterns
+- Add performance improvements only when asked
+
+## FRAMEWORK-SPECIFIC RULES (React/Vue/Angular)
+- Preserve existing component structure
+- Do NOT refactor components unless requested
+- Keep existing state management patterns
+- Add new components/hooks minimally
+
+## FINAL REMINDERS
+- User's explicit request is the ONLY requirement
+- Existing codebase is sacred - modify minimally
+- When in doubt, ask for clarification
+- Less is more - minimal changes preferred
+- Preserve, don't replace
