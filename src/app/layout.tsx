@@ -24,37 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <meta name="referrer" content="no-referrer-when-downgrade" />
-        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; frame-src 'self' https:; connect-src 'self' https:; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https:; font-src 'self' data: https:;" />
-      </head>
       <body className={`${font.className} ${font.variable}`}>
         <ClientWrapper>
           {children}
         </ClientWrapper>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function (w, d, s, o, f, js, fjs) {
-                w["botsonic_widget"] = o;
-                w[o] =
-                  w[o] ||
-                  function () {
-                    (w[o].q = w[o].q || []).push(arguments);
-                  };
-                (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
-                js.id = o;
-                js.src = f;
-                js.async = 1;
-                fjs.parentNode.insertBefore(js, fjs);
-              })(window, document, "script", "Botsonic", "https://widget.botsonic.com/CDN/botsonic.min.js");
-              Botsonic("init", {
-                serviceBaseUrl: "https://api-bot.writesonic.com",
-                token: "f9d5fa2f-3062-4676-a8e2-3b66cf2d5bcd",
-              });
-            `,
-          }}
-        />
       </body>
     </html>
   );
