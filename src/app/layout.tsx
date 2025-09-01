@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./fonts.css";
 import ClientWrapper from "@/components/client-wrapper";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 // Local font configuration
 const font = {
@@ -28,6 +30,8 @@ export default function RootLayout({
         <ClientWrapper>
           {children}
         </ClientWrapper>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -19,6 +19,8 @@
     "@tabler/icons-react": "^3.34.1",
     "@types/nodemailer": "^6.4.14",
     "@types/react-slick": "^0.23.13",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "data-uri-to-buffer": "^6.0.2",
