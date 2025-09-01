@@ -13,7 +13,7 @@ const font = {
 
 export const metadata: Metadata = {
   // Add this line
-  metadataBase: new URL('https://your-domain.com'), 
+  metadataBase: new URL('https://www.genuinestack.com/'), 
   
   title: "SaaS Agency - Custom Software Development & AI Solutions",
   description: "Professional SaaS development agency specializing in custom software, API development, MVP creation, enterprise websites, and AI automation solutions.",
