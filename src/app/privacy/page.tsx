@@ -40,7 +40,7 @@ export default function PrivacyPolicy() {
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">Introduction</h2>
               <p className="text-neutral-300 leading-relaxed">
-                This Privacy Policy describes how our SaaS development agency ("we," "us," or "our") collects, uses, and shares your personal information when you visit our website, use our services, or interact with us in any way. By using our services, you agree to the collection and use of information in accordance with this policy.
+                This Privacy Policy describes how our SaaS development agency (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;) collects, uses, and shares your personal information when you visit our website, use our services, or interact with us in any way. By using our services, you agree to the collection and use of information in accordance with this policy.
               </p>
             </section>
 
@@ -155,7 +155,7 @@ export default function PrivacyPolicy() {
 
             {/* Children's Privacy */}
             <section>
-              <h2 className="text-2xl font-semibold text-white mb-4">Children's Privacy</h2>
+              <h2 className="text-2xl font-semibold text-white mb-4">Children&apos;s Privacy</h2>
               <p className="text-neutral-300 leading-relaxed">
                 Our services are not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have collected such information, please contact us immediately.
               </p>
@@ -165,7 +165,7 @@ export default function PrivacyPolicy() {
             <section>
               <h2 className="text-2xl font-semibold text-white mb-4">Changes to This Policy</h2>
               <p className="text-neutral-300 leading-relaxed">
-                We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last updated" date. We encourage you to review this policy periodically.
+                We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the &ldquo;Last updated&rdquo; date. We encourage you to review this policy periodically.
               </p>
             </section>
 

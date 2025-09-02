@@ -93,7 +93,7 @@ const Navbar = ({
     if (justOpenedTimeout.current) {
       clearTimeout(justOpenedTimeout.current);
     }
-  }, [pathname]);
+  }, [pathname, servicesDropdownTimeout]);
 
   // Check if current page is a service page
   const isServicePage = pathname?.startsWith('/services/');
