@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   }
 
   const seoTitle = post.seoTitle || post.title;
-  const baseUrl = 'https://yourdomain.com'; // Replace with your actual domain
+  const baseUrl = 'https://www.genuinestack.com';
 
   return {
     title: `${seoTitle} | SaaS Development Blog`,
@@ -105,7 +105,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     });
   };
 
-  const shareUrl = `https://yourdomain.com/blog/${post.slug}`;
+  const shareUrl = `https://www.genuinestack.com/blog/${post.slug}`;
   const shareText = `Check out this article: ${post.title}`;
 
   return (
@@ -119,7 +119,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             "@type": "BlogPosting",
             "headline": post.title,
             "description": post.metaDescription,
-            "image": `https://yourdomain.com${post.featuredImage}`,
+            "image": `https://www.genuinestack.com${post.featuredImage}`,
             "author": {
               "@type": "Person",
               "name": post.author.name,
@@ -130,14 +130,14 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               "name": "SaaS Agency",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://yourdomain.com/logo.svg"
+                "url": "https://www.genuinestack.com/logo/logo.svg"
               }
             },
             "datePublished": post.publishedAt,
             "dateModified": post.updatedAt,
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": `https://yourdomain.com/blog/${post.slug}`
+              "@id": `https://www.genuinestack.com/blog/${post.slug}`
             },
             "articleSection": post.category,
             "keywords": post.metaKeywords,

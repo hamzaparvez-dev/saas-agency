@@ -1,19 +1,6 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import "./fonts.css";
-import ClientWrapper from "@/components/client-wrapper";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-
-// Local font configuration
-const font = {
-  className: 'font-poppins',
-  variable: '--font-poppins'
-};
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.genuinestack.com/'), 
-  
   title: "Genuine Stack - SaaS Development Agency | Custom Software & AI Solutions",
   description: "Genuine Stack is a leading SaaS development agency specializing in custom software development, API development, MVP creation, enterprise websites, and AI automation solutions. Transform your ideas into powerful digital products.",
   keywords: "Genuine Stack, SaaS development agency, custom software development, API development, MVP development, enterprise websites, AI automation, software development company, web application development, mobile app development, digital transformation",
@@ -24,6 +11,10 @@ export const metadata: Metadata = {
     email: false,
     address: false,
     telephone: false,
+  },
+  metadataBase: new URL('https://www.genuinestack.com'),
+  alternates: {
+    canonical: '/',
   },
   openGraph: {
     title: "Genuine Stack - Premier SaaS Development Agency",
@@ -64,20 +55,3 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body className={`${font.className} ${font.variable}`}>
-        <ClientWrapper>
-          {children}
-        </ClientWrapper>
-        <Analytics />
-        <SpeedInsights />
-      </body>
-    </html>
-  );
-}

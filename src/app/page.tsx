@@ -13,6 +13,7 @@ import { useRef } from "react";
 import FAQS from "./faq";
 import { AnimatedTestimonialsDemo } from "./testimonials";
 import Footer from "@/components/footer";
+import StructuredData from "@/components/structured-data";
 
 export default function Home() {
   const SoftwareDevelopmentRef = useRef<HTMLDivElement>(null);
@@ -46,7 +47,9 @@ export default function Home() {
     servicesRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+    <>
+      <StructuredData />
+      <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <Navbar
         scrollToWebsiteDesign={scrollToWebsiteDesign}
         scrollToGraphicDesign={scrollToGraphicDesign}
@@ -57,12 +60,12 @@ export default function Home() {
 
       <Spotlight className="hidden md:flex md:-top-80 left-80  " fill="white" />
       <div className="p-4 mx-auto relative z-10 w-full pt-16 md:pt-32 px-2">
-        <div className="text-4xl pb-5 md:text-7xl px-6 text-center  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 bg-opacity-50">
+        <h1 className="text-4xl pb-5 md:text-7xl px-6 text-center  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 bg-opacity-50">
           Build, scale, and <br /> automate your software
-        </div>
+        </h1>
         <p className="mt-4 text-lg font-normal  text-neutral-300 max-w-lg text-center mx-auto px-4">
-          From MVP to enterprise solutions. We are a SaaS development agency
-          specializing in custom software, APIs, and AI automation.
+          From MVP to enterprise solutions. Genuine Stack is a premier SaaS development agency
+          specializing in custom software development, APIs, and AI automation solutions.
         </p>
 
         <Link
@@ -95,6 +98,7 @@ export default function Home() {
         <FAQS />
         <Footer />
       </div>
-    </div>
+      </div>
+    </>
   );
 }

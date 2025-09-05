@@ -73,27 +73,27 @@ export default function BlogPage() {
             "@type": "Blog",
             "name": "SaaS Development Blog",
             "description": "Expert insights on SaaS development, API design, and software engineering",
-            "url": "https://yourdomain.com/blog",
+            "url": "https://www.genuinestack.com/blog",
             "publisher": {
               "@type": "Organization",
               "name": "SaaS Agency",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://yourdomain.com/logo.svg"
+                "url": "https://www.genuinestack.com/logo/logo.svg"
               }
             },
             "blogPost": blogPosts.map(post => ({
               "@type": "BlogPosting",
               "headline": post.title,
               "description": post.excerpt,
-              "url": `https://yourdomain.com/blog/${post.slug}`,
+              "url": `https://www.genuinestack.com/blog/${post.slug}`,
               "datePublished": post.publishedAt,
               "dateModified": post.updatedAt,
               "author": {
                 "@type": "Person",
                 "name": post.author.name
               },
-              "image": `https://yourdomain.com${post.featuredImage}`,
+              "image": `https://www.genuinestack.com${post.featuredImage}`,
               "wordCount": post.content.split(' ').length,
               "timeRequired": `PT${post.readTime}M`
             }))
