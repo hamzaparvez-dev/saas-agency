@@ -4,10 +4,10 @@ import {
   Mail, 
   Phone, 
   MapPin,
-  Github,
   Linkedin,
   Twitter,
-  Instagram
+  Instagram,
+  Facebook
 } from "lucide-react";
 
 const Footer = () => {
@@ -38,17 +38,41 @@ const Footer = () => {
             
             {/* Social Links */}
             <div className="flex space-x-4">
-              <Link href="#" className="text-neutral-400 hover:text-blue-400 transition-colors">
-                <Github className="w-6 h-6" />
-              </Link>
-              <Link href="#" className="text-neutral-400 hover:text-blue-400 transition-colors">
+              <Link
+                href="https://www.linkedin.com/company/genuinestack/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Genuine Stack on LinkedIn"
+                className="text-neutral-400 hover:text-blue-400 transition-colors"
+              >
                 <Linkedin className="w-6 h-6" />
               </Link>
-              <Link href="#" className="text-neutral-400 hover:text-blue-400 transition-colors">
+              <Link
+                href="https://x.com/GenuineStack"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Genuine Stack on X (Twitter)"
+                className="text-neutral-400 hover:text-blue-400 transition-colors"
+              >
                 <Twitter className="w-6 h-6" />
               </Link>
-              <Link href="#" className="text-neutral-400 hover:text-blue-400 transition-colors">
+              <Link
+                href="https://www.instagram.com/bygenuinestack/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Genuine Stack on Instagram"
+                className="text-neutral-400 hover:text-blue-400 transition-colors"
+              >
                 <Instagram className="w-6 h-6" />
+              </Link>
+              <Link
+                href="https://www.facebook.com/profile.php?id=61580009018149"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Genuine Stack on Facebook"
+                className="text-neutral-400 hover:text-blue-400 transition-colors"
+              >
+                <Facebook className="w-6 h-6" />
               </Link>
             </div>
           </div>
