@@ -32,8 +32,8 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-neutral-300 text-sm leading-relaxed mb-6">
-              We are a SaaS development agency specializing in custom software, APIs, and AI automation. 
-              From MVP to enterprise solutions, we power your digital transformation.
+              <strong>Genuine Stack</strong> is a leading SaaS development agency specializing in custom software, APIs, and AI automation. 
+              From MVP to enterprise solutions, we power your digital transformation with cutting-edge technology.
             </p>
             
             {/* Social Links */}

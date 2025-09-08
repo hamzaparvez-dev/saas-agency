@@ -14,6 +14,7 @@ import FAQS from "./faq";
 import { AnimatedTestimonialsDemo } from "./testimonials";
 import Footer from "@/components/footer";
 import StructuredData from "@/components/structured-data";
+import SEOFAQ from "@/components/seo-faq";
 
 export default function Home() {
   const SoftwareDevelopmentRef = useRef<HTMLDivElement>(null);
@@ -49,6 +50,7 @@ export default function Home() {
   return (
     <>
       <StructuredData />
+      <SEOFAQ />
       <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <Navbar
         scrollToWebsiteDesign={scrollToWebsiteDesign}
@@ -64,8 +66,8 @@ export default function Home() {
           Build, scale, and <br /> automate your software
         </h1>
         <p className="mt-4 text-lg font-normal  text-neutral-300 max-w-lg text-center mx-auto px-4">
-          From MVP to enterprise solutions. Genuine Stack is a premier SaaS development agency
-          specializing in custom software development, APIs, and AI automation solutions.
+          From MVP to enterprise solutions. <strong>Genuine Stack</strong> is a premier SaaS development agency
+          specializing in custom software development, APIs, and AI automation solutions. Trusted by 50+ companies worldwide.
         </p>
 
         <Link
