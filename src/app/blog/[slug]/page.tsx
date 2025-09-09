@@ -4,6 +4,7 @@ import PricingNavbar from "@/components/pricing-navbar";
 import Footer from "@/components/footer";
 import LoadingLink from "@/components/loading-link";
 import ShareButtons from "@/components/share-buttons";
+import InternalLinks from "@/components/internal-links";
 import Image from "next/image";
 import { getBlogPostBySlug, getAllBlogPosts, getBlogPostsByCategory } from "@/lib/blog";
 import { ArrowLeft, Calendar, Clock, User } from "lucide-react";
@@ -127,7 +128,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             },
             "publisher": {
               "@type": "Organization",
-              "name": "SaaS Agency",
+              "name": "Genuine Stack",
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://www.genuinestack.com/logo/logo.svg"
@@ -144,6 +145,43 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
             "wordCount": post.content.split(' ').length,
             "timeRequired": `PT${post.readTime}M`,
             "articleBody": post.content
+          })
+        }}
+      />
+
+      {/* FAQ Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is Genuine Stack?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Genuine Stack is a leading SaaS development agency specializing in custom software development, API development, MVP creation, and AI automation solutions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can Genuine Stack help my business?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We help businesses transform their ideas into powerful digital products through expert development, modern technologies, and scalable solutions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What technologies does Genuine Stack use?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We use modern technologies including React, Next.js, Node.js, Python, AWS, and AI/ML frameworks to build cutting-edge solutions."
+                }
+              }
+            ]
           })
         }}
       />
@@ -298,6 +336,25 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               ))}
             </div>
 
+            {/* FAQ Section */}
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-2xl p-8 mb-12">
+              <h3 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h3>
+              <div className="space-y-6">
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-2">What is Genuine Stack?</h4>
+                  <p className="text-neutral-300">Genuine Stack is a leading SaaS development agency specializing in custom software development, API development, MVP creation, and AI automation solutions.</p>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-2">How can Genuine Stack help my business?</h4>
+                  <p className="text-neutral-300">We help businesses transform their ideas into powerful digital products through expert development, modern technologies, and scalable solutions.</p>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-2">What technologies does Genuine Stack use?</h4>
+                  <p className="text-neutral-300">We use modern technologies including React, Next.js, Node.js, Python, AWS, and AI/ML frameworks to build cutting-edge solutions.</p>
+                </div>
+              </div>
+            </div>
+
             {/* Author Bio */}
             <div className="bg-gradient-to-r from-neutral-900/50 to-neutral-800/50 border border-neutral-700 rounded-2xl p-8 mb-12">
               <div className="flex flex-col sm:flex-row gap-6">
@@ -316,6 +373,28 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
               </div>
             </div>
+
+            {/* Internal Links */}
+            <InternalLinks 
+              links={[
+                {
+                  href: "/services/software-development",
+                  title: "Custom Software Development Services",
+                  description: "Transform your ideas into powerful software solutions with our expert development team."
+                },
+                {
+                  href: "/services/api-development", 
+                  title: "API Development Services",
+                  description: "Build robust APIs and microservices with our experienced backend developers."
+                },
+                {
+                  href: "/contact",
+                  title: "Get Started Today",
+                  description: "Ready to build something amazing? Contact Genuine Stack for a free consultation."
+                }
+              ]}
+              title="Explore Our Services"
+            />
           </article>
 
           {/* Related Posts */}

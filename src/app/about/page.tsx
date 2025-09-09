@@ -3,6 +3,7 @@
 import PricingNavbar from "@/components/pricing-navbar";
 import Footer from "@/components/footer";
 import Image from "next/image";
+import Breadcrumbs from "@/components/breadcrumbs";
 
 const About = () => {
   return (
@@ -10,6 +11,11 @@ const About = () => {
       <PricingNavbar />
 
       <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
+        <div className="max-w-6xl mx-auto">
+          <Breadcrumbs items={[
+            { label: "About Us", href: "/about" }
+          ]} />
+        </div>
         {/* Hero Section */}
         <div className="text-4xl pb-5 md:text-7xl px-6 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
           Digital acceleration company
