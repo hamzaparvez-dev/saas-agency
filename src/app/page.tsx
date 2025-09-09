@@ -93,7 +93,7 @@ export default function Home() {
               with over 5 years of experience in transforming innovative ideas into powerful digital solutions. 
               We specialize in custom software development, API development, MVP creation, enterprise websites, 
               and AI automation solutions. Our team of expert developers, designers, and strategists has successfully 
-              delivered 150+ projects for startups and enterprises worldwide, helping them secure over $50M in funding 
+              delivered 150+ projects for startups and enterprises worldwide, helping them secure over $10M in funding 
               and achieve their digital transformation goals.
             </p>
           </div>
@@ -108,7 +108,7 @@ export default function Home() {
               <p className="text-neutral-300">Successfully launched products for startups and enterprises</p>
             </div>
             <div className="text-center p-6 bg-neutral-900/50 rounded-xl border border-neutral-800">
-              <h3 className="text-xl font-bold text-white mb-3">$50M+ Funding Secured</h3>
+              <h3 className="text-xl font-bold text-white mb-3">$10M+ Funding Secured</h3>
               <p className="text-neutral-300">Helped our clients raise significant investment through our MVPs</p>
             </div>
           </div>
