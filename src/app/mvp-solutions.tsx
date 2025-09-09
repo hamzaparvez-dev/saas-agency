@@ -149,26 +149,27 @@ const MvpSolutions = () => {
           MVP Development <br />
         </div>
 
-        <p className="mt-4 text-lg font-normal text-neutral-800 max-w-lg text-center mx-auto">
-          We build MVPs that help startups validate their ideas and secure funding quickly.
+        <p className="mt-6 text-xl font-normal text-neutral-700 max-w-2xl text-center mx-auto leading-relaxed">
+          We build MVPs that help startups validate their ideas and secure funding quickly. 
+          <span className="font-semibold text-neutral-800">Transform your concept into a market-ready product in just 4 weeks.</span>
         </p>
 
         {/* MVP Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 max-w-4xl mx-auto px-4">
           {mvpStats.map((stat, i) => (
-            <div key={i} className="text-center p-4 rounded-lg bg-white/80 backdrop-blur-sm border border-neutral-200 shadow-sm hover:shadow-md transition-shadow">
-              <div className="text-2xl md:text-3xl font-bold text-neutral-800">
+            <div key={i} className="text-center p-6 rounded-xl bg-white/90 backdrop-blur-sm border border-neutral-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="text-3xl md:text-4xl font-bold text-neutral-900 mb-2">
                 {stat.value}
                 <span className="text-purple-600">{stat.suffix}</span>
               </div>
-              <div className="text-sm text-neutral-600 mt-1">{stat.label}</div>
+              <div className="text-base font-medium text-neutral-700">{stat.label}</div>
             </div>
           ))}
         </div>
 
         {/* MVP Features */}
         <div className="mt-16 max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-neutral-800">
+          <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-neutral-900 leading-tight">
             What Makes Our MVPs Successful
           </h2>
           
@@ -176,18 +177,18 @@ const MvpSolutions = () => {
             {mvpFeatures.map((feature, i) => (
               <div
                 key={i}
-                className={`p-6 rounded-xl border transition-all duration-500 cursor-pointer transform hover:scale-105 ${
+                className={`p-8 rounded-2xl border transition-all duration-500 cursor-pointer transform hover:scale-105 ${
                   activeFeature === i
-                    ? "bg-white shadow-lg border-purple-300"
-                    : "bg-white/60 border-neutral-200 hover:bg-white/80"
+                    ? "bg-white shadow-2xl border-purple-300 shadow-purple-100"
+                    : "bg-white/80 border-neutral-200 hover:bg-white hover:shadow-lg"
                 }`}
                 onMouseEnter={() => setActiveFeature(i)}
               >
-                <div className={`w-12 h-12 rounded-lg mb-4 flex items-center justify-center bg-gradient-to-r ${feature.color}`}>
+                <div className={`w-14 h-14 rounded-xl mb-6 flex items-center justify-center bg-gradient-to-r ${feature.color} shadow-lg`}>
                   {feature.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-neutral-800 mb-2">{feature.title}</h3>
-                <p className="text-neutral-600 text-sm">{feature.description}</p>
+                <h3 className="text-xl font-bold text-neutral-900 mb-3">{feature.title}</h3>
+                <p className="text-neutral-700 text-base leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -195,7 +196,7 @@ const MvpSolutions = () => {
 
         {/* MVP Process */}
         <div className="mt-16 max-w-5xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-neutral-800">
+          <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-neutral-900 leading-tight">
             Our 4-Week MVP Process
           </h2>
           
@@ -216,12 +217,15 @@ const MvpSolutions = () => {
                     {activeProcess > i ? <CheckCircle className="w-6 h-6" /> : process.step}
                   </div>
                   <div className="text-center">
-                    <h3 className="text-lg font-semibold text-neutral-800 mb-2">{process.title}</h3>
-                    <p className="text-sm text-neutral-600 mb-2">{process.description}</p>
-                    <span className="text-xs text-purple-600 font-medium block mb-2">{process.duration}</span>
-                    <div className="text-xs text-neutral-500">
+                    <h3 className="text-xl font-bold text-neutral-900 mb-3">{process.title}</h3>
+                    <p className="text-base text-neutral-700 mb-3 leading-relaxed">{process.description}</p>
+                    <span className="text-sm text-purple-600 font-semibold block mb-3 bg-purple-50 px-3 py-1 rounded-full">{process.duration}</span>
+                    <div className="text-sm text-neutral-600 space-y-1">
                       {process.deliverables.map((deliverable, idx) => (
-                        <div key={idx}>• {deliverable}</div>
+                        <div key={idx} className="flex items-center justify-center">
+                          <span className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2"></span>
+                          {deliverable}
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -233,42 +237,42 @@ const MvpSolutions = () => {
 
         {/* Enhanced Testimonials */}
         <div className="mt-16 max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-neutral-800">
+          <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 text-neutral-900 leading-tight">
             Success Stories
           </h2>
           
           <div className="relative">
             <div className="bg-gradient-to-br from-white to-neutral-50 rounded-2xl p-8 md:p-12 shadow-xl border border-neutral-200">
               <div className="text-center">
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-neutral-800 leading-relaxed mb-6 px-4">
+                <div className="text-2xl md:text-3xl lg:text-4xl font-bold text-neutral-900 leading-relaxed mb-8 px-4">
                   &ldquo;{mvpProjects[activeTestimonial].quote}&rdquo;
                 </div>
-                <div className="mb-8">
-                  <div className="text-xl font-semibold text-neutral-900">
+                <div className="mb-10">
+                  <div className="text-2xl font-bold text-neutral-900 mb-2">
                     {mvpProjects[activeTestimonial].name}
                   </div>
-                  <div className="text-neutral-700 font-medium">
+                  <div className="text-lg text-neutral-700 font-semibold">
                     {mvpProjects[activeTestimonial].role}
                   </div>
                 </div>
                 
                 {/* Project Metrics */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
-                  <div className="text-center p-4 bg-neutral-50 rounded-lg">
-                    <div className="text-xl font-bold text-neutral-900">{mvpProjects[activeTestimonial].industry}</div>
-                    <div className="text-sm text-neutral-700 font-medium">Industry</div>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
+                  <div className="text-center p-6 bg-neutral-50 rounded-xl border border-neutral-200">
+                    <div className="text-2xl font-bold text-neutral-900 mb-2">{mvpProjects[activeTestimonial].industry}</div>
+                    <div className="text-base text-neutral-700 font-semibold">Industry</div>
                   </div>
-                  <div className="text-center p-4 bg-green-50 rounded-lg">
-                    <div className="text-xl font-bold text-green-700">{mvpProjects[activeTestimonial].funding}</div>
-                    <div className="text-sm text-green-600 font-medium">Funding Raised</div>
+                  <div className="text-center p-6 bg-green-50 rounded-xl border border-green-200">
+                    <div className="text-2xl font-bold text-green-700 mb-2">{mvpProjects[activeTestimonial].funding}</div>
+                    <div className="text-base text-green-600 font-semibold">Funding Raised</div>
                   </div>
-                  <div className="text-center p-4 bg-blue-50 rounded-lg">
-                    <div className="text-xl font-bold text-blue-700">{mvpProjects[activeTestimonial].timeframe}</div>
-                    <div className="text-sm text-blue-600 font-medium">Time to Market</div>
+                  <div className="text-center p-6 bg-blue-50 rounded-xl border border-blue-200">
+                    <div className="text-2xl font-bold text-blue-700 mb-2">{mvpProjects[activeTestimonial].timeframe}</div>
+                    <div className="text-base text-blue-600 font-semibold">Time to Market</div>
                   </div>
-                  <div className="text-center p-4 bg-purple-50 rounded-lg">
-                    <div className="text-xl font-bold text-purple-700">{mvpProjects[activeTestimonial].users}</div>
-                    <div className="text-sm text-purple-600 font-medium">Users Acquired</div>
+                  <div className="text-center p-6 bg-purple-50 rounded-xl border border-purple-200">
+                    <div className="text-2xl font-bold text-purple-700 mb-2">{mvpProjects[activeTestimonial].users}</div>
+                    <div className="text-base text-purple-600 font-semibold">Users Acquired</div>
                   </div>
                 </div>
               </div>
@@ -300,7 +304,7 @@ const MvpSolutions = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </LoadingLink>
           
-          <p className="text-neutral-600 text-sm mt-4 max-w-md mx-auto">
+          <p className="text-neutral-700 text-lg mt-6 max-w-lg mx-auto font-medium">
             Join 150+ successful startups who launched their MVP with us
           </p>
         </div>
