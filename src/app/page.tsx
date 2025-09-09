@@ -65,9 +65,10 @@ export default function Home() {
         <h1 className="text-4xl pb-5 md:text-7xl px-6 text-center  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 bg-opacity-50">
           Build, scale, and <br /> automate your software
         </h1>
-        <p className="mt-4 text-lg font-normal  text-neutral-300 max-w-lg text-center mx-auto px-4">
+        <p className="mt-6 text-xl font-normal text-neutral-300 max-w-3xl text-center mx-auto px-4 leading-relaxed">
           From MVP to enterprise solutions. <strong>Genuine Stack</strong> is a premier SaaS development agency
-          specializing in custom software development, APIs, and AI automation solutions. Trusted by 50+ companies worldwide.
+          specializing in custom software development, APIs, and AI automation solutions. Based in Lucknow, India, 
+          we've helped 50+ companies worldwide transform their ideas into powerful digital products.
         </p>
 
         <Link
@@ -79,6 +80,38 @@ export default function Home() {
 
         <div className="w-full pt-12">
           <SliderOne />
+        </div>
+
+        {/* Who We Are Section */}
+        <div className="max-w-6xl mx-auto px-4 py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              Who We Are
+            </h2>
+            <p className="text-lg text-neutral-300 max-w-4xl mx-auto leading-relaxed">
+              <strong>Genuine Stack</strong> is a leading SaaS development agency based in Lucknow, India, 
+              with over 5 years of experience in transforming innovative ideas into powerful digital solutions. 
+              We specialize in custom software development, API development, MVP creation, enterprise websites, 
+              and AI automation solutions. Our team of expert developers, designers, and strategists has successfully 
+              delivered 150+ projects for startups and enterprises worldwide, helping them secure over $50M in funding 
+              and achieve their digital transformation goals.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
+            <div className="text-center p-6 bg-neutral-900/50 rounded-xl border border-neutral-800">
+              <h3 className="text-xl font-bold text-white mb-3">5+ Years Experience</h3>
+              <p className="text-neutral-300">Proven track record in SaaS development and digital transformation</p>
+            </div>
+            <div className="text-center p-6 bg-neutral-900/50 rounded-xl border border-neutral-800">
+              <h3 className="text-xl font-bold text-white mb-3">150+ Projects Delivered</h3>
+              <p className="text-neutral-300">Successfully launched products for startups and enterprises</p>
+            </div>
+            <div className="text-center p-6 bg-neutral-900/50 rounded-xl border border-neutral-800">
+              <h3 className="text-xl font-bold text-white mb-3">$50M+ Funding Secured</h3>
+              <p className="text-neutral-300">Helped our clients raise significant investment through our MVPs</p>
+            </div>
+          </div>
         </div>
         
         <div id="services">

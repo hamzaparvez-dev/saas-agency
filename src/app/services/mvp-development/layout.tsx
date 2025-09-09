@@ -1,13 +1,13 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'MVP Development Services | Genuine Stack - Startup MVP Solutions',
-  description: 'Expert MVP development services by Genuine Stack. We help startups and entrepreneurs build Minimum Viable Products quickly and cost-effectively. Fast-track your idea to market.',
-  keywords: 'MVP development, minimum viable product, startup development, rapid prototyping, product development, startup MVP, lean development, product launch, Genuine Stack',
+  title: 'Expert MVP Development Services | Genuine Stack - Launch Your Startup in 4 Weeks',
+  description: 'Transform your startup idea into a market-ready MVP in just 4 weeks with Genuine Stack. Our MVP development services have helped 150+ startups secure $50M+ in funding. Get your free consultation today.',
+  keywords: 'MVP development services, minimum viable product development, startup MVP development, rapid prototyping services, product development company, startup development agency, lean development, product launch services, MVP consulting, Genuine Stack',
   authors: [{ name: 'Genuine Stack Team' }],
   openGraph: {
-    title: 'MVP Development Services | Genuine Stack',
-    description: 'Launch your startup idea quickly with our expert MVP development services. Fast, cost-effective, and market-ready solutions.',
+    title: 'Expert MVP Development Services | Genuine Stack',
+    description: 'Transform your startup idea into a market-ready MVP in just 4 weeks. Our services have helped 150+ startups secure $50M+ in funding.',
     type: 'website',
     siteName: 'Genuine Stack',
     images: [
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
         url: '/images/mobile-app-mvp.webp',
         width: 1200,
         height: 630,
-        alt: 'MVP Development Services - Genuine Stack',
+        alt: 'Expert MVP Development Services - Genuine Stack SaaS Development Agency',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MVP Development Services | Genuine Stack',
-    description: 'Launch your startup idea quickly with our expert MVP development services.',
+    title: 'Expert MVP Development Services | Genuine Stack',
+    description: 'Transform your startup idea into a market-ready MVP in just 4 weeks. Our services have helped 150+ startups secure $50M+ in funding.',
     images: ['/images/mobile-app-mvp.webp'],
   },
   alternates: {

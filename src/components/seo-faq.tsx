@@ -37,10 +37,34 @@ export default function SEOFAQ() {
       },
       {
         "@type": "Question",
+        "name": "What is your process for developing an MVP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our 4-week MVP development process includes: 1) Discovery and market analysis (2-3 days), 2) Design and technical planning (3-5 days), 3) Development with agile methodology (2-4 weeks), 4) Launch and user feedback collection (1 week). We focus on core features and rapid iteration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which industries do you specialize in?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Genuine Stack specializes in FinTech, HealthTech, SaaS, E-commerce, EdTech, and Enterprise solutions. We have experience across various industries and can adapt our development approach to meet specific industry requirements and compliance standards."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "What technologies does Genuine Stack use?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Genuine Stack uses modern technologies including React, Next.js, Node.js, Python, PostgreSQL, AWS, Docker, Kubernetes, and AI/ML frameworks like TensorFlow and OpenAI GPT for comprehensive software development solutions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does MVP development cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "MVP development costs vary based on complexity and features. Our MVPs typically range from $15,000 to $50,000 and can be delivered in 4-6 weeks. We offer flexible payment plans and provide detailed quotes after understanding your specific requirements."
         }
       },
       {

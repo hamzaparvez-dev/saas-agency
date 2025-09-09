@@ -7,7 +7,7 @@ export default function StructuredData() {
     "url": "https://www.genuinestack.com",
     "logo": "https://www.genuinestack.com/logo/logo.svg",
     "description": "Leading SaaS development agency specializing in custom software development, API development, MVP creation, enterprise websites, and AI automation solutions.",
-    "foundingDate": "2024",
+    "foundingDate": "2019",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Lucknow",
@@ -20,9 +20,10 @@ export default function StructuredData() {
       "email": "hello@genuinestack.com"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/genuinestack",
-      "https://twitter.com/genuinestack",
-      "https://github.com/genuinestack"
+      "https://www.linkedin.com/company/genuinestack/",
+      "https://x.com/GenuineStack",
+      "https://www.instagram.com/bygenuinestack/",
+      "https://www.facebook.com/profile.php?id=61580009018149"
     ],
     "serviceArea": {
       "@type": "Country",

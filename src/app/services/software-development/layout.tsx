@@ -1,13 +1,13 @@
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Custom Software Development Services | Genuine Stack',
-  description: 'Expert custom software development services by Genuine Stack. We build scalable, secure, and modern software solutions using the latest technologies. From web applications to enterprise software.',
-  keywords: 'custom software development, software development company, web application development, enterprise software, scalable software, secure software development, modern software solutions, software architecture, Genuine Stack',
+  title: 'Premier Custom Software Development Services | Genuine Stack - Enterprise Solutions',
+  description: 'Transform your ideas into powerful software solutions with Genuine Stack. We build scalable, secure, and modern custom software using cutting-edge technologies. Trusted by 50+ companies worldwide. Get started today.',
+  keywords: 'custom software development services, software development company India, web application development, enterprise software solutions, scalable software development, secure software development, modern software solutions, software architecture consulting, SaaS development, Genuine Stack',
   authors: [{ name: 'Genuine Stack Team' }],
   openGraph: {
-    title: 'Custom Software Development Services | Genuine Stack',
-    description: 'Transform your ideas into powerful software solutions. Expert custom software development with scalable architecture and modern technologies.',
+    title: 'Premier Custom Software Development Services | Genuine Stack',
+    description: 'Transform your ideas into powerful software solutions. Expert custom software development with scalable architecture and cutting-edge technologies.',
     type: 'website',
     siteName: 'Genuine Stack',
     images: [
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
         url: '/images/software-dev.jpg',
         width: 1200,
         height: 630,
-        alt: 'Custom Software Development Services - Genuine Stack',
+        alt: 'Premier Custom Software Development Services - Genuine Stack SaaS Development Agency',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Custom Software Development Services | Genuine Stack',
-    description: 'Expert custom software development with scalable architecture and modern technologies.',
+    title: 'Premier Custom Software Development Services | Genuine Stack',
+    description: 'Transform your ideas into powerful software solutions. Expert custom software development with scalable architecture and cutting-edge technologies.',
     images: ['/images/software-dev.jpg'],
   },
   alternates: {

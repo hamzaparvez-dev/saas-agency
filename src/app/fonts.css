@@ -33,11 +33,9 @@
   src: url('/fonts/Poppins-Bold.woff2') format('woff2');
 }
 
-/* Lora Font Family */
-@font-face {
-  font-family: 'Lora';
-  font-style: normal;
+/* Lora Font Family - Using Google Fonts */
+.lora {
+  font-family: 'Lora', serif;
   font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/Lora-Regular.woff2') format('woff2');
+  font-style: normal;
 } 
