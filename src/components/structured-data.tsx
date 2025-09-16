@@ -6,7 +6,7 @@ export default function StructuredData() {
     "alternateName": "Genuine Stack SaaS Development Agency",
     "url": "https://www.genuinestack.com",
     "logo": "https://www.genuinestack.com/logo/logo.svg",
-    "description": "Leading SaaS development agency specializing in custom software development, API development, MVP creation, enterprise websites, and AI automation solutions.",
+    "description": "Leading SaaS development agency specializing in custom software development, API development, MVP creation, enterprise websites, and AI automation solutions for a global client base.",
     "foundingDate": "2019",
     "address": {
       "@type": "PostalAddress",
@@ -20,15 +20,16 @@ export default function StructuredData() {
       "email": "hello@genuinestack.com"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/genuinestack/",
-      "https://x.com/GenuineStack",
-      "https://www.instagram.com/bygenuinestack/",
-      "https://www.facebook.com/profile.php?id=61580009018149"
+      "https://www.linkedin.com/company/genuinestack",
+      "https://twitter.com/genuinestack",
+      "https://github.com/genuinestack"
     ],
-    "serviceArea": {
-      "@type": "Country",
-      "name": "Worldwide"
-    },
+    "serviceArea": [
+      { "@type": "Country", "name": "USA" },
+      { "@type": "Country", "name": "Canada" },
+      { "@type": "Country", "name": "United Kingdom" },
+      { "@type": "Country", "name": "Worldwide" }
+    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
       "name": "SaaS Development Services",
@@ -82,7 +83,7 @@ export default function StructuredData() {
     "@type": "WebSite",
     "name": "Genuine Stack",
     "url": "https://www.genuinestack.com",
-    "description": "Premier SaaS development agency offering custom software, API development, MVP creation, and AI automation solutions.",
+    "description": "Premier SaaS development agency offering custom software, API development, MVP creation, and AI automation solutions to a global clientele.",
     "publisher": {
       "@type": "Organization",
       "name": "Genuine Stack"
@@ -100,7 +101,7 @@ export default function StructuredData() {
     "@id": "https://www.genuinestack.com/#organization",
     "name": "Genuine Stack",
     "image": "https://www.genuinestack.com/logo/logo.svg",
-    "description": "Leading SaaS development agency specializing in custom software development, API development, MVP creation, enterprise websites, and AI automation solutions.",
+    "description": "Leading SaaS development agency specializing in custom software development, API development, MVP creation, enterprise websites, and AI automation solutions for a global client base.",
     "url": "https://www.genuinestack.com",
     "telephone": "+91-7753818253",
     "email": "hello@genuinestack.com",
@@ -154,4 +155,3 @@ export default function StructuredData() {
     </>
   );
 }
-

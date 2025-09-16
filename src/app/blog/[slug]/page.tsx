@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       title: seoTitle,
       description: post.metaDescription,
       type: 'article',
-      siteName: 'SaaS Agency',
+      siteName: 'Genuine Stack',
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
       section: post.category,

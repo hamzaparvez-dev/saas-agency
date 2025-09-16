@@ -33,7 +33,7 @@ const Footer = () => {
             </div>
             <p className="text-neutral-300 text-sm leading-relaxed mb-6">
               <strong>Genuine Stack</strong> is a leading SaaS development agency specializing in custom software, APIs, and AI automation. 
-              While proudly based in Lucknow, India, we serve a global client base, delivering exceptional software solutions to businesses in the USA, Europe, and beyond.
+              While proudly based in Lucknow, India & Manhattan, New York, USA, we serve a global client base, delivering exceptional software solutions to businesses in the USA, Europe, and beyond.
             </p>
             
             {/* Social Links */}

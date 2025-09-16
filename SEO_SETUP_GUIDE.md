@@ -19,7 +19,7 @@
    - Name: Genuine Stack
    - Category: Software Development Company
    - Address: Lucknow, India
-   - Phone: +91-7753818253
+   - Phone: +91-9076970199
    - Website: https://www.genuinestack.com
    - Hours: 9 AM - 6 PM (Monday-Friday)
 4. **Verify Business** (Google will send verification code)

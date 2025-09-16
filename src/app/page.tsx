@@ -67,7 +67,7 @@ export default function Home() {
         </h1>
         <p className="mt-6 text-xl font-normal text-neutral-300 max-w-3xl text-center mx-auto px-4 leading-relaxed">
           From MVP to enterprise solutions. <strong>Genuine Stack</strong> is a premier SaaS development agency
-          specializing in custom software development, APIs, and AI automation solutions. Based in Lucknow, India, 
+          specializing in custom software development, APIs, and AI automation solutions. Based in Lucknow & Manhattan, New York, USA, 
           we&apos;ve helped 50+ companies worldwide transform their ideas into powerful digital products.
         </p>
 
