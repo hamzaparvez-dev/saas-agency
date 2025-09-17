@@ -10,6 +10,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
+      { // Add this new block
+        protocol: 'https',
+        hostname: 'cdn.example.com',
+      },
     ],
   },
 };
