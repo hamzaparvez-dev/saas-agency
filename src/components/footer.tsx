@@ -169,11 +169,12 @@ const Footer = () => {
               </div>
               <div className="flex items-center text-neutral-300 text-sm">
                 <Phone className="w-4 h-4 mr-3 text-blue-400" />
+                +1 619 566 7183
                 +91 7753818253
               </div>
               <div className="flex items-center text-neutral-300 text-sm">
                 <MapPin className="w-4 h-4 mr-3 text-blue-400" />
-                Lucknow, India (Serving Globally)
+                Lucknow India & Manhattan, NY, USA (Serving Globally)
               </div>
             </div>
 
