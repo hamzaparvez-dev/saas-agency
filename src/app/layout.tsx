@@ -14,8 +14,8 @@ const font = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.genuinestack.com/'), 
   
-  title: "Genuine Stack - SaaS Development Agency | Custom Software & AI Solutions",
-  description: "Genuine Stack is a leading SaaS development agency specializing in custom software development, API development, MVP creation, enterprise websites, and AI automation solutions. Transform your ideas into powerful digital products.",
+  title: "Genuine Stack - SaaS Agency | Custom Software & AI Solutions",
+  description: "Leading SaaS development agency specializing in custom software, API development, MVPs, and AI automation. Transform your ideas into powerful digital products..",
   keywords: "Genuine Stack, SaaS development agency, custom software development, API development, MVP development, enterprise websites, AI automation, software development company, web application development, mobile app development, digital transformation",
   authors: [{ name: 'Genuine Stack Team' }],
   creator: 'Genuine Stack',
