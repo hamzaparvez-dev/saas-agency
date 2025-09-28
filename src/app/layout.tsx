@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
+import { Poppins, Lora } from 'next/font/google';
 import "./globals.css";
-import "./fonts.css";
 import ClientWrapper from "@/components/client-wrapper";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-// Local font configuration
-const font = {
-  className: 'font-poppins',
-  variable: '--font-poppins'
-};
+// Setup optimized fonts
+const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-poppins',
+  weight: ['400', '500', '600', '700']
+});
+
+const lora = Lora({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-lora',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.genuinestack.com/'), 
@@ -60,7 +68,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'your-google-verification-code', // Add your Google Search Console verification code
+    google: 'your-google-verification-code',
   },
 };
 
@@ -71,12 +79,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
-      </head>
-      <body className={`${font.className} ${font.variable}`}>
+      {/* The <head> tag with font links is no longer needed */}
+      <body className={`${poppins.variable} ${lora.variable} font-poppins`}>
         <ClientWrapper>
           {children}
         </ClientWrapper>
