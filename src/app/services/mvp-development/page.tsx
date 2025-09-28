@@ -1,5 +1,3 @@
-"use client";
-
 import PricingNavbar from "@/components/pricing-navbar";
 import Footer from "@/components/footer";
 import Image from "next/image";

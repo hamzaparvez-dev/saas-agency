@@ -1,13 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import PricingNavbar from "@/components/pricing-navbar";
 import Footer from "@/components/footer";
 import LoadingLink from "@/components/loading-link";
 import Image from "next/image";
-import { ArrowUpRight, Calendar, Users, Clock } from "lucide-react";
+import { ArrowUpRight, Calendar, Users, Clock, ArrowLeft, ArrowRight } from "lucide-react";
 
-const Portfolio = () => {
-  const projects = [
+const projects = [
     {
       slug: "silk-design-system",
       title: "50% Efficiency Gains with Silk Design System",
@@ -154,6 +154,24 @@ const Portfolio = () => {
     }
   ];
 
+const ITEMS_PER_PAGE = 6;
+
+const Portfolio = () => {
+    const [currentPage, setCurrentPage] = useState(1);
+
+    const totalPages = Math.ceil(projects.length / ITEMS_PER_PAGE);
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+    const currentProjects = projects.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+    const handleNextPage = () => {
+        setCurrentPage((prev) => Math.min(prev + 1, totalPages));
+    };
+
+    const handlePrevPage = () => {
+        setCurrentPage((prev) => Math.max(prev - 1, 1));
+    };
+
+
   return (
     <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <PricingNavbar />
@@ -171,7 +189,7 @@ const Portfolio = () => {
         {/* Portfolio Grid */}
         <div className="max-w-7xl mx-auto py-20">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
+            {currentProjects.map((project, index) => (
               <LoadingLink
                 key={index}
                 href={`/portfolio/${project.slug}`}
@@ -185,6 +203,8 @@ const Portfolio = () => {
                       width={500}
                       height={400}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      // Add priority to the first image on the page
+                      priority={index === 0}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                     
@@ -249,6 +269,28 @@ const Portfolio = () => {
               </LoadingLink>
             ))}
           </div>
+            {/* Pagination Controls */}
+            <div className="flex justify-center items-center gap-4 mt-12">
+                <button
+                    onClick={handlePrevPage}
+                    disabled={currentPage === 1}
+                    className="flex items-center gap-2 px-4 py-2 bg-neutral-800 text-white rounded-md disabled:opacity-50"
+                >
+                    <ArrowLeft className="w-4 h-4" />
+                    Previous
+                </button>
+                <span className="text-neutral-400">
+                    Page {currentPage} of {totalPages}
+                </span>
+                <button
+                    onClick={handleNextPage}
+                    disabled={currentPage === totalPages}
+                    className="flex items-center gap-2 px-4 py-2 bg-neutral-800 text-white rounded-md disabled:opacity-50"
+                >
+                    Next
+                    <ArrowRight className="w-4 h-4" />
+                </button>
+            </div>
         </div>
 
         {/* Stats Section */}

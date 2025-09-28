@@ -1,5 +1,3 @@
-"use client";
-
 import PricingNavbar from "@/components/pricing-navbar";
 import Footer from "@/components/footer";
 import Image from "next/image";
@@ -105,6 +103,7 @@ const About = () => {
                 width={600}
                 height={500}
                 className="rounded-2xl shadow-2xl"
+                priority
               />
             </div>
           </div>
@@ -120,6 +119,7 @@ const About = () => {
                 width={600}
                 height={400}
                 className="rounded-2xl shadow-2xl"
+                priority
               />
             </div>
             <div>
