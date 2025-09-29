@@ -100,9 +100,15 @@ const Navbar = ({
   const isHomePage = pathname === '/';
 
   return (
-    <div>
-      <div className="p-6 md:p-10 flex items-center justify-between relative z-50">
-        <div>
+    <div className="p-4 md:p-6 flex items-center justify-center fixed md:relative top-0 w-full z-50">
+      {/* Mobile-only full-width background */}
+      <div className="md:hidden absolute top-0 left-0 w-full h-full bg-black/[0.96] " />
+
+      {/* Main Nav Container */}
+      <div className="relative flex items-center justify-between w-full max-w-6xl md:bg-black/50 md:backdrop-blur-lg md:border md:border-neutral-700 md:rounded-full md:px-8 md:py-3">
+        
+        {/* Logo */}
+        <div className="relative z-10">
           <Link className="cursor-pointer" href="/">
             <Image
               priority
@@ -110,18 +116,13 @@ const Navbar = ({
               alt="Logo"
               width={100}
               height={100}
-              className="w-10 h-10 md:w-14 md:h-14"
+              className="w-10 h-10 md:w-12 md:h-12"
             />
           </Link>
         </div>
-        <div
-          className="cursor-pointer hidden 
-            md:flex space-x-10 items-center
-             text-gray-300 text-center 
-             bg-clip-text text-transparent 
-             bg-gradient-to-b from-neutral-50
-              to bg-neutral-400 bg-opacity-50"
-        >
+
+        {/* Desktop Links */}
+        <div className="hidden md:flex items-center space-x-10 text-gray-300">
           <div 
             className="relative group" 
             onMouseEnter={showServicesDropdown}
@@ -129,7 +130,7 @@ const Navbar = ({
           >
             <div 
               className={`flex items-center space-x-1 cursor-pointer transition-colors duration-200 ${
-                isServicePage ? 'text-gray-50' : 'text-gray-300 hover:text-gray-50'
+                isServicePage ? 'text-white font-medium' : 'hover:text-white'
               }`}
             >
               <span>Services</span>
@@ -141,120 +142,48 @@ const Navbar = ({
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
-                className="absolute top-full left-0 mt-1 w-64 bg-neutral-900 border border-neutral-800 rounded-lg shadow-xl z-[100]"
+                className="absolute top-full left-0 mt-4 w-64 bg-neutral-900 border border-neutral-800 rounded-lg shadow-xl z-[100]"
                 onMouseEnter={showServicesDropdown}
                 onMouseLeave={hideServicesDropdown}
               >
                 <div className="py-2">
-                  <LoadingLink 
-                    href="/services/software-development" 
-                    className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors duration-200"
-                  >
-                    Software Development
-                  </LoadingLink>
-                  <LoadingLink 
-                    href="/services/api-development" 
-                    className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors duration-200"
-                  >
-                    API Development
-                  </LoadingLink>
-                  <LoadingLink 
-                    href="/services/mvp-development" 
-                    className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors duration-200"
-                  >
-                    MVP Development
-                  </LoadingLink>
-                  <LoadingLink 
-                    href="/services/enterprise-websites" 
-                    className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors duration-200"
-                  >
-                    Enterprise Websites
-                  </LoadingLink>
-                  <LoadingLink 
-                    href="/services/ai-automation" 
-                    className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors duration-200"
-                  >
-                    AI Automation
-                  </LoadingLink>
-                  <LoadingLink 
-                    href="/services/end-to-end-development" 
-                    className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors duration-200"
-                  >
-                    End-to-End Development
-                  </LoadingLink>
-          </div>
+                  <LoadingLink href="/services/software-development" className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors duration-200">Software Development</LoadingLink>
+                  <LoadingLink href="/services/api-development" className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors duration-200">API Development</LoadingLink>
+                  <LoadingLink href="/services/mvp-development" className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors duration-200">MVP Development</LoadingLink>
+                  <LoadingLink href="/services/enterprise-websites" className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors duration-200">Enterprise Websites</LoadingLink>
+                  <LoadingLink href="/services/ai-automation" className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors duration-200">AI Automation</LoadingLink>
+                  <LoadingLink href="/services/end-to-end-development" className="block px-4 py-2 text-sm text-neutral-300 hover:bg-neutral-800 hover:text-white transition-colors duration-200">End-to-End Development</LoadingLink>
+                </div>
               </motion.div>
             )}
           </div>
 
-          <LoadingLink 
-            href="/portfolio" 
-            className={`transition-colors duration-200 ${
-              pathname === '/portfolio' ? 'text-gray-50' : 'text-gray-300 hover:text-gray-50'
-            }`}
-          >
-            Portfolio
-          </LoadingLink>
-
-          <LoadingLink 
-            href="/blog" 
-            className={`transition-colors duration-200 ${
-              pathname?.startsWith('/blog') ? 'text-gray-50' : 'text-gray-300 hover:text-gray-50'
-            }`}
-          >
-            Blog
-          </LoadingLink>
-
-          <LoadingLink 
-            href="/about" 
-            className={`transition-colors duration-200 ${
-              pathname === '/about' ? 'text-gray-50' : 'text-gray-300 hover:text-gray-50'
-            }`}
-          >
-            About
-          </LoadingLink>
-
-          <LoadingLink 
-            href="/pricing" 
-            className={`transition-colors duration-200 ${
-              pathname === '/pricing' ? 'text-gray-50' : 'text-gray-300 hover:text-gray-50'
-            }`}
-          >
-            Pricing
-          </LoadingLink>
+          <LoadingLink href="/portfolio" className={`transition-colors duration-200 ${pathname === '/portfolio' ? 'text-white font-medium' : 'hover:text-white'}`}>Portfolio</LoadingLink>
+          <LoadingLink href="/blog" className={`transition-colors duration-200 ${pathname?.startsWith('/blog') ? 'text-white font-medium' : 'hover:text-white'}`}>Blog</LoadingLink>
+          <LoadingLink href="/about" className={`transition-colors duration-200 ${pathname === '/about' ? 'text-white font-medium' : 'hover:text-white'}`}>About</LoadingLink>
+          <LoadingLink href="/pricing" className={`transition-colors duration-200 ${pathname === '/pricing' ? 'text-white font-medium' : 'hover:text-white'}`}>Pricing</LoadingLink>
         </div>
 
-        <div className="flex md:hidden">
+        {/* Contact Button (Desktop) */}
+        <div className="hidden md:flex">
+        <LoadingLink
+  href="/contact"
+  className="inline-flex items-center justify-center px-6 py-2 rounded-full font-medium text-slate-300 transition-colors animate-shimmer border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] hover:text-white"
+>
+  Contact
+</LoadingLink>
+        </div>
+
+        {/* Mobile Menu Toggle */}
+        <div className="flex md:hidden relative z-10">
           {isDropDownVisible ? (
-            <div
-              onClick={toggleDropDown}
-              className="w-8 h-8 text-slate-300 cursor-pointer"
-            >
+            <div onClick={toggleDropDown} className="w-8 h-8 text-slate-300 cursor-pointer">
               <X />
-              <DropDownMenu
-                onClose={closeDropDown}
-              />
+              <DropDownMenu onClose={closeDropDown} />
             </div>
           ) : (
-            <AlignJustify
-              onClick={toggleDropDown}
-              className="w-8 h-8 text-slate-300 cursor-pointer"
-            />
+            <AlignJustify onClick={toggleDropDown} className="w-8 h-8 text-slate-300 cursor-pointer" />
           )}
-        </div>
-
-        <div className="hidden md:flex">
-          <LoadingLink
-            href="/contact"
-            className="
-            inline-flex h-12 animate-shimmer items-center justify-center 
-            rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] 
-            bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors
-             focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2
-            focus:ring-offset-slate-50"
-          >
-            Contact
-          </LoadingLink>
         </div>
       </div>
     </div>

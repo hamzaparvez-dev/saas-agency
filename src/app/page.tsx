@@ -11,7 +11,6 @@ import Automation from "./automation";
 import Services from "./services";
 import { useRef } from "react";
 import FAQS from "./faq";
-import { AnimatedTestimonialsDemo } from "./testimonials";
 import Footer from "@/components/footer";
 import StructuredData from "@/components/structured-data";
 import SEOFAQ from "@/components/seo-faq";
@@ -67,8 +66,8 @@ export default function Home() {
         </h1>
         <p className="mt-6 text-xl font-normal text-neutral-300 max-w-3xl text-center mx-auto px-4 leading-relaxed">
           From MVP to enterprise solutions. <strong>Genuine Stack</strong> is a premier SaaS development agency
-          specializing in custom software development, APIs, and AI automation solutions. Based in Lucknow & New York, USA, 
-          we&apos;ve helped 50+ companies worldwide transform their ideas into powerful digital products.
+          specializing in custom software development, APIs, and AI automation solutions.
+          We&apos;ve helped 50+ companies worldwide transform their ideas into powerful digital products.
         </p>
 
         <Link
@@ -89,7 +88,7 @@ export default function Home() {
               Who We Are
             </h2>
             <p className="text-lg text-neutral-300 max-w-4xl mx-auto leading-relaxed">
-              <strong>Genuine Stack</strong> is a leading SaaS development agency based in Lucknow, India, 
+              <strong>Genuine Stack</strong> is a leading SaaS development agency based in Lucknow, India, And NewYork USA,
               with over 5 years of experience in transforming innovative ideas into powerful digital solutions. 
               We specialize in custom software development, API development, MVP creation, enterprise websites, 
               and AI automation solutions. Our team of expert developers, designers, and strategists has successfully 
@@ -129,7 +128,6 @@ export default function Home() {
         <div ref={AutomationRef}>
           <Automation/>
         </div>
-        <AnimatedTestimonialsDemo />
         <FAQS />
         <Footer />
       </div>
