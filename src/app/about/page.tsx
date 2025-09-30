@@ -2,6 +2,25 @@ import PricingNavbar from "@/components/pricing-navbar";
 import Footer from "@/components/footer";
 import Image from "next/image";
 import Breadcrumbs from "@/components/breadcrumbs";
+import {
+  Rocket,
+  Handshake,
+  Zap,
+  Building2,
+  Banknote,
+  Stethoscope,
+  ShoppingCart,
+  GraduationCap,
+  Shield,
+  Cloud,
+  Bot,
+  Code2,
+  CalendarDays,
+  Brain,
+  Sparkles,
+  CheckCircle2,
+  Star
+} from "lucide-react";
 
 const About = () => {
   return (
@@ -20,25 +39,25 @@ const About = () => {
         {/* Company Stats */}
         <div className="max-w-6xl mx-auto py-16">
           <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div className="p-6">
+            <div className="p-6 border border-neutral-800/60 rounded-2xl bg-white/5 backdrop-blur shadow-[0_0_0_1px_rgba(255,255,255,0.02)] hover:shadow-[0_0_0_1px_rgba(59,130,246,0.25)] transition">
               <div className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-blue-400 to-blue-600 mb-2">
                 150+
               </div>
               <p className="text-neutral-300 text-lg">Projects Delivered</p>
             </div>
-            <div className="p-6">
+            <div className="p-6 border border-neutral-800/60 rounded-2xl bg-white/5 backdrop-blur shadow-[0_0_0_1px_rgba(255,255,255,0.02)] hover:shadow-[0_0_0_1px_rgba(16,185,129,0.25)] transition">
               <div className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-emerald-400 to-emerald-600 mb-2">
                 50+
               </div>
               <p className="text-neutral-300 text-lg">Happy Clients</p>
             </div>
-            <div className="p-6">
+            <div className="p-6 border border-neutral-800/60 rounded-2xl bg-white/5 backdrop-blur shadow-[0_0_0_1px_rgba(255,255,255,0.02)] hover:shadow-[0_0_0_1px_rgba(147,51,234,0.25)] transition">
               <div className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-purple-400 to-purple-600 mb-2">
                 5+
               </div>
               <p className="text-neutral-300 text-lg">Years Experience</p>
             </div>
-            <div className="p-6">
+            <div className="p-6 border border-neutral-800/60 rounded-2xl bg-white/5 backdrop-blur shadow-[0_0_0_1px_rgba(255,255,255,0.02)] hover:shadow-[0_0_0_1px_rgba(249,115,22,0.25)] transition">
               <div className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-orange-400 to-orange-600 mb-2">
                 24/7
               </div>
@@ -62,28 +81,36 @@ const About = () => {
             <div>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="mt-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-blue-500/20 ring-1 ring-blue-500/40">
+                    <CalendarDays className="h-3.5 w-3.5 text-blue-400" />
+                  </div>
                   <div>
                     <h4 className="text-xl font-semibold text-white mb-2">2019 - The Beginning</h4>
                     <p className="text-neutral-300">Started with a vision to bridge the gap between cutting-edge technology and practical business solutions.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="mt-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500/20 ring-1 ring-emerald-500/40">
+                    <Brain className="h-3.5 w-3.5 text-emerald-400" />
+                  </div>
                   <div>
                     <h4 className="text-xl font-semibold text-white mb-2">2021 - AI Integration</h4>
                     <p className="text-neutral-300">Pioneered AI-first development approaches, helping clients automate and optimize their operations.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-purple-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="mt-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-purple-500/20 ring-1 ring-purple-500/40">
+                    <Rocket className="h-3.5 w-3.5 text-purple-400" />
+                  </div>
                   <div>
                     <h4 className="text-xl font-semibold text-white mb-2">2023 - Scale & Growth</h4>
                     <p className="text-neutral-300">Expanded to serve enterprise clients across multiple industries, delivering complex SaaS platforms.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
-                  <div className="w-3 h-3 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <div className="mt-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-orange-500/20 ring-1 ring-orange-500/40">
+                    <Sparkles className="h-3.5 w-3.5 text-orange-400" />
+                  </div>
                   <div>
                     <h4 className="text-xl font-semibold text-white mb-2">2025 - Innovation Continues</h4>
                     <p className="text-neutral-300">Leading the charge in next-gen technologies while maintaining our commitment to quality and client success.</p>
@@ -131,15 +158,21 @@ const About = () => {
               </p>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <div className="flex h-6 w-6 items-center justify-center rounded-md bg-blue-500/10 ring-1 ring-blue-500/30">
+                    <Code2 className="h-3.5 w-3.5 text-blue-400" />
+                  </div>
                   <span className="text-neutral-300">Custom SaaS Development</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                  <div className="flex h-6 w-6 items-center justify-center rounded-md bg-emerald-500/10 ring-1 ring-emerald-500/30">
+                    <Bot className="h-3.5 w-3.5 text-emerald-400" />
+                  </div>
                   <span className="text-neutral-300">AI-Powered Automation</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                  <div className="flex h-6 w-6 items-center justify-center rounded-md bg-purple-500/10 ring-1 ring-purple-500/30">
+                    <Cloud className="h-3.5 w-3.5 text-purple-400" />
+                  </div>
                   <span className="text-neutral-300">Cloud Infrastructure</span>
                 </div>
               </div>
@@ -153,27 +186,27 @@ const About = () => {
             Our Values
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6">
+            <div className="text-center p-6 border border-neutral-800/60 rounded-2xl bg-white/5 backdrop-blur">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">🚀</span>
+                <Rocket className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Innovation First</h3>
               <p className="text-neutral-300">
                 We stay at the forefront of technology, continuously learning and implementing the latest tools and methodologies.
               </p>
             </div>
-            <div className="text-center p-6">
+            <div className="text-center p-6 border border-neutral-800/60 rounded-2xl bg-white/5 backdrop-blur">
               <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">🤝</span>
+                <Handshake className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Client Partnership</h3>
               <p className="text-neutral-300">
                 We work as an extension of your team, understanding your business goals and delivering solutions that exceed expectations.
               </p>
             </div>
-            <div className="text-center p-6">
+            <div className="text-center p-6 border border-neutral-800/60 rounded-2xl bg-white/5 backdrop-blur">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">⚡</span>
+                <Zap className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Quality & Speed</h3>
               <p className="text-neutral-300">
@@ -189,7 +222,7 @@ const About = () => {
             Our Development Process
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
+            <div className="text-center border border-neutral-800/60 rounded-2xl p-6 bg-white/5 backdrop-blur">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">1</span>
               </div>
@@ -198,7 +231,7 @@ const About = () => {
                 We deep-dive into your business requirements, technical constraints, and success metrics to create a comprehensive roadmap.
               </p>
             </div>
-            <div className="text-center">
+            <div className="text-center border border-neutral-800/60 rounded-2xl p-6 bg-white/5 backdrop-blur">
               <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">2</span>
               </div>
@@ -207,7 +240,7 @@ const About = () => {
                 Our team designs scalable architecture and intuitive user experiences that align with your business goals.
               </p>
             </div>
-            <div className="text-center">
+            <div className="text-center border border-neutral-800/60 rounded-2xl p-6 bg-white/5 backdrop-blur">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">3</span>
               </div>
@@ -216,7 +249,7 @@ const About = () => {
                 We build in iterative sprints with regular check-ins, ensuring transparency and flexibility throughout development.
               </p>
             </div>
-            <div className="text-center">
+            <div className="text-center border border-neutral-800/60 rounded-2xl p-6 bg-white/5 backdrop-blur">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">4</span>
               </div>
@@ -291,9 +324,9 @@ const About = () => {
             Industry Experience
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-6 border border-neutral-800 rounded-2xl hover:border-blue-500 transition-colors">
-              <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-xl">🏦</span>
+            <div className="p-6 border border-neutral-800/60 rounded-2xl hover:border-blue-500 transition-colors bg-white/5 backdrop-blur">
+              <div className="w-12 h-12 bg-blue-500/20 ring-1 ring-blue-500/40 rounded-lg flex items-center justify-center mb-4">
+                <Banknote className="h-6 w-6 text-blue-400" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">FinTech</h3>
               <p className="text-neutral-300 text-sm mb-4">
@@ -305,9 +338,9 @@ const About = () => {
                 <p className="text-neutral-400 text-xs">• Real-time Trading Systems</p>
               </div>
             </div>
-            <div className="p-6 border border-neutral-800 rounded-2xl hover:border-emerald-500 transition-colors">
-              <div className="w-12 h-12 bg-emerald-500 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-xl">🏥</span>
+            <div className="p-6 border border-neutral-800/60 rounded-2xl hover:border-emerald-500 transition-colors bg-white/5 backdrop-blur">
+              <div className="w-12 h-12 bg-emerald-500/20 ring-1 ring-emerald-500/40 rounded-lg flex items-center justify-center mb-4">
+                <Stethoscope className="h-6 w-6 text-emerald-400" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">HealthTech</h3>
               <p className="text-neutral-300 text-sm mb-4">
@@ -319,9 +352,9 @@ const About = () => {
                 <p className="text-neutral-400 text-xs">• Patient Data Analytics</p>
               </div>
             </div>
-            <div className="p-6 border border-neutral-800 rounded-2xl hover:border-purple-500 transition-colors">
-              <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-xl">🛒</span>
+            <div className="p-6 border border-neutral-800/60 rounded-2xl hover:border-purple-500 transition-colors bg-white/5 backdrop-blur">
+              <div className="w-12 h-12 bg-purple-500/20 ring-1 ring-purple-500/40 rounded-lg flex items-center justify-center mb-4">
+                <ShoppingCart className="h-6 w-6 text-purple-400" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">E-Commerce</h3>
               <p className="text-neutral-300 text-sm mb-4">
@@ -333,9 +366,9 @@ const About = () => {
                 <p className="text-neutral-400 text-xs">• AI Recommendations</p>
               </div>
             </div>
-            <div className="p-6 border border-neutral-800 rounded-2xl hover:border-orange-500 transition-colors">
-              <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-xl">🎓</span>
+            <div className="p-6 border border-neutral-800/60 rounded-2xl hover:border-orange-500 transition-colors bg-white/5 backdrop-blur">
+              <div className="w-12 h-12 bg-orange-500/20 ring-1 ring-orange-500/40 rounded-lg flex items-center justify-center mb-4">
+                <GraduationCap className="h-6 w-6 text-orange-400" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">EdTech</h3>
               <p className="text-neutral-300 text-sm mb-4">
@@ -347,9 +380,9 @@ const About = () => {
                 <p className="text-neutral-400 text-xs">• Progress Tracking</p>
               </div>
             </div>
-            <div className="p-6 border border-neutral-800 rounded-2xl hover:border-pink-500 transition-colors">
-              <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-xl">🏢</span>
+            <div className="p-6 border border-neutral-800/60 rounded-2xl hover:border-pink-500 transition-colors bg-white/5 backdrop-blur">
+              <div className="w-12 h-12 bg-pink-500/20 ring-1 ring-pink-500/40 rounded-lg flex items-center justify-center mb-4">
+                <Building2 className="h-6 w-6 text-pink-400" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">SaaS Platforms</h3>
               <p className="text-neutral-300 text-sm mb-4">
@@ -361,9 +394,9 @@ const About = () => {
                 <p className="text-neutral-400 text-xs">• API Development</p>
               </div>
             </div>
-            <div className="p-6 border border-neutral-800 rounded-2xl hover:border-cyan-500 transition-colors">
-              <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-xl">🚀</span>
+            <div className="p-6 border border-neutral-800/60 rounded-2xl hover:border-cyan-500 transition-colors bg-white/5 backdrop-blur">
+              <div className="w-12 h-12 bg-cyan-500/20 ring-1 ring-cyan-500/40 rounded-lg flex items-center justify-center mb-4">
+                <Rocket className="h-6 w-6 text-cyan-400" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">Startups</h3>
               <p className="text-neutral-300 text-sm mb-4">
@@ -384,7 +417,7 @@ const About = () => {
             What Our Clients Say
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-6 border border-neutral-800 rounded-2xl bg-neutral-900/50">
+            <div className="p-6 border border-neutral-800/60 rounded-2xl bg-neutral-900/50 backdrop-blur">
               <div className="flex items-center mb-4">
                 <Image
                   src="/images/client1-avatar.jpg"
@@ -401,11 +434,13 @@ const About = () => {
               <p className="text-neutral-300 text-sm mb-4">
                 {"\"They delivered our SaaS platform 2 weeks ahead of schedule. The quality exceeded our expectations and their AI integration boosted our efficiency by 40%.\""}
               </p>
-              <div className="flex text-yellow-400 text-sm">
-                ⭐⭐⭐⭐⭐
+              <div className="flex text-yellow-400 text-sm gap-1">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                ))}
               </div>
             </div>
-            <div className="p-6 border border-neutral-800 rounded-2xl bg-neutral-900/50">
+            <div className="p-6 border border-neutral-800/60 rounded-2xl bg-neutral-900/50 backdrop-blur">
               <div className="flex items-center mb-4">
                 <Image
                   src="/images/client2-avatar.jpg"
@@ -422,11 +457,13 @@ const About = () => {
               <p className="text-neutral-300 text-sm mb-4">
                 &ldquo;Their expertise in healthcare compliance was invaluable. They built a HIPAA-compliant platform that our patients love using.&rdquo;
               </p>
-              <div className="flex text-yellow-400 text-sm">
-                ⭐⭐⭐⭐⭐
+              <div className="flex text-yellow-400 text-sm gap-1">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                ))}
               </div>
             </div>
-            <div className="p-6 border border-neutral-800 rounded-2xl bg-neutral-900/50">
+            <div className="p-6 border border-neutral-800/60 rounded-2xl bg-neutral-900/50 backdrop-blur">
               <div className="flex items-center mb-4">
                 <Image
                   src="/images/client3-avatar.jpg"
@@ -443,8 +480,10 @@ const About = () => {
               <p className="text-neutral-300 text-sm mb-4">
                 &ldquo;From MVP to enterprise scale in 8 months. Their development process is incredibly efficient and their support is outstanding.&rdquo;
               </p>
-              <div className="flex text-yellow-400 text-sm">
-                ⭐⭐⭐⭐⭐
+              <div className="flex text-yellow-400 text-sm gap-1">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                ))}
               </div>
             </div>
           </div>
@@ -459,7 +498,7 @@ const About = () => {
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white text-sm font-bold">✓</span>
+                  <CheckCircle2 className="h-4 w-4 text-white" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">Proven Track Record</h3>
@@ -468,7 +507,7 @@ const About = () => {
               </div>
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white text-sm font-bold">✓</span>
+                  <CheckCircle2 className="h-4 w-4 text-white" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">AI-First Approach</h3>
@@ -477,7 +516,7 @@ const About = () => {
               </div>
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white text-sm font-bold">✓</span>
+                  <CheckCircle2 className="h-4 w-4 text-white" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">Transparent Communication</h3>
@@ -488,7 +527,7 @@ const About = () => {
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white text-sm font-bold">✓</span>
+                  <CheckCircle2 className="h-4 w-4 text-white" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">Scalable Solutions</h3>
@@ -497,7 +536,7 @@ const About = () => {
               </div>
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white text-sm font-bold">✓</span>
+                  <CheckCircle2 className="h-4 w-4 text-white" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">Post-Launch Support</h3>
@@ -506,7 +545,7 @@ const About = () => {
               </div>
               <div className="flex items-start space-x-4">
                 <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <span className="text-white text-sm font-bold">✓</span>
+                  <CheckCircle2 className="h-4 w-4 text-white" />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-white mb-2">Security First</h3>
@@ -569,25 +608,25 @@ const About = () => {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-gradient-to-r from-pink-500 to-violet-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">🎯</span>
+                    <Sparkles className="h-3.5 w-3.5 text-white" />
                   </div>
                   <span className="text-neutral-300">Remote-first with flexible working hours</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-gradient-to-r from-pink-500 to-violet-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">📚</span>
+                    <Brain className="h-3.5 w-3.5 text-white" />
                   </div>
                   <span className="text-neutral-300">Continuous learning and skill development budget</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-gradient-to-r from-pink-500 to-violet-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">🚀</span>
+                    <Rocket className="h-3.5 w-3.5 text-white" />
                   </div>
                   <span className="text-neutral-300">Innovation time for personal projects</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-6 h-6 bg-gradient-to-r from-pink-500 to-violet-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">🌍</span>
+                    <Shield className="h-3.5 w-3.5 text-white" />
                   </div>
                   <span className="text-neutral-300">Diverse, global team across 12 countries</span>
                 </div>

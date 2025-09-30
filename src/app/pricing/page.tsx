@@ -26,7 +26,7 @@ const plans = [
       " rounded-3xl  py-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-50",
     description:
       "Perfect for startups and entrepreneurs looking to validate their ideas quickly with a functional MVP.",
-    button: "Buy Now",
+    button: "Contact Now",
   },
   {
     index: 1,
@@ -45,7 +45,7 @@ const plans = [
       " rounded-3xl  py-10 bg-clip-text text-transparent bg-gradient-to-b from-neutral-300 to-neutral-50",
     description:
       "Best for growing businesses that need a complete software solution with advanced functionality.",
-    button: "Buy Now",
+    button: "Contact Now",
   },
   {
     index: 2,
@@ -125,26 +125,26 @@ const Pricing = () => {
               <div className={plan.button}>
                 {index === 0 && (
                   <Link
-                    href="https://buy.stripe.com/test_8wM15jgAm4iV2UE7ss"
+                    href="/book"
                     className="rounded-3xl my-4  py-2 text-white w-full mx-auto items-center flex justify-center bg-gradient-to-r from-emerald-500 to-blue-300"
                   >
-                    Buy Now
+                    Book a Call
                   </Link>
                 )}
                 {index === 1 && (
                   <Link
-                    href="https://buy.stripe.com/test_4gw4hv0Bo4iV3YIfYZ"
+                    href="/book"
                     className="rounded-3xl my-4  py-2 text-white w-full mx-auto items-center flex justify-center bg-gradient-to-r from-emerald-500 to-blue-300"
                   >
-                    Buy Now
+                    Book a Call
                   </Link>
                 )}
                 {index === 2 && (
                   <Link
-                    href="/contact"
+                    href="/book"
                     className="rounded-3xl my-4  py-2 text-white w-full mx-auto items-center flex justify-center bg-gradient-to-r from-purple-500 to-blue-300"
                   >
-                    Contact Us
+                    Book a Call
                   </Link>
                 )}
               </div>

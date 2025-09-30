@@ -14,6 +14,7 @@ import FAQS from "./faq";
 import Footer from "@/components/footer";
 import StructuredData from "@/components/structured-data";
 import SEOFAQ from "@/components/seo-faq";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const SoftwareDevelopmentRef = useRef<HTMLDivElement>(null);
@@ -70,14 +71,39 @@ export default function Home() {
           We&apos;ve helped 50+ companies worldwide transform their ideas into powerful digital products.
         </p>
 
-        <Link
-          href={"/book"}
-          className="cursor-pointer flex items-center justify-center border rounded-full w-48 p-2 mx-auto my-6 text-white bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 hover:border-white/30 hover:shadow-lg hover:shadow-white/25 hover:scale-105 transition-all duration-300 ease-out hover:backdrop-blur-md"
+        <motion.div
+          initial={{ scale: 1 }}
+          animate={{ scale: [1, 1.03, 1] }}
+          transition={{
+            duration: 2.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className="w-48 mx-auto my-6"
         >
-          Book a call
-        </Link>
+          <Link
+            href={"/book"}
+            className="cursor-pointer flex items-center justify-center border rounded-full w-full p-2 text-white bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 hover:border-white/30 hover:shadow-lg hover:shadow-white/25 hover:scale-105 transition-all duration-300 ease-out hover:backdrop-blur-md"
+          >
+            Book a call
+          </Link>
+        </motion.div>
+        
+        <div className="mt-12 text-center">
+            <p className="text-sm text-neutral-500 mb-4 uppercase tracking-widest">
+                Trusted by innovative startups and enterprises
+            </p>
+            <div className="flex justify-center items-center gap-x-8 md:gap-x-12 opacity-60">
+                {/* Replace with your actual client logos */}
+                <span className="font-bold text-2xl text-neutral-400">Stripe</span>
+                <span className="font-bold text-2xl text-neutral-400">Notion</span>
+                <span className="font-bold text-2xl text-neutral-400">Loom</span>
+                <span className="font-bold text-2xl text-neutral-400">Webflow</span>
+            </div>
+        </div>
 
-        <div className="w-full pt-12">
+
+        <div className="w-full pt-20">
           <SliderOne />
         </div>
 
