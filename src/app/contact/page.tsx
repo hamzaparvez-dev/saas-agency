@@ -459,7 +459,7 @@ export default function ContactForm() {
                     <p className="text-sm text-gray-300">
                       <strong className="text-white">Urgent project?</strong> Email us directly at{" "}
                       <a href="mailto:hello@genuinestack.com" className="text-blue-400 hover:text-blue-300">
-                        hello@youragency.com
+                        hello@genuinestack.com
                       </a>
                     </p>
                   </div>
