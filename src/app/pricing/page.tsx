@@ -81,7 +81,7 @@ const Pricing = () => {
       <PricingNavbar />
 
       <div className="flex items-center justify-center flex-col mt-20 md:mt-0">
-        <div className="text-5xl pb-10 md:pb-20 text-slate-300 px-6 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-500 bg-opacity-50">
+        <div className="text-5xl pb-10 md:pb-20 text-slate-300 px-6 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-500 bg-opacity-50 mt-36 md:mt-10">
           Development Packages <br /> Choose your solution
         </div>
         <div className="grid md:grid-cols-3 gap-6 px-6 md:w-4/5 2xl:w-3/4 cursor-pointer pb-20  items-start ">
