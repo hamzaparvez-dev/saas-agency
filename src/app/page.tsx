@@ -2,6 +2,7 @@
 
 import Navbar from "@/components/navbar";
 import SliderOne from "@/components/ui/slider";
+import Testimonial from "@/components/ui/testimonial";
 import { Spotlight } from "@/components/ui/spotlight";
 import Link from "next/link";
 import SoftwareDevelopment from "./SoftwareDevelopment";
@@ -132,65 +133,7 @@ export default function Home() {
         <div ref={AutomationRef}>
           <Automation/>
         </div>
-        {/* Testimonials Section */}
-        <div id="testimonials" className="max-w-6xl mx-auto px-4 py-16">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              What our clients say
-            </h2>
-            <p className="text-lg text-neutral-300 max-w-3xl mx-auto leading-relaxed">
-              Real words from founders and operators who trusted us to build, ship,
-              and scale their products.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="p-6 bg-neutral-900/50 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors">
-              <div className="flex items-center gap-4">
-                <img src="/images/client1-avatar.jpg" alt="Client avatar" className="h-12 w-12 rounded-full object-cover border border-neutral-700" />
-                <div>
-                  <p className="text-white font-semibold">Aarav Mehta</p>
-                  <p className="text-neutral-400 text-sm">Founder, Finlytics</p>
-                </div>
-              </div>
-              <p className="text-neutral-300 mt-4 leading-relaxed">
-                “Genuine Stack felt like an extension of our team. They were fast, thoughtful,
-                and brutally honest about trade‑offs. We launched our MVP in 3 weeks and closed
-                two enterprise pilots the same month. I wish we had met them earlier.”
-              </p>
-            </div>
-
-            <div className="p-6 bg-neutral-900/50 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors">
-              <div className="flex items-center gap-4">
-                <img src="/images/client2-avatar.jpg" alt="Client avatar" className="h-12 w-12 rounded-full object-cover border border-neutral-700" />
-                <div>
-                  <p className="text-white font-semibold">Emily Rogers</p>
-                  <p className="text-neutral-400 text-sm">COO, CareBridge Health</p>
-                </div>
-              </div>
-              <p className="text-neutral-300 mt-4 leading-relaxed">
-                “They translated a messy idea into a reliable product our clinicians actually
-                love using. Communication was crisp, deadlines were respected, and the codebase
-                is a joy for our internal team to maintain.”
-              </p>
-            </div>
-
-            <div className="p-6 bg-neutral-900/50 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors">
-              <div className="flex items-center gap-4">
-                <img src="/images/client3-avatar.jpg" alt="Client avatar" className="h-12 w-12 rounded-full object-cover border border-neutral-700" />
-                <div>
-                  <p className="text-white font-semibold">Noah Williams</p>
-                  <p className="text-neutral-400 text-sm">Product Lead, ShipRight</p>
-                </div>
-              </div>
-              <p className="text-neutral-300 mt-4 leading-relaxed">
-                “From architecture to tiny UI details, they cared about outcomes—not just
-                output. Performance improved 40%, support tickets dropped, and customers noticed.
-                This is the partner you keep.”
-              </p>
-            </div>
-          </div>
-        </div>
+        <Testimonial />
         <FAQS />
         <Footer />
       </div>
