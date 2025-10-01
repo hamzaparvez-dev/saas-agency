@@ -14,7 +14,6 @@ import FAQS from "./faq";
 import Footer from "@/components/footer";
 import StructuredData from "@/components/structured-data";
 import SEOFAQ from "@/components/seo-faq";
-import { motion } from "framer-motion";
 
 export default function Home() {
   const SoftwareDevelopmentRef = useRef<HTMLDivElement>(null);
@@ -61,49 +60,28 @@ export default function Home() {
       />
 
       <Spotlight className="hidden md:flex md:-top-80 left-80  " fill="white" />
-      <div className="p-4 mx-auto relative z-10 w-full pt-16 md:pt-32 px-2">
-        <h1 className="text-4xl pb-5 md:text-7xl px-6 text-center  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to bg-neutral-400 bg-opacity-50">
-          Build, scale, and <br /> automate your software
-        </h1>
-        <p className="mt-6 text-xl font-normal text-neutral-300 max-w-3xl text-center mx-auto px-4 leading-relaxed">
-          From MVP to enterprise solutions. <strong>Genuine Stack</strong> is a premier SaaS development agency
-          specializing in custom software development, APIs, and AI automation solutions.
-          We&apos;ve helped 50+ companies worldwide transform their ideas into powerful digital products.
-        </p>
+      <div className="px-4 mx-auto relative z-10 w-full pt-20 md:pt-32 mt-20 md:mt-0">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl md:text-7xl px-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50 leading-tight">
+            Build, scale, and <br /> automate your software
+          </h1>
+          <p className="mt-8 text-lg sm:text-xl font-normal text-neutral-300 max-w-3xl text-center mx-auto px-4 leading-relaxed">
+            From MVP to enterprise solutions. <strong>Genuine Stack</strong> is a premier SaaS development agency
+            specializing in custom software development, APIs, and AI automation solutions.
+            We&apos;ve helped 50+ companies worldwide transform their ideas into powerful digital products.
+          </p>
 
-        <motion.div
-          initial={{ scale: 1 }}
-          animate={{ scale: [1, 1.03, 1] }}
-          transition={{
-            duration: 2.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="w-48 mx-auto my-6"
-        >
-          <Link
-            href={"/book"}
-            className="cursor-pointer flex items-center justify-center border rounded-full w-full p-2 text-white bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 hover:border-white/30 hover:shadow-lg hover:shadow-white/25 hover:scale-105 transition-all duration-300 ease-out hover:backdrop-blur-md"
-          >
-            Book a call
-          </Link>
-        </motion.div>
-        
-        <div className="mt-12 text-center">
-            <p className="text-sm text-neutral-500 mb-4 uppercase tracking-widest">
-                Trusted by innovative startups and enterprises
-            </p>
-            <div className="flex justify-center items-center gap-x-8 md:gap-x-12 opacity-60">
-                {/* Replace with your actual client logos */}
-                <span className="font-bold text-2xl text-neutral-400">Stripe</span>
-                <span className="font-bold text-2xl text-neutral-400">Notion</span>
-                <span className="font-bold text-2xl text-neutral-400">Loom</span>
-                <span className="font-bold text-2xl text-neutral-400">Webflow</span>
-            </div>
+          <div className="mt-10 flex justify-center">
+            <Link
+              href={"/book"}
+              className="cursor-pointer flex items-center justify-center border rounded-full w-48 sm:w-56 p-3 text-white bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 hover:border-white/30 hover:shadow-lg hover:shadow-white/25 hover:scale-105 transition-all duration-300 ease-out hover:backdrop-blur-md"
+            >
+              Book a call
+            </Link>
+          </div>
         </div>
 
-
-        <div className="w-full pt-20">
+        <div className="w-full pt-12">
           <SliderOne />
         </div>
 

@@ -136,7 +136,7 @@ export default function ContactForm() {
   return (
     <div className=" w-full   md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden ">
       <PricingNavbar />
-      <div className="md:flex items-start justify-center gap-12 md:py-20 px-6 max-w-7xl mx-auto">
+      <div className="md:flex items-start justify-center gap-12 md:py-20 px-6 max-w-7xl mx-auto mt-20 md:mt-0">
         <div className="md:w-1/2 md:max-w-2xl">
           <div className="text-4xl md:text-5xl lg:text-6xl font-medium pb-5 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
             Let&apos;s Build Your Vision
@@ -458,7 +458,7 @@ export default function ContactForm() {
                   <div className="mt-8 p-4 bg-gradient-to-r from-blue-500/10 to-purple-600/10 border border-blue-500/20 rounded-lg">
                     <p className="text-sm text-gray-300">
                       <strong className="text-white">Urgent project?</strong> Email us directly at{" "}
-                      <a href="mailto:hello@youragency.com" className="text-blue-400 hover:text-blue-300">
+                      <a href="mailto:hello@genuinestack.com" className="text-blue-400 hover:text-blue-300">
                         hello@youragency.com
                       </a>
                     </p>

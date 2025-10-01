@@ -100,12 +100,12 @@ const Navbar = ({
   const isHomePage = pathname === '/';
 
   return (
-    <div className="p-4 md:p-6 flex items-center justify-center fixed md:relative top-0 w-full z-50">
-      {/* Mobile-only full-width background */}
-      <div className="md:hidden absolute top-0 left-0 w-full h-full bg-black/[0.96] " />
-
-      {/* Main Nav Container */}
-      <div className="relative flex items-center justify-between w-full max-w-6xl md:bg-black/50 md:backdrop-blur-lg md:border md:border-neutral-700 md:rounded-full md:px-8 md:py-3">
+    <div className="fixed md:relative top-0 w-full z-50 md:flex md:justify-center md:pt-6">
+      
+      <div className="p-4 bg-black/[0.96] flex items-center justify-between 
+                 md:max-w-6xl md:w-full md:bg-black/10 md:backdrop-blur-xl 
+                 md:border md:border-white/10 
+                 md:rounded-full md:px-8 md:py-3">
         
         {/* Logo */}
         <div className="relative z-10">
@@ -191,3 +191,4 @@ const Navbar = ({
 };
  
 export default Navbar;
+

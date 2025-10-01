@@ -155,7 +155,7 @@ const APIDeveopmentService = () => {
     <div className="w-full md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
       <PricingNavbar />
       
-      <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2">
+      <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2 mt-20 md:mt-0">
         {/* Hero Section */}
         <div className="max-w-6xl mx-auto text-center mb-20">
           <div className="text-4xl pb-5 md:text-7xl px-6 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
