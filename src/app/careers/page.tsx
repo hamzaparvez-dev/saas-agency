@@ -17,6 +17,7 @@ import {
   Zap,
   CheckCircle2,
   ArrowRight,
+  DollarSign,
 } from "lucide-react";
 
 const jobListings = [
@@ -25,6 +26,7 @@ const jobListings = [
     title: "Full Stack Developer",
     location: "Remote / Hybrid",
     type: "Contract",
+    salary: "$80k - $120k",
     icon: Code2,
     color: "from-blue-500 to-purple-600",
     description:
@@ -55,6 +57,7 @@ const jobListings = [
     title: "Sales Closure Specialist",
     location: "Remote / On-site",
     type: "Contract",
+    salary: "$60k - $100k + Commission",
     icon: TrendingUp,
     color: "from-emerald-500 to-teal-600",
     description:
@@ -85,6 +88,7 @@ const jobListings = [
     title: "Graphic Designer",
     location: "Remote",
     type: "Contract",
+    salary: "$50k - $80k",
     icon: Palette,
     color: "from-pink-500 to-orange-500",
     description:
