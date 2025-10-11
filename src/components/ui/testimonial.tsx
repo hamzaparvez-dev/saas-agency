@@ -24,7 +24,7 @@ const TESTIMONIALS: TestimonialItem[] = [
   },
   {
     name: "Emily Rogers",
-    role: "COO",
+    role: "CFO",
     company: "CareBridge Health",
     avatar: "/images/client2-avatar.jpg",
     quote:
