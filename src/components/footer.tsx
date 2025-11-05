@@ -20,13 +20,15 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
-              <Image
-                src="/logo/logo.svg"
-                alt="Logo"
-                width={40}
-                height={40}
-                className="w-10 h-10"
-              />
+              <div className="rounded-full border-2 border-white/10 bg-white/50 backdrop-blur-sm">
+                <Image
+                  src="/logo/logo.png"
+                  alt="Logo"
+                  width={100}
+                  height={100}
+                  className="w-12 h-12 md:w-12 md:h-12 rounded-full"
+                />
+              </div>
               <span className="ml-3 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
                 Genuine Stack
               </span>
@@ -211,18 +213,6 @@ const Footer = () => {
               <Link href="/cookies" className="text-neutral-400 hover:text-blue-400 text-sm transition-colors">
                 Cookie Policy
               </Link>
-            </div>
-          </div>
-          
-          {/* Tech Stack Badge */}
-          <div className="flex items-center space-x-2 mt-4 md:mt-0">
-            <span className="text-neutral-400 text-sm">Built with</span>
-            <div className="flex items-center space-x-1">
-              <span className="text-blue-400 text-sm font-medium">Next.js</span>
-              <span className="text-neutral-400">•</span>
-              <span className="text-purple-400 text-sm font-medium">TypeScript</span>
-              <span className="text-neutral-400">•</span>
-              <span className="text-teal-400 text-sm font-medium">Tailwind CSS</span>
             </div>
           </div>
         </div>

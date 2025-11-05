@@ -69,7 +69,7 @@ export default function Home() {
           <p className="mt-8 text-lg sm:text-xl font-normal text-neutral-300 max-w-3xl text-center mx-auto px-4 leading-relaxed">
             From MVP to enterprise solutions. <strong>Genuine Stack</strong> is a premier SaaS development agency
             specializing in custom software development, APIs, and AI automation solutions.
-            We&apos;ve helped 50+ companies worldwide transform their ideas into powerful digital products.
+            We&apos;ve helped 12+ companies worldwide transform their ideas into powerful digital products.
           </p>
 
           <div className="mt-10 flex justify-center">
@@ -97,7 +97,7 @@ export default function Home() {
               with over 5 years of experience in transforming innovative ideas into powerful digital solutions. 
               We specialize in custom software development, API development, MVP creation, enterprise websites, 
               and AI automation solutions. Our team of expert developers, designers, and strategists has successfully 
-              delivered 150+ projects for startups and enterprises worldwide, helping them secure over $10M in funding 
+              delivered 37+ projects for startups and enterprises worldwide, helping them secure over $2.5M in funding 
               and achieve their digital transformation goals.
             </p>
           </div>
@@ -108,11 +108,11 @@ export default function Home() {
               <p className="text-neutral-300">Proven track record in SaaS development and digital transformation</p>
             </div>
             <div className="text-center p-6 bg-neutral-900/50 rounded-xl border border-neutral-800">
-              <h3 className="text-xl font-bold text-white mb-3">150+ Projects Delivered</h3>
+              <h3 className="text-xl font-bold text-white mb-3">37+ Projects Delivered</h3>
               <p className="text-neutral-300">Successfully launched products for startups and enterprises</p>
             </div>
             <div className="text-center p-6 bg-neutral-900/50 rounded-xl border border-neutral-800">
-              <h3 className="text-xl font-bold text-white mb-3">$10M+ Funding Secured</h3>
+              <h3 className="text-xl font-bold text-white mb-3">$2.5M+ Funding Secured</h3>
               <p className="text-neutral-300">Helped our clients raise significant investment through our MVPs</p>
             </div>
           </div>

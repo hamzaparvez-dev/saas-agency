@@ -100,24 +100,26 @@ const Navbar = ({
   const isHomePage = pathname === '/';
 
   return (
-    <div className="fixed md:relative top-0 w-full z-50 md:flex md:justify-center md:pt-6">
+    <div className="fixed md:relative top-0 w-full z-50 md:flex md:justify-center md:pt-2">
       
-      <div className="p-4 bg-black/[0.96] flex items-center justify-between 
+      <div className="p-3 bg-black/[0.96] flex items-center justify-between 
                  md:max-w-6xl md:w-full md:bg-black/10 md:backdrop-blur-xl 
                  md:border md:border-white/10 
-                 md:rounded-full md:px-8 md:py-3">
+                 md:rounded-full md:px-4 md:py-2">
         
         {/* Logo */}
         <div className="relative z-10">
           <Link className="cursor-pointer" href="/">
-            <Image
-              priority
-              src="/logo/logo.svg"
-              alt="Logo"
-              width={100}
-              height={100}
-              className="w-10 h-10 md:w-12 md:h-12"
-            />
+            <div className="rounded-full border-2 border-white/10 hover:border-white/40 transition-all duration-300 bg-white/50 backdrop-blur-sm">
+              <Image
+                priority
+                src="/logo/logo.png"
+                alt="Logo"
+                width={100}
+                height={100}
+                className="w-12 h-12 md:w-12 md:h-12 rounded-full"
+              />
+            </div>
           </Link>
         </div>
 

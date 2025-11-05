@@ -94,7 +94,7 @@ export default async function BlogPage({
               "name": "SaaS Agency",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.genuinestack.com/logo/logo.svg"
+                "url": "https://www.genuinestack.com/logo/logo.png"
               }
             },
             "blogPost": visiblePosts.map(post => ({

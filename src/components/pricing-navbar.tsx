@@ -110,14 +110,16 @@ const Navbar = ({
         {/* Logo */}
         <div className="relative z-10">
           <Link className="cursor-pointer" href="/">
-            <Image
-              priority
-              src="/logo/logo.svg"
-              alt="Logo"
-              width={100}
-              height={100}
-              className="w-10 h-10 md:w-12 md:h-12"
-            />
+            <div className="rounded-full border-2 border-white/10 hover:border-white/40 transition-all duration-300 bg-white/50 backdrop-blur-sm">
+              <Image
+                priority
+                src="/logo/logo.png"
+                alt="Logo"
+                width={100}
+                height={100}
+                className="w-12 h-12 md:w-12 md:h-12 rounded-full"
+              />
+            </div>
           </Link>
         </div>
 

@@ -23,35 +23,35 @@ const mvpProjects = [
     name: "Sarah Chen",
     role: "CEO, TechStart",
     industry: "FinTech",
-    funding: "$2.5M",
+    funding: "$625K",
     timeframe: "4 weeks",
-    users: "10K+"
+    users: "2.5K+"
   },
   {
     quote: "Our MVP helped us secure our first round of funding. The team understood our vision perfectly.",
     name: "Mike Rodriguez",
     role: "Founder, InnovateLab",
     industry: "HealthTech",
-    funding: "$5M",
+    funding: "$1.25M",
     timeframe: "6 weeks",
-    users: "25K+"
+    users: "6.25K+"
   },
   {
     quote: "Fast, efficient, and exactly what we needed to test our product-market fit. Highly recommended.",
     name: "Emma Johnson",
     role: "Co-founder, DataFlow",
     industry: "SaaS",
-    funding: "$1.8M",
+    funding: "$450K",
     timeframe: "3 weeks",
-    users: "8K+"
+    users: "2K+"
   },
 ];
 
 const mvpStats = [
   { label: "Average Launch Time", value: "4", suffix: " weeks" },
   { label: "Success Rate", value: "95", suffix: "%" },
-  { label: "Funding Secured", value: "$50M", suffix: "+" },
-  { label: "MVPs Delivered", value: "150", suffix: "+" }
+  { label: "Funding Secured", value: "$1.5M", suffix: "+" },
+  { label: "MVPs Delivered", value: "37", suffix: "+" }
 ];
 
 const mvpFeatures = [
@@ -305,7 +305,7 @@ const MvpSolutions = () => {
           </LoadingLink>
           
           <p className="text-neutral-700 text-lg mt-6 max-w-lg mx-auto font-medium">
-            Join 150+ successful startups who launched their MVP with us
+            Join 37+ successful startups who launched their MVP with us
           </p>
         </div>
       </div>

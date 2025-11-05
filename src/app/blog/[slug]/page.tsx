@@ -131,7 +131,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               "name": "Genuine Stack",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.genuinestack.com/logo/logo.svg"
+                "url": "https://www.genuinestack.com/logo/logo.png"
               }
             },
             "datePublished": post.publishedAt,
