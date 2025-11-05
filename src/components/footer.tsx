@@ -59,7 +59,7 @@ const Footer = () => {
                 <Twitter className="w-6 h-6" />
               </Link>
               <Link
-                href="https://www.instagram.com/bygenuinestack/"
+                href="https://www.instagram.com/genuinestack/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Genuine Stack on Instagram"
