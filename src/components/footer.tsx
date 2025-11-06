@@ -183,13 +183,13 @@ const Footer = () => {
             {/* Newsletter Signup */}
             <div className="space-y-3">
               <p className="text-sm text-neutral-300">Subscribe to our newsletter</p>
-              <div className="flex">
+              <div className="flex gap-2">
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-3 py-2 bg-neutral-800 border border-neutral-700 rounded-l-md text-sm text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className="flex-1 px-3 py-2 bg-neutral-800 border border-neutral-700 rounded-md text-sm text-white placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-                <button className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium rounded-r-md hover:from-blue-600 hover:to-purple-700 transition-colors">
+                <button className="genuine-button text-sm rounded-md" style={{ borderRadius: '0.375rem' }}>
                   Subscribe
                 </button>
               </div>

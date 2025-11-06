@@ -445,7 +445,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <LoadingLink
                   href="/contact"
-                  className="inline-flex h-12 items-center justify-center rounded-md bg-gradient-to-r from-blue-500 to-purple-600 px-8 font-medium text-white transition-colors hover:from-blue-600 hover:to-purple-700"
+                  className="genuine-button h-12 px-8"
                 >
                   Start Your Project
                 </LoadingLink>
