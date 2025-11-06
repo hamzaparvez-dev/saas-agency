@@ -55,7 +55,7 @@ const developmentServices = [
 ]
 
 const developmentStats = [
-  { label: "Projects Delivered", value: "500", suffix: "+" },
+  { label: "Projects Delivered", value: "37", suffix: "+" },
   { label: "Code Quality Score", value: "98", suffix: "%" },
   { label: "Client Satisfaction", value: "99", suffix: "%" },
   { label: "Deployment Success", value: "100", suffix: "%" }
