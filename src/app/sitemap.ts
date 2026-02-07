@@ -96,8 +96,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
+  
   // SEO and conversion focused pages
   const seoPages = [
+    // Add these to your sitemap function
+{
+  url: `${baseUrl}/locations/new-york-saas-agency`,
+  lastModified: new Date(),
+  changeFrequency: 'monthly',
+  priority: 0.8,
+},
+{
+  url: `${baseUrl}/locations/lucknow-software-company`,
+  lastModified: new Date(),
+  changeFrequency: 'monthly',
+  priority: 0.8,
+},
     {
       url: `${baseUrl}/faq`,
       lastModified: new Date(),
