@@ -3,6 +3,27 @@ import Footer from "@/components/footer";
 import Image from "next/image";
 import Link from "next/link";
 
+// Example for AI Automation Page
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "AI Automation",
+  "provider": {
+    "@type": "Organization",
+    "name": "Genuine Stack"
+  },
+  "areaServed": "Worldwide",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "AI Services",
+    "itemListElement": [
+      { "@type": "Offer", "name": "Document Processing Automation" },
+      { "@type": "Offer", "name": "Custom Chatbot Development" },
+      { "@type": "Offer", "name": "LLM Integration" }
+    ]
+  }
+};
+
 const AIAutomationService = () => {
   const process = [
     {
