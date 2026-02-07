@@ -1,7 +1,8 @@
+// Update src/app/robots.ts
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://www.genuinestack.com' // Your actual domain
+  const baseUrl = 'https://www.genuinestack.com'
 
   return {
     rules: [
@@ -12,18 +13,12 @@ export default function robots(): MetadataRoute.Robots {
           '/admin/',
           '/api/',
           '/private/',
-          '/_next/',
+          // '/_next/', 
           '/node_modules/',
         ],
-        crawlDelay: 1,
       },
       {
         userAgent: 'Googlebot',
-        allow: '/',
-        disallow: ['/admin/', '/api/'],
-      },
-      {
-        userAgent: 'Bingbot',
         allow: '/',
         disallow: ['/admin/', '/api/'],
       },
