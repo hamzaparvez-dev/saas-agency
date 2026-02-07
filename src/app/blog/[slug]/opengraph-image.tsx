@@ -1,7 +1,15 @@
 import { ImageResponse } from 'next/og'
 import { getBlogPostBySlug } from '@/lib/blog'
  
-export const runtime = 'edge'
+// DELETE THIS LINE:
+// export const runtime = 'edge' 
+ 
+export const alt = 'Genuine Stack Blog Post'
+export const size = {
+  width: 1200,
+  height: 630,
+}
+export const contentType = 'image/png'
  
 export default async function Image({ params }: { params: { slug: string } }) {
   const post = getBlogPostBySlug(params.slug)
@@ -23,7 +31,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
           backgroundImage: 'linear-gradient(to bottom right, #111, #000)',
         }}
       >
-        <div style={{ padding: '40px', textAlign: 'center' }}>
+        <div style={{ padding: '40px', textAlign: 'center', lineHeight: 1.2 }}>
           {title}
         </div>
         <div style={{ fontSize: 30, color: '#888', marginTop: 20 }}>
@@ -31,6 +39,6 @@ export default async function Image({ params }: { params: { slug: string } }) {
         </div>
       </div>
     ),
-    { width: 1200, height: 630 }
+    { ...size }
   )
 }
