@@ -25,7 +25,25 @@ export const metadata: Metadata = {
   
   title: "Genuine Stack - SaaS Agency | Custom Software & AI Solutions",
   description: "Leading SaaS development agency specializing in custom software, API development, MVPs, and AI automation. Transform your ideas into powerful digital products..",
-  keywords: "Genuine Stack, SaaS development agency, custom software development, API development, MVP development, enterprise websites, AI automation, software development company, web application development, mobile app development, digital transformation",
+  keywords: [
+  // High Intent (Commercial)
+  "AI automation agency for startups",
+  "SaaS MVP development company India",
+  "Enterprise Next.js development services",
+  "Custom CRM development services",
+  "Generative AI integration services",
+  "B2B SaaS product design agency",
+
+  // Technical Specificity
+  "API development and integration experts",
+  "Supabase development agency",
+  "Vercel enterprise solutions partner",
+
+  // Location Based
+  "Genuine Stack Lucknow",
+  "SaaS agency New York"
+].join(", "),
+  
   authors: [{ name: 'Genuine Stack Team' }],
   creator: 'Genuine Stack',
   publisher: 'Genuine Stack',
