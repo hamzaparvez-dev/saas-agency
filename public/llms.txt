@@ -1,0 +1,34 @@
+# Genuine Stack - SaaS & AI Development Agency
+
+## Project Summary
+Genuine Stack is a premier SaaS development agency specializing in custom software, API development, MVP creation, and AI automation solutions. We help startups and enterprises transform ideas into scalable digital products.
+
+## Core Services
+- **Custom SaaS Development**: End-to-end software engineering using Next.js, React, Node.js.
+- **AI Automation**: Workflow automation, LLM integration, and intelligent document processing.
+- **MVP Development**: Rapid prototyping and MVP launch for startups (3-month typical timeline).
+- **API Development**: Scalable REST and GraphQL API architectures.
+- **Enterprise Solutions**: High-performance corporate websites and internal tools.
+
+## Key Links
+- **Home**: https://www.genuinestack.com/
+- **Services**: https://www.genuinestack.com/services
+- **Case Studies**: https://www.genuinestack.com/portfolio
+- **Blog (Technical Insights)**: https://www.genuinestack.com/blog
+- **Pricing**: https://www.genuinestack.com/pricing
+- **Contact**: https://www.genuinestack.com/contact
+
+## Technical Stack
+- **Frontend**: Next.js, React, Tailwind CSS, TypeScript
+- **Backend**: Node.js, Python (for AI), Supabase/PostgreSQL
+- **Infrastructure**: AWS, Vercel, Docker
+- **AI/ML**: OpenAI API, Anthropic Claude, LangChain, Pinecone
+
+## Content Structure for AI Indexing
+- **/services**: Detailed breakdown of technical capabilities and service offerings.
+- **/portfolio**: Real-world case studies including "Silk Design System" and "Polpharma API".
+- **/blog**: In-depth technical articles on Microservices, DevOps, and SaaS Architecture.
+
+## Contact Information
+- **Email**: hello@genuinestack.com
+- **Location**: Lucknow, India & New York, USA
