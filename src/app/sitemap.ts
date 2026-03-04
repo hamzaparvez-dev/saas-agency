@@ -2,10 +2,8 @@ import { MetadataRoute } from 'next'
 import { getAllBlogPosts } from '@/lib/blog'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.genuinestack.com' // Your actual domain
+  const baseUrl = 'https://www.genuinestack.com'
   
-  // Static pages - High priority core pages
-  // hi
   const staticPages = [
     {
       url: baseUrl,
@@ -51,7 +49,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // Service pages - High value conversion pages
   const servicePages = [
     'software-development',
     'api-development', 
@@ -66,7 +63,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }))
 
-  // Additional service-related pages for better coverage
   const additionalServicePages = [
     {
       url: `${baseUrl}/services`,
@@ -76,7 +72,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // Portfolio case study pages - Showcase our work
   const portfolioPages = [
     'silk-design-system',
     'polpharma-api-website',
@@ -97,22 +92,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  
-  // SEO and conversion focused pages
   const seoPages = [
-    // Add these to your sitemap function
-{
-  url: `${baseUrl}/locations/new-york-saas-agency`,
-  lastModified: new Date(),
-  changeFrequency: 'monthly',
-  priority: 0.8,
-},
-{
-  url: `${baseUrl}/locations/lucknow-software-company`,
-  lastModified: new Date(),
-  changeFrequency: 'monthly',
-  priority: 0.8,
-},
+    {
+      url: `${baseUrl}/locations/new-york-saas-agency`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,  // ← fixed
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/locations/lucknow-software-company`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,  // ← fixed
+      priority: 0.8,
+    },
     {
       url: `${baseUrl}/faq`,
       lastModified: new Date(),
@@ -157,7 +149,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // Blog posts - Fresh content for SEO
   const blogPosts = getAllBlogPosts().map(post => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post.updatedAt),
@@ -165,7 +156,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  // Admin pages (if accessible publicly)
   const adminPages = [
     {
       url: `${baseUrl}/admin/blog`,
