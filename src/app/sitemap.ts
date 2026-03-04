@@ -5,6 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.genuinestack.com' // Your actual domain
   
   // Static pages - High priority core pages
+  // hi
   const staticPages = [
     {
       url: baseUrl,
