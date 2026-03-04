@@ -1,7 +1,8 @@
+"use client"
+
 import PricingNavbar from "@/components/pricing-navbar";
 import Footer from "@/components/footer";
 import Image from "next/image";
-import Breadcrumbs from "@/components/breadcrumbs";
 import {
   Rocket,
   Handshake,
@@ -19,8 +20,110 @@ import {
   Brain,
   Sparkles,
   CheckCircle2,
-  Star
+  Star,
+  ExternalLink,
+  Cpu,
+  TrendingUp,
+  PenTool,
+  Terminal,
+  MonitorSmartphone,
+  Workflow,
 } from "lucide-react";
+
+// ── Team data ────────────────────────────────────────────────────────────────
+const team = [
+  {
+    name: "Hamza Parvez",
+    role: "CFO & AI Automation Lead",
+    bio: "Leads backend architecture and custom AI voice agent development. Transforms complex business processes into intelligent, automated systems that save time and cut cost.",
+    linkedin: "https://www.linkedin.com/in/hamzaparvez-main/",
+    icon: Cpu,
+    gradient: "from-blue-500 via-blue-600 to-indigo-700",
+    glow: "rgba(59,130,246,0.35)",
+    tag: "AI · Backend · Voice Agents",
+    initials: "HP",
+  },
+  {
+    name: "B Tharun",
+    role: "Marketing & Growth Strategist",
+    bio: "Drives market research, business development, and growth strategy. Specialises in off-market strategic transactions and connecting GenuineStack with enterprise partners globally.",
+    linkedin: "https://www.linkedin.com/in/b-tharun-b92b57186/",
+    icon: TrendingUp,
+    gradient: "from-emerald-500 via-teal-500 to-cyan-600",
+    glow: "rgba(16,185,129,0.35)",
+    tag: "Growth · Research · Strategy",
+    initials: "BT",
+  },
+  {
+    name: "Samuel Adebayo",
+    role: "Content Writer & Brand Strategist",
+    bio: "Shapes GenuineStack's voice and content strategy. Creates clear, compelling narratives that translate complex AI solutions into stories clients understand and trust.",
+    linkedin: "https://www.linkedin.com/in/samuel-adebayo-4a9290344/",
+    icon: PenTool,
+    gradient: "from-purple-500 via-violet-600 to-pink-600",
+    glow: "rgba(147,51,234,0.35)",
+    tag: "Content · Branding · Comms",
+    initials: "SA",
+  },
+  {
+    name: "Ankit Sevak",
+    role: "Backend Developer",
+    bio: "Builds the server-side systems powering GenuineStack's products. Designs robust APIs, data pipelines, and integrations that keep every platform fast, stable, and scalable.",
+    linkedin: "https://www.linkedin.com/in/ankitsevak/",
+    icon: Terminal,
+    gradient: "from-orange-500 via-amber-500 to-yellow-500",
+    glow: "rgba(249,115,22,0.35)",
+    tag: "Backend · APIs · Integrations",
+    initials: "AS",
+  },
+  {
+    name: "Manisha Saini",
+    role: "Software Developer",
+    bio: "Develops full-stack features across GenuineStack's platforms. Brings precision and clean engineering to every layer of the product — from UI components to database logic.",
+    linkedin: "https://www.linkedin.com/in/manisha-saini-424a97153/",
+    icon: MonitorSmartphone,
+    gradient: "from-pink-500 via-rose-500 to-red-500",
+    glow: "rgba(236,72,153,0.35)",
+    tag: "Full-Stack · Java · Frontend",
+    initials: "MS",
+  },
+  {
+    name: "Kevin (A Rishwanth)",
+    role: "AI Automation Engineer",
+    bio: "Builds custom AI systems that eliminate manual work for businesses. Specialises in AI automations, agents, voice systems, and custom business dashboards that help entrepreneurs scale faster.",
+    linkedin: "https://www.linkedin.com/in/kevinautomates/",
+    icon: Workflow,
+    gradient: "from-lime-500 via-green-500 to-emerald-600",
+    glow: "rgba(132,204,22,0.35)",
+    tag: "AI Agents · Automation · Systems",
+    initials: "KR",
+  },
+];
+
+// ── Reusable stat card ────────────────────────────────────────────────────────
+const StatCard = ({
+  value,
+  label,
+  gradient,
+  shadow,
+}: {
+  value: string;
+  label: string;
+  gradient: string;
+  shadow: string;
+}) => (
+  <div
+    className={`p-6 border border-neutral-800/60 rounded-2xl bg-white/5 backdrop-blur transition hover:shadow-lg`}
+    style={{ boxShadow: `0 0 0 1px rgba(255,255,255,0.02)` }}
+  >
+    <div
+      className={`text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b ${gradient} mb-2`}
+    >
+      {value}
+    </div>
+    <p className="text-neutral-300 text-lg">{label}</p>
+  </div>
+);
 
 const About = () => {
   return (
@@ -28,45 +131,27 @@ const About = () => {
       <PricingNavbar />
 
       <div className="p-4 mx-auto relative z-10 w-full pt-10 md:pt-20 px-2 mt-20 md:mt-0">
-        {/* Hero Section */}
+
+        {/* ── Hero ─────────────────────────────────────────────────────────── */}
         <div className="text-4xl pb-5 md:text-7xl px-6 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
           Digital acceleration company
         </div>
         <p className="mt-4 text-lg font-normal text-neutral-300 max-w-3xl text-center mx-auto px-4">
-          We are a dedicated team of software developers, architects, and AI specialists committed to transforming ideas into powerful digital solutions that scale businesses worldwide.
+          We are a dedicated team of software developers, architects, and AI specialists committed
+          to transforming ideas into powerful digital solutions that scale businesses worldwide.
         </p>
 
-        {/* Company Stats */}
+        {/* ── Stats ────────────────────────────────────────────────────────── */}
         <div className="max-w-6xl mx-auto py-16">
           <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div className="p-6 border border-neutral-800/60 rounded-2xl bg-white/5 backdrop-blur shadow-[0_0_0_1px_rgba(255,255,255,0.02)] hover:shadow-[0_0_0_1px_rgba(59,130,246,0.25)] transition">
-              <div className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-blue-400 to-blue-600 mb-2">
-                150+
-              </div>
-              <p className="text-neutral-300 text-lg">Projects Delivered</p>
-            </div>
-            <div className="p-6 border border-neutral-800/60 rounded-2xl bg-white/5 backdrop-blur shadow-[0_0_0_1px_rgba(255,255,255,0.02)] hover:shadow-[0_0_0_1px_rgba(16,185,129,0.25)] transition">
-              <div className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-emerald-400 to-emerald-600 mb-2">
-                50+
-              </div>
-              <p className="text-neutral-300 text-lg">Happy Clients</p>
-            </div>
-            <div className="p-6 border border-neutral-800/60 rounded-2xl bg-white/5 backdrop-blur shadow-[0_0_0_1px_rgba(255,255,255,0.02)] hover:shadow-[0_0_0_1px_rgba(147,51,234,0.25)] transition">
-              <div className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-purple-400 to-purple-600 mb-2">
-                5+
-              </div>
-              <p className="text-neutral-300 text-lg">Years Experience</p>
-            </div>
-            <div className="p-6 border border-neutral-800/60 rounded-2xl bg-white/5 backdrop-blur shadow-[0_0_0_1px_rgba(255,255,255,0.02)] hover:shadow-[0_0_0_1px_rgba(249,115,22,0.25)] transition">
-              <div className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-orange-400 to-orange-600 mb-2">
-                24/7
-              </div>
-              <p className="text-neutral-300 text-lg">Support Available</p>
-            </div>
+            <StatCard value="150+" label="Projects Delivered"  gradient="from-blue-400 to-blue-600"    shadow="rgba(59,130,246,0.25)" />
+            <StatCard value="50+"  label="Happy Clients"       gradient="from-emerald-400 to-emerald-600" shadow="rgba(16,185,129,0.25)" />
+            <StatCard value="5+"   label="Years Experience"    gradient="from-purple-400 to-purple-600" shadow="rgba(147,51,234,0.25)" />
+            <StatCard value="24/7" label="Support Available"   gradient="from-orange-400 to-orange-600" shadow="rgba(249,115,22,0.25)" />
           </div>
         </div>
 
-        {/* Our Story Section */}
+        {/* ── Our Story ────────────────────────────────────────────────────── */}
         <div className="max-w-6xl mx-auto py-20">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 mb-6">
@@ -78,71 +163,35 @@ const About = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="mt-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-blue-500/20 ring-1 ring-blue-500/40">
-                    <CalendarDays className="h-3.5 w-3.5 text-blue-400" />
+            <div className="space-y-6">
+              {[
+                { icon: CalendarDays, color: "blue",    year: "2019 - The Beginning",    desc: "Started with a vision to bridge the gap between cutting-edge technology and practical business solutions." },
+                { icon: Brain,        color: "emerald", year: "2021 - AI Integration",   desc: "Pioneered AI-first development approaches, helping clients automate and optimize their operations." },
+                { icon: Rocket,       color: "purple",  year: "2023 - Scale & Growth",   desc: "Expanded to serve enterprise clients across multiple industries, delivering complex SaaS platforms." },
+                { icon: Sparkles,     color: "orange",  year: "2025 - Innovation Continues", desc: "Leading the charge in next-gen technologies while maintaining our commitment to quality and client success." },
+              ].map(({ icon: Icon, color, year, desc }) => (
+                <div key={year} className="flex items-start space-x-4">
+                  <div className={`mt-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-${color}-500/20 ring-1 ring-${color}-500/40`}>
+                    <Icon className={`h-3.5 w-3.5 text-${color}-400`} />
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold text-white mb-2">2019 - The Beginning</h4>
-                    <p className="text-neutral-300">Started with a vision to bridge the gap between cutting-edge technology and practical business solutions.</p>
+                    <h4 className="text-xl font-semibold text-white mb-2">{year}</h4>
+                    <p className="text-neutral-300">{desc}</p>
                   </div>
                 </div>
-                <div className="flex items-start space-x-4">
-                  <div className="mt-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-emerald-500/20 ring-1 ring-emerald-500/40">
-                    <Brain className="h-3.5 w-3.5 text-emerald-400" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-white mb-2">2021 - AI Integration</h4>
-                    <p className="text-neutral-300">Pioneered AI-first development approaches, helping clients automate and optimize their operations.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="mt-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-purple-500/20 ring-1 ring-purple-500/40">
-                    <Rocket className="h-3.5 w-3.5 text-purple-400" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-white mb-2">2023 - Scale & Growth</h4>
-                    <p className="text-neutral-300">Expanded to serve enterprise clients across multiple industries, delivering complex SaaS platforms.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="mt-1.5 flex h-6 w-6 items-center justify-center rounded-full bg-orange-500/20 ring-1 ring-orange-500/40">
-                    <Sparkles className="h-3.5 w-3.5 text-orange-400" />
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-white mb-2">2025 - Innovation Continues</h4>
-                    <p className="text-neutral-300">Leading the charge in next-gen technologies while maintaining our commitment to quality and client success.</p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
             <div className="relative">
-              <Image
-                src="/images/startup-office.jpg"
-                alt="Team Collaboration"
-                width={600}
-                height={500}
-                className="rounded-2xl shadow-2xl"
-                priority
-              />
+              <Image src="/images/startup-office.jpg" alt="Team Collaboration" width={600} height={500} className="rounded-2xl shadow-2xl" priority />
             </div>
           </div>
         </div>
 
-        {/* Mission Section */}
+        {/* ── Mission ──────────────────────────────────────────────────────── */}
         <div className="max-w-6xl mx-auto py-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative">
-              <Image
-                src="/images/tech-workspace.jpg"
-                alt="Our Team Workspace"
-                width={600}
-                height={400}
-                className="rounded-2xl shadow-2xl"
-                priority
-              />
+              <Image src="/images/tech-workspace.jpg" alt="Our Team Workspace" width={600} height={400} className="rounded-2xl shadow-2xl" priority />
             </div>
             <div>
               <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-blue-500 to-neutral-50 mb-6">
@@ -157,443 +206,336 @@ const About = () => {
                 to build the technology that powers their success.
               </p>
               <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <div className="flex h-6 w-6 items-center justify-center rounded-md bg-blue-500/10 ring-1 ring-blue-500/30">
-                    <Code2 className="h-3.5 w-3.5 text-blue-400" />
+                {[
+                  { icon: Code2, color: "blue",    label: "Custom SaaS Development" },
+                  { icon: Bot,   color: "emerald", label: "AI-Powered Automation"   },
+                  { icon: Cloud, color: "purple",  label: "Cloud Infrastructure"    },
+                ].map(({ icon: Icon, color, label }) => (
+                  <div key={label} className="flex items-center space-x-3">
+                    <div className={`flex h-6 w-6 items-center justify-center rounded-md bg-${color}-500/10 ring-1 ring-${color}-500/30`}>
+                      <Icon className={`h-3.5 w-3.5 text-${color}-400`} />
+                    </div>
+                    <span className="text-neutral-300">{label}</span>
                   </div>
-                  <span className="text-neutral-300">Custom SaaS Development</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="flex h-6 w-6 items-center justify-center rounded-md bg-emerald-500/10 ring-1 ring-emerald-500/30">
-                    <Bot className="h-3.5 w-3.5 text-emerald-400" />
-                  </div>
-                  <span className="text-neutral-300">AI-Powered Automation</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="flex h-6 w-6 items-center justify-center rounded-md bg-purple-500/10 ring-1 ring-purple-500/30">
-                    <Cloud className="h-3.5 w-3.5 text-purple-400" />
-                  </div>
-                  <span className="text-neutral-300">Cloud Infrastructure</span>
-                </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
 
-        {/* Values Section */}
+        {/* ══════════════════════════════════════════════════════════════════
+            TEAM SECTION
+        ══════════════════════════════════════════════════════════════════ */}
+        <div className="max-w-6xl mx-auto py-24 relative">
+
+          {/* Background glow blob */}
+          <div className="absolute inset-0 pointer-events-none overflow-hidden">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full opacity-10"
+              style={{ background: "radial-gradient(ellipse, #3b82f6 0%, #8b5cf6 50%, transparent 80%)", filter: "blur(80px)" }} />
+          </div>
+
+          {/* Heading */}
+          <div className="text-center mb-20 relative">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-neutral-700/60 bg-white/5 backdrop-blur mb-6">
+              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+              <span className="text-neutral-400 text-sm tracking-widest uppercase font-medium">The People Behind It</span>
+            </div>
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-neutral-200 to-neutral-400">
+                Meet the Team
+              </span>
+            </h2>
+            <p className="text-neutral-400 text-lg max-w-2xl mx-auto">
+              A small, focused team of specialists. Every person owns their domain completely —
+              no layers, no middlemen, direct access to the people building your product.
+            </p>
+          </div>
+
+          {/* Cards grid — 2×3 for 6 members */}
+          <div className="grid md:grid-cols-2 gap-8 relative">
+            {team.map((member, idx) => {
+              const Icon = member.icon;
+              return (
+                <div
+                  key={member.name}
+                  className="group relative rounded-3xl border border-neutral-800/60 bg-neutral-950/80 backdrop-blur overflow-hidden transition-all duration-500 hover:border-neutral-600/60 hover:-translate-y-1"
+                  style={{ boxShadow: `0 0 0 1px rgba(255,255,255,0.03)` }}
+                >
+                  {/* Top glow line */}
+                  <div className={`absolute top-0 left-0 right-0 h-px bg-gradient-to-r ${member.gradient} opacity-60 group-hover:opacity-100 transition-opacity duration-500`} />
+
+                  {/* Subtle background glow on hover */}
+                  <div
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
+                    style={{ background: `radial-gradient(ellipse at top left, ${member.glow} 0%, transparent 60%)` }}
+                  />
+
+                  <div className="relative p-8">
+                    {/* Top row: avatar + name */}
+                    <div className="flex items-start gap-5 mb-6">
+
+                      {/* Avatar circle with gradient ring */}
+                      <div className="relative flex-shrink-0">
+                        <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${member.gradient} flex items-center justify-center shadow-lg`}>
+                          <span className="text-white font-bold text-xl tracking-tight">{member.initials}</span>
+                        </div>
+                        {/* Small icon badge */}
+                        <div className="absolute -bottom-2 -right-2 w-7 h-7 rounded-lg bg-neutral-900 border border-neutral-700 flex items-center justify-center">
+                          <Icon className="w-3.5 h-3.5 text-neutral-300" />
+                        </div>
+                      </div>
+
+                      {/* Name + role */}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center justify-between gap-2">
+                          <h3 className="text-xl font-bold text-white leading-tight">{member.name}</h3>
+                          <a
+                            href={member.linkedin}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex-shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-neutral-700/60 bg-white/5 hover:bg-white/10 hover:border-neutral-500 transition-all duration-200 group/btn"
+                            aria-label={`${member.name} on LinkedIn`}
+                          >
+                            {/* LinkedIn icon */}
+                            <svg className="w-3.5 h-3.5 text-[#0A66C2]" viewBox="0 0 24 24" fill="currentColor">
+                              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                            <ExternalLink className="w-3 h-3 text-neutral-500 group-hover/btn:text-neutral-300 transition-colors" />
+                          </a>
+                        </div>
+                        <p className={`text-sm font-semibold mt-1 bg-clip-text text-transparent bg-gradient-to-r ${member.gradient}`}>
+                          {member.role}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Bio */}
+                    <p className="text-neutral-400 text-sm leading-relaxed mb-6">
+                      {member.bio}
+                    </p>
+
+                    {/* Tag pill */}
+                    <div className="flex items-center justify-between">
+                      <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium border`}
+                        style={{
+                          background: `${member.glow}`,
+                          borderColor: `${member.glow}`,
+                          color: "rgba(255,255,255,0.75)"
+                        }}>
+                        {member.tag}
+                      </div>
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-xs text-neutral-600 hover:text-neutral-300 transition-colors"
+                      >
+                        View Profile →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Bottom note */}
+          <div className="mt-16 text-center">
+            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl border border-neutral-800/60 bg-white/5 backdrop-blur">
+              <div className="flex -space-x-2">
+                {team.map((m) => (
+                  <div key={m.name} className={`w-8 h-8 rounded-full bg-gradient-to-br ${m.gradient} ring-2 ring-black flex items-center justify-center`}>
+                    <span className="text-white text-xs font-bold">{m.initials[0]}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="text-neutral-400 text-sm">
+                A global team of <span className="text-white font-medium">6 specialists</span> across <span className="text-white font-medium">3 countries</span> — building for the world
+              </p>
+            </div>
+          </div>
+        </div>
+        {/* ══ END TEAM SECTION ══ */}
+
+        {/* ── Values ───────────────────────────────────────────────────────── */}
         <div className="max-w-6xl mx-auto py-20">
           <h2 className="text-3xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-purple-500 to-sky-200 mb-16">
             Our Values
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center p-6 border border-neutral-800/60 rounded-2xl bg-white/5 backdrop-blur">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Rocket className="h-8 w-8 text-white" />
+            {[
+              { icon: Rocket,   gradient: "from-blue-500 to-purple-600",  title: "Innovation First",   desc: "We stay at the forefront of technology, continuously learning and implementing the latest tools and methodologies." },
+              { icon: Handshake,gradient: "from-emerald-500 to-blue-500", title: "Client Partnership", desc: "We work as an extension of your team, understanding your business goals and delivering solutions that exceed expectations." },
+              { icon: Zap,      gradient: "from-purple-500 to-pink-500",  title: "Quality & Speed",    desc: "We deliver high-quality code fast, without compromising on security, scalability, or performance." },
+            ].map(({ icon: Icon, gradient, title, desc }) => (
+              <div key={title} className="text-center p-6 border border-neutral-800/60 rounded-2xl bg-white/5 backdrop-blur">
+                <div className={`w-16 h-16 bg-gradient-to-r ${gradient} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                  <Icon className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
+                <p className="text-neutral-300">{desc}</p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Innovation First</h3>
-              <p className="text-neutral-300">
-                We stay at the forefront of technology, continuously learning and implementing the latest tools and methodologies.
-              </p>
-            </div>
-            <div className="text-center p-6 border border-neutral-800/60 rounded-2xl bg-white/5 backdrop-blur">
-              <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Handshake className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Client Partnership</h3>
-              <p className="text-neutral-300">
-                We work as an extension of your team, understanding your business goals and delivering solutions that exceed expectations.
-              </p>
-            </div>
-            <div className="text-center p-6 border border-neutral-800/60 rounded-2xl bg-white/5 backdrop-blur">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Quality & Speed</h3>
-              <p className="text-neutral-300">
-                We deliver high-quality code fast, without compromising on security, scalability, or performance.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* Our Process Section */}
+        {/* ── Process ──────────────────────────────────────────────────────── */}
         <div className="max-w-6xl mx-auto py-20">
           <h2 className="text-3xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-orange-500 to-red-400 mb-16">
             Our Development Process
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center border border-neutral-800/60 rounded-2xl p-6 bg-white/5 backdrop-blur">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">1</span>
+            {[
+              { n: "1", gradient: "from-blue-500 to-blue-600",     title: "Discovery & Planning",    desc: "We deep-dive into your business requirements, technical constraints, and success metrics to create a comprehensive roadmap." },
+              { n: "2", gradient: "from-emerald-500 to-emerald-600",title: "Design & Architecture",  desc: "Our team designs scalable architecture and intuitive user experiences that align with your business goals." },
+              { n: "3", gradient: "from-purple-500 to-purple-600",  title: "Agile Development",      desc: "We build in iterative sprints with regular check-ins, ensuring transparency and flexibility throughout development." },
+              { n: "4", gradient: "from-orange-500 to-red-500",     title: "Launch & Support",       desc: "We handle deployment, monitoring, and provide ongoing support to ensure your application performs optimally." },
+            ].map(({ n, gradient, title, desc }) => (
+              <div key={n} className="text-center border border-neutral-800/60 rounded-2xl p-6 bg-white/5 backdrop-blur">
+                <div className={`w-16 h-16 bg-gradient-to-r ${gradient} rounded-full flex items-center justify-center mx-auto mb-4`}>
+                  <span className="text-2xl font-bold text-white">{n}</span>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
+                <p className="text-neutral-300 text-sm">{desc}</p>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Discovery & Planning</h3>
-              <p className="text-neutral-300 text-sm">
-                We deep-dive into your business requirements, technical constraints, and success metrics to create a comprehensive roadmap.
-              </p>
-            </div>
-            <div className="text-center border border-neutral-800/60 rounded-2xl p-6 bg-white/5 backdrop-blur">
-              <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">2</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Design & Architecture</h3>
-              <p className="text-neutral-300 text-sm">
-                Our team designs scalable architecture and intuitive user experiences that align with your business goals.
-              </p>
-            </div>
-            <div className="text-center border border-neutral-800/60 rounded-2xl p-6 bg-white/5 backdrop-blur">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">3</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Agile Development</h3>
-              <p className="text-neutral-300 text-sm">
-                We build in iterative sprints with regular check-ins, ensuring transparency and flexibility throughout development.
-              </p>
-            </div>
-            <div className="text-center border border-neutral-800/60 rounded-2xl p-6 bg-white/5 backdrop-blur">
-              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">4</span>
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Launch & Support</h3>
-              <p className="text-neutral-300 text-sm">
-                We handle deployment, monitoring, and provide ongoing support to ensure your application performs optimally.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* Technologies & Expertise Section */}
+        {/* ── Technologies ─────────────────────────────────────────────────── */}
         <div className="max-w-6xl mx-auto py-20">
           <h2 className="text-3xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-emerald-500 to-blue-300 mb-16">
             Technologies & Expertise
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-6 rounded-2xl mb-4 h-32 flex flex-col justify-center">
-                <h3 className="text-xl font-semibold text-white mb-2">Full-Stack Development</h3>
-                <p className="text-blue-100 text-sm">React, Next.js, Node.js, Python, PostgreSQL</p>
+            {[
+              { gradient: "from-blue-500 to-purple-600",    title: "Full-Stack Development", sub: "React, Next.js, Node.js, Python, PostgreSQL",     items: ["TypeScript/JavaScript","React & Next.js","Node.js & Express","Python & Django"] },
+              { gradient: "from-emerald-500 to-teal-500",   title: "Cloud & DevOps",         sub: "AWS, Docker, Kubernetes, CI/CD",                  items: ["AWS & Azure","Docker & Kubernetes","GitHub Actions","Terraform"] },
+              { gradient: "from-purple-500 to-pink-500",    title: "AI & Machine Learning",  sub: "TensorFlow, OpenAI, LangChain, Automation",       items: ["OpenAI GPT Integration","LangChain & Vector DBs","TensorFlow & PyTorch","Custom AI Solutions"] },
+              { gradient: "from-orange-500 to-red-500",     title: "Mobile Development",     sub: "React Native, iOS, Android, Cross-platform",      items: ["React Native","Flutter","Native iOS/Android","Progressive Web Apps"] },
+            ].map(({ gradient, title, sub, items }) => (
+              <div key={title} className="text-center">
+                <div className={`bg-gradient-to-r ${gradient} p-6 rounded-2xl mb-4 h-32 flex flex-col justify-center`}>
+                  <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
+                  <p className="text-white/80 text-sm">{sub}</p>
+                </div>
+                <div className="text-left space-y-1">
+                  {items.map(i => <p key={i} className="text-neutral-400 text-xs">• {i}</p>)}
+                </div>
               </div>
-              <div className="text-left space-y-1">
-                <p className="text-neutral-400 text-xs">• TypeScript/JavaScript</p>
-                <p className="text-neutral-400 text-xs">• React & Next.js</p>
-                <p className="text-neutral-400 text-xs">• Node.js & Express</p>
-                <p className="text-neutral-400 text-xs">• Python & Django</p>
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-emerald-500 to-teal-500 p-6 rounded-2xl mb-4 h-32 flex flex-col justify-center">
-                <h3 className="text-xl font-semibold text-white mb-2">Cloud & DevOps</h3>
-                <p className="text-emerald-100 text-sm">AWS, Docker, Kubernetes, CI/CD</p>
-              </div>
-              <div className="text-left space-y-1">
-                <p className="text-neutral-400 text-xs">• AWS & Azure</p>
-                <p className="text-neutral-400 text-xs">• Docker & Kubernetes</p>
-                <p className="text-neutral-400 text-xs">• GitHub Actions</p>
-                <p className="text-neutral-400 text-xs">• Terraform</p>
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-6 rounded-2xl mb-4 h-32 flex flex-col justify-center">
-                <h3 className="text-xl font-semibold text-white mb-2">AI & Machine Learning</h3>
-                <p className="text-purple-100 text-sm">TensorFlow, OpenAI, LangChain, Automation</p>
-              </div>
-              <div className="text-left space-y-1">
-                <p className="text-neutral-400 text-xs">• OpenAI GPT Integration</p>
-                <p className="text-neutral-400 text-xs">• LangChain & Vector DBs</p>
-                <p className="text-neutral-400 text-xs">• TensorFlow & PyTorch</p>
-                <p className="text-neutral-400 text-xs">• Custom AI Solutions</p>
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="bg-gradient-to-r from-orange-500 to-red-500 p-6 rounded-2xl mb-4 h-32 flex flex-col justify-center">
-                <h3 className="text-xl font-semibold text-white mb-2">Mobile Development</h3>
-                <p className="text-orange-100 text-sm">React Native, iOS, Android, Cross-platform</p>
-              </div>
-              <div className="text-left space-y-1">
-                <p className="text-neutral-400 text-xs">• React Native</p>
-                <p className="text-neutral-400 text-xs">• Flutter</p>
-                <p className="text-neutral-400 text-xs">• Native iOS/Android</p>
-                <p className="text-neutral-400 text-xs">• Progressive Web Apps</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* Industry Experience Section */}
+        {/* ── Industry Experience ───────────────────────────────────────────── */}
         <div className="max-w-6xl mx-auto py-20">
           <h2 className="text-3xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-blue-500 to-purple-400 mb-16">
             Industry Experience
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-6 border border-neutral-800/60 rounded-2xl hover:border-blue-500 transition-colors bg-white/5 backdrop-blur">
-              <div className="w-12 h-12 bg-blue-500/20 ring-1 ring-blue-500/40 rounded-lg flex items-center justify-center mb-4">
-                <Banknote className="h-6 w-6 text-blue-400" />
+            {[
+              { icon: Banknote,    color: "blue",   hoverBorder: "blue-500",   title: "FinTech",       desc: "Payment processing, trading platforms, digital banking solutions, and regulatory compliance systems.",                                   items: ["Stripe & PayPal Integration","PCI DSS Compliance","Real-time Trading Systems"] },
+              { icon: Stethoscope,color: "emerald", hoverBorder: "emerald-500",title: "HealthTech",    desc: "Electronic health records, telemedicine platforms, patient management systems, and HIPAA compliance.",                                  items: ["HIPAA Compliant Systems","Telemedicine Platforms","Patient Data Analytics"] },
+              { icon: ShoppingCart,color:"purple",  hoverBorder: "purple-500", title: "E-Commerce",    desc: "Multi-vendor marketplaces, inventory management, recommendation engines, and customer analytics.",                                      items: ["Shopify & WooCommerce","Custom Marketplaces","AI Recommendations"] },
+              { icon: GraduationCap,color:"orange", hoverBorder: "orange-500", title: "EdTech",        desc: "Learning management systems, online course platforms, student assessment tools, and virtual classrooms.",                               items: ["LMS Development","Interactive Learning","Progress Tracking"] },
+              { icon: Building2,  color: "pink",    hoverBorder: "pink-500",   title: "SaaS Platforms",desc: "Multi-tenant architectures, subscription management, user analytics, and enterprise integrations.",                                    items: ["Multi-tenant Architecture","Subscription Billing","API Development"] },
+              { icon: Rocket,     color: "cyan",    hoverBorder: "cyan-500",   title: "Startups",      desc: "MVP development, rapid prototyping, investor demos, and scalable growth solutions.",                                                   items: ["Rapid MVP Development","Investor Presentations","Growth Optimization"] },
+            ].map(({ icon: Icon, color, hoverBorder, title, desc, items }) => (
+              <div key={title} className={`p-6 border border-neutral-800/60 rounded-2xl hover:border-${hoverBorder} transition-colors bg-white/5 backdrop-blur`}>
+                <div className={`w-12 h-12 bg-${color}-500/20 ring-1 ring-${color}-500/40 rounded-lg flex items-center justify-center mb-4`}>
+                  <Icon className={`h-6 w-6 text-${color}-400`} />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
+                <p className="text-neutral-300 text-sm mb-4">{desc}</p>
+                <div className="space-y-1">
+                  {items.map(i => <p key={i} className="text-neutral-400 text-xs">• {i}</p>)}
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">FinTech</h3>
-              <p className="text-neutral-300 text-sm mb-4">
-                Payment processing, trading platforms, digital banking solutions, and regulatory compliance systems.
-              </p>
-              <div className="space-y-1">
-                <p className="text-neutral-400 text-xs">• Stripe & PayPal Integration</p>
-                <p className="text-neutral-400 text-xs">• PCI DSS Compliance</p>
-                <p className="text-neutral-400 text-xs">• Real-time Trading Systems</p>
-              </div>
-            </div>
-            <div className="p-6 border border-neutral-800/60 rounded-2xl hover:border-emerald-500 transition-colors bg-white/5 backdrop-blur">
-              <div className="w-12 h-12 bg-emerald-500/20 ring-1 ring-emerald-500/40 rounded-lg flex items-center justify-center mb-4">
-                <Stethoscope className="h-6 w-6 text-emerald-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">HealthTech</h3>
-              <p className="text-neutral-300 text-sm mb-4">
-                Electronic health records, telemedicine platforms, patient management systems, and HIPAA compliance.
-              </p>
-              <div className="space-y-1">
-                <p className="text-neutral-400 text-xs">• HIPAA Compliant Systems</p>
-                <p className="text-neutral-400 text-xs">• Telemedicine Platforms</p>
-                <p className="text-neutral-400 text-xs">• Patient Data Analytics</p>
-              </div>
-            </div>
-            <div className="p-6 border border-neutral-800/60 rounded-2xl hover:border-purple-500 transition-colors bg-white/5 backdrop-blur">
-              <div className="w-12 h-12 bg-purple-500/20 ring-1 ring-purple-500/40 rounded-lg flex items-center justify-center mb-4">
-                <ShoppingCart className="h-6 w-6 text-purple-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">E-Commerce</h3>
-              <p className="text-neutral-300 text-sm mb-4">
-                Multi-vendor marketplaces, inventory management, recommendation engines, and customer analytics.
-              </p>
-              <div className="space-y-1">
-                <p className="text-neutral-400 text-xs">• Shopify & WooCommerce</p>
-                <p className="text-neutral-400 text-xs">• Custom Marketplaces</p>
-                <p className="text-neutral-400 text-xs">• AI Recommendations</p>
-              </div>
-            </div>
-            <div className="p-6 border border-neutral-800/60 rounded-2xl hover:border-orange-500 transition-colors bg-white/5 backdrop-blur">
-              <div className="w-12 h-12 bg-orange-500/20 ring-1 ring-orange-500/40 rounded-lg flex items-center justify-center mb-4">
-                <GraduationCap className="h-6 w-6 text-orange-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">EdTech</h3>
-              <p className="text-neutral-300 text-sm mb-4">
-                Learning management systems, online course platforms, student assessment tools, and virtual classrooms.
-              </p>
-              <div className="space-y-1">
-                <p className="text-neutral-400 text-xs">• LMS Development</p>
-                <p className="text-neutral-400 text-xs">• Interactive Learning</p>
-                <p className="text-neutral-400 text-xs">• Progress Tracking</p>
-              </div>
-            </div>
-            <div className="p-6 border border-neutral-800/60 rounded-2xl hover:border-pink-500 transition-colors bg-white/5 backdrop-blur">
-              <div className="w-12 h-12 bg-pink-500/20 ring-1 ring-pink-500/40 rounded-lg flex items-center justify-center mb-4">
-                <Building2 className="h-6 w-6 text-pink-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">SaaS Platforms</h3>
-              <p className="text-neutral-300 text-sm mb-4">
-                Multi-tenant architectures, subscription management, user analytics, and enterprise integrations.
-              </p>
-              <div className="space-y-1">
-                <p className="text-neutral-400 text-xs">• Multi-tenant Architecture</p>
-                <p className="text-neutral-400 text-xs">• Subscription Billing</p>
-                <p className="text-neutral-400 text-xs">• API Development</p>
-              </div>
-            </div>
-            <div className="p-6 border border-neutral-800/60 rounded-2xl hover:border-cyan-500 transition-colors bg-white/5 backdrop-blur">
-              <div className="w-12 h-12 bg-cyan-500/20 ring-1 ring-cyan-500/40 rounded-lg flex items-center justify-center mb-4">
-                <Rocket className="h-6 w-6 text-cyan-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">Startups</h3>
-              <p className="text-neutral-300 text-sm mb-4">
-                MVP development, rapid prototyping, investor demos, and scalable growth solutions.
-              </p>
-              <div className="space-y-1">
-                <p className="text-neutral-400 text-xs">• Rapid MVP Development</p>
-                <p className="text-neutral-400 text-xs">• Investor Presentations</p>
-                <p className="text-neutral-400 text-xs">• Growth Optimization</p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* Client Testimonials Section */}
+        {/* ── Testimonials ─────────────────────────────────────────────────── */}
         <div className="max-w-6xl mx-auto py-20">
           <h2 className="text-3xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-yellow-500 to-orange-400 mb-16">
             What Our Clients Say
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="p-6 border border-neutral-800/60 rounded-2xl bg-neutral-900/50 backdrop-blur">
-              <div className="flex items-center mb-4">
-                <Image
-                  src="/images/client1-avatar.jpg"
-                  alt="Client 1"
-                  width={50}
-                  height={50}
-                  className="rounded-full mr-4"
-                />
-                <div>
-                  <h4 className="text-white font-semibold">David Miller</h4>
-                  <p className="text-neutral-400 text-sm">CEO, TechCorp</p>
+            {[
+              { name: "David Miller",  title: "CEO, TechCorp",        avatar: "/images/client1-avatar.jpg", quote: "They delivered our SaaS platform 2 weeks ahead of schedule. The quality exceeded our expectations and their AI integration boosted our efficiency by 40%." },
+              { name: "Lisa Chen",     title: "Founder, HealthFirst",  avatar: "/images/client2-avatar.jpg", quote: "Their expertise in healthcare compliance was invaluable. They built a HIPAA-compliant platform that our patients love using." },
+              { name: "Mark Johnson",  title: "CTO, EduLearn",         avatar: "/images/client3-avatar.jpg", quote: "From MVP to enterprise scale in 8 months. Their development process is incredibly efficient and their support is outstanding." },
+            ].map(({ name, title, avatar, quote }) => (
+              <div key={name} className="p-6 border border-neutral-800/60 rounded-2xl bg-neutral-900/50 backdrop-blur">
+                <div className="flex items-center mb-4">
+                  <Image src={avatar} alt={name} width={50} height={50} className="rounded-full mr-4" />
+                  <div>
+                    <h4 className="text-white font-semibold">{name}</h4>
+                    <p className="text-neutral-400 text-sm">{title}</p>
+                  </div>
+                </div>
+                <p className="text-neutral-300 text-sm mb-4">&ldquo;{quote}&rdquo;</p>
+                <div className="flex text-yellow-400 text-sm gap-1">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                  ))}
                 </div>
               </div>
-              <p className="text-neutral-300 text-sm mb-4">
-                {"\"They delivered our SaaS platform 2 weeks ahead of schedule. The quality exceeded our expectations and their AI integration boosted our efficiency by 40%.\""}
-              </p>
-              <div className="flex text-yellow-400 text-sm gap-1">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-            </div>
-            <div className="p-6 border border-neutral-800/60 rounded-2xl bg-neutral-900/50 backdrop-blur">
-              <div className="flex items-center mb-4">
-                <Image
-                  src="/images/client2-avatar.jpg"
-                  alt="Client 2"
-                  width={50}
-                  height={50}
-                  className="rounded-full mr-4"
-                />
-                <div>
-                  <h4 className="text-white font-semibold">Lisa Chen</h4>
-                  <p className="text-neutral-400 text-sm">Founder, HealthFirst</p>
-                </div>
-              </div>
-              <p className="text-neutral-300 text-sm mb-4">
-                &ldquo;Their expertise in healthcare compliance was invaluable. They built a HIPAA-compliant platform that our patients love using.&rdquo;
-              </p>
-              <div className="flex text-yellow-400 text-sm gap-1">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-            </div>
-            <div className="p-6 border border-neutral-800/60 rounded-2xl bg-neutral-900/50 backdrop-blur">
-              <div className="flex items-center mb-4">
-                <Image
-                  src="/images/client3-avatar.jpg"
-                  alt="Client 3"
-                  width={50}
-                  height={50}
-                  className="rounded-full mr-4"
-                />
-                <div>
-                  <h4 className="text-white font-semibold">Mark Johnson</h4>
-                  <p className="text-neutral-400 text-sm">CTO, EduLearn</p>
-                </div>
-              </div>
-              <p className="text-neutral-300 text-sm mb-4">
-                &ldquo;From MVP to enterprise scale in 8 months. Their development process is incredibly efficient and their support is outstanding.&rdquo;
-              </p>
-              <div className="flex text-yellow-400 text-sm gap-1">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* Why Choose Us Section */}
+        {/* ── Why Choose Us ────────────────────────────────────────────────── */}
         <div className="max-w-6xl mx-auto py-20">
           <h2 className="text-3xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-green-500 to-blue-400 mb-16">
             Why Choose Us
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+            {[
+              { color: "blue",   title: "Proven Track Record",       desc: "150+ successful projects across multiple industries with a 98% client satisfaction rate." },
+              { color: "emerald",title: "AI-First Approach",         desc: "We integrate cutting-edge AI technologies to give your business a competitive advantage." },
+              { color: "purple", title: "Transparent Communication", desc: "Regular updates, clear timelines, and direct access to your development team." },
+              { color: "orange", title: "Scalable Solutions",        desc: "Built to grow with your business, from startup MVP to enterprise-scale applications." },
+              { color: "pink",   title: "Post-Launch Support",       desc: "Comprehensive maintenance, monitoring, and feature updates to ensure long-term success." },
+              { color: "cyan",   title: "Security First",            desc: "Enterprise-grade security practices, compliance standards, and data protection protocols." },
+            ].map(({ color, title, desc }, i) => (
+              <div key={title} className="flex items-start space-x-4">
+                <div className={`w-8 h-8 bg-${color}-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1`}>
                   <CheckCircle2 className="h-4 w-4 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Proven Track Record</h3>
-                  <p className="text-neutral-300">150+ successful projects across multiple industries with a 98% client satisfaction rate.</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
+                  <p className="text-neutral-300">{desc}</p>
                 </div>
               </div>
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <CheckCircle2 className="h-4 w-4 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">AI-First Approach</h3>
-                  <p className="text-neutral-300">We integrate cutting-edge AI technologies to give your business a competitive advantage.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <CheckCircle2 className="h-4 w-4 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Transparent Communication</h3>
-                  <p className="text-neutral-300">Regular updates, clear timelines, and direct access to your development team.</p>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <CheckCircle2 className="h-4 w-4 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Scalable Solutions</h3>
-                  <p className="text-neutral-300">Built to grow with your business, from startup MVP to enterprise-scale applications.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <CheckCircle2 className="h-4 w-4 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Post-Launch Support</h3>
-                  <p className="text-neutral-300">Comprehensive maintenance, monitoring, and feature updates to ensure long-term success.</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-4">
-                <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                  <CheckCircle2 className="h-4 w-4 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-2">Security First</h3>
-                  <p className="text-neutral-300">Enterprise-grade security practices, compliance standards, and data protection protocols.</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* Partnership & Certifications Section */}
+        {/* ── Partnerships ─────────────────────────────────────────────────── */}
         <div className="max-w-6xl mx-auto py-20">
           <h2 className="text-3xl md:text-5xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-indigo-500 to-purple-400 mb-16">
             Partnerships & Certifications
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-center">
-            <div className="text-center p-6 border border-neutral-800 rounded-2xl hover:border-blue-500 transition-colors">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-sm">AWS</span>
+            {[
+              { gradient: "from-blue-500 to-blue-600",     abbr: "AWS",  name: "AWS Partner",       sub: "Certified Solutions Architect", hoverColor: "blue-500"   },
+              { gradient: "from-emerald-500 to-emerald-600",abbr: "MSFT",name: "Microsoft Partner", sub: "Azure Certified Developer",    hoverColor: "emerald-500"},
+              { gradient: "from-purple-500 to-purple-600", abbr: "SOC",  name: "SOC 2 Compliant",   sub: "Type II Certified",            hoverColor: "purple-500" },
+              { gradient: "from-orange-500 to-orange-600", abbr: "ISO",  name: "ISO 27001",         sub: "Information Security",         hoverColor: "orange-500" },
+            ].map(({ gradient, abbr, name, sub, hoverColor }) => (
+              <div key={abbr} className={`text-center p-6 border border-neutral-800 rounded-2xl hover:border-${hoverColor} transition-colors`}>
+                <div className={`w-16 h-16 bg-gradient-to-r ${gradient} rounded-lg flex items-center justify-center mx-auto mb-4`}>
+                  <span className="text-white font-bold text-sm">{abbr}</span>
+                </div>
+                <h3 className="text-white font-semibold mb-2">{name}</h3>
+                <p className="text-neutral-400 text-sm">{sub}</p>
               </div>
-              <h3 className="text-white font-semibold mb-2">AWS Partner</h3>
-              <p className="text-neutral-400 text-sm">Certified Solutions Architect</p>
-            </div>
-            <div className="text-center p-6 border border-neutral-800 rounded-2xl hover:border-emerald-500 transition-colors">
-              <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-sm">MSFT</span>
-              </div>
-              <h3 className="text-white font-semibold mb-2">Microsoft Partner</h3>
-              <p className="text-neutral-400 text-sm">Azure Certified Developer</p>
-            </div>
-            <div className="text-center p-6 border border-neutral-800 rounded-2xl hover:border-purple-500 transition-colors">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-sm">SOC</span>
-              </div>
-              <h3 className="text-white font-semibold mb-2">SOC 2 Compliant</h3>
-              <p className="text-neutral-400 text-sm">Type II Certified</p>
-            </div>
-            <div className="text-center p-6 border border-neutral-800 rounded-2xl hover:border-orange-500 transition-colors">
-              <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <span className="text-white font-bold text-sm">ISO</span>
-              </div>
-              <h3 className="text-white font-semibold mb-2">ISO 27001</h3>
-              <p className="text-neutral-400 text-sm">Information Security</p>
-            </div>
+            ))}
           </div>
         </div>
 
-        {/* Culture & Work Environment Section */}
+        {/* ── Culture ──────────────────────────────────────────────────────── */}
         <div className="max-w-6xl mx-auto py-20">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -606,45 +548,28 @@ const About = () => {
                 technologists who love what we do.
               </p>
               <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-gradient-to-r from-pink-500 to-violet-500 rounded-full flex items-center justify-center">
-                    <Sparkles className="h-3.5 w-3.5 text-white" />
+                {[
+                  "Remote-first with flexible working hours",
+                  "Continuous learning and skill development budget",
+                  "Innovation time for personal projects",
+                  "Diverse, global team across 12 countries",
+                ].map((item) => (
+                  <div key={item} className="flex items-center space-x-3">
+                    <div className="w-6 h-6 bg-gradient-to-r from-pink-500 to-violet-500 rounded-full flex items-center justify-center">
+                      <Sparkles className="h-3.5 w-3.5 text-white" />
+                    </div>
+                    <span className="text-neutral-300">{item}</span>
                   </div>
-                  <span className="text-neutral-300">Remote-first with flexible working hours</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-gradient-to-r from-pink-500 to-violet-500 rounded-full flex items-center justify-center">
-                    <Brain className="h-3.5 w-3.5 text-white" />
-                  </div>
-                  <span className="text-neutral-300">Continuous learning and skill development budget</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-gradient-to-r from-pink-500 to-violet-500 rounded-full flex items-center justify-center">
-                    <Rocket className="h-3.5 w-3.5 text-white" />
-                  </div>
-                  <span className="text-neutral-300">Innovation time for personal projects</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-gradient-to-r from-pink-500 to-violet-500 rounded-full flex items-center justify-center">
-                    <Shield className="h-3.5 w-3.5 text-white" />
-                  </div>
-                  <span className="text-neutral-300">Diverse, global team across 12 countries</span>
-                </div>
+                ))}
               </div>
             </div>
             <div className="relative">
-              <Image
-                src="/images/cumpany-culture.jpg"
-                alt="Team Culture"
-                width={600}
-                height={400}
-                className="rounded-2xl shadow-2xl"
-              />
+              <Image src="/images/cumpany-culture.jpg" alt="Team Culture" width={600} height={400} className="rounded-2xl shadow-2xl" />
             </div>
           </div>
         </div>
 
-        {/* CTA Section */}
+        {/* ── CTA ──────────────────────────────────────────────────────────── */}
         <div className="max-w-4xl mx-auto py-20 text-center">
           <h2 className="text-3xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 mb-6">
             Ready to Build Something Amazing?
@@ -653,16 +578,10 @@ const About = () => {
             Let&apos;s discuss your project and see how we can help bring your vision to life with cutting-edge technology and expert development.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
-              className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-8 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
-            >
+            <a href="/contact" className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-8 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
               Get In Touch
             </a>
-            <a
-              href="/book"
-              className="inline-flex h-12 items-center justify-center rounded-md bg-gradient-to-r from-blue-500 to-purple-600 px-8 font-medium text-white transition-colors hover:from-blue-600 hover:to-purple-700"
-            >
+            <a href="/book" className="inline-flex h-12 items-center justify-center rounded-md bg-gradient-to-r from-blue-500 to-purple-600 px-8 font-medium text-white transition-colors hover:from-blue-600 hover:to-purple-700">
               Schedule a Call
             </a>
           </div>
@@ -670,8 +589,8 @@ const About = () => {
             <p>Free consultation • No commitment required • Response within 24 hours</p>
           </div>
         </div>
-      </div>
 
+      </div>
       <Footer />
     </div>
   );
