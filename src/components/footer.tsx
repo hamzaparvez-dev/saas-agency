@@ -25,7 +25,7 @@ const Footer = () => {
              <div className="mb-6">
     <Link href="/">
       <Image
-        src="/logo/logo__1_.png"
+        src="/logo/logo1.png"
         alt="GenuineStack"
         width={180}
         height={44}
