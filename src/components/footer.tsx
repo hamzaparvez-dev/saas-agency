@@ -16,23 +16,23 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer Content */}
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
           
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center mb-6">
-              <div className="rounded-full border-2 border-white/10 bg-white/50 backdrop-blur-sm">
-                <Image
-                  src="/logo/logo.png"
-                  alt="Logo"
-                  width={100}
-                  height={100}
-                  className="w-12 h-12 md:w-12 md:h-12 rounded-full"
-                />
-              </div>
-              <span className="ml-3 text-xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-                Genuine Stack
-              </span>
-            </div>
+            {/* <div className="flex items-center mb-6"> */}
+
+             <div className="mb-6">
+    <Link href="/">
+      <Image
+        src="/logo/logo__1_.png"
+        alt="GenuineStack"
+        width={180}
+        height={44}
+        className="h-9 w-auto object-contain"
+      />
+    </Link>
+  </div>
             <p className="text-neutral-300 text-sm leading-relaxed mb-6">
               <strong>Genuine Stack</strong> is a leading SaaS development agency specializing in custom software, APIs, and AI automation. 
               While proudly based in Lucknow, India & Manhattan, New York, USA, we serve a global client base, delivering exceptional software solutions to businesses in the USA, Europe, and beyond.
