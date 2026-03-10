@@ -61,7 +61,6 @@ const Navbar = ({
       setServicesDropdownTimeout(null);
     }
     if (justOpened) {
-      // Prevent closing if just opened
       return;
     }
     const timeout = setTimeout(() => {
@@ -70,7 +69,6 @@ const Navbar = ({
     setServicesDropdownTimeout(timeout);
   };
 
-  // Cleanup timeouts on unmount
   useEffect(() => {
     return () => {
       if (servicesDropdownTimeout) {
@@ -82,7 +80,6 @@ const Navbar = ({
     };
   }, [servicesDropdownTimeout]);
 
-  // Reset dropdown state on navigation
   useEffect(() => {
     setIsServicesDropdownVisible(false);
     setJustOpened(false);
@@ -95,31 +92,28 @@ const Navbar = ({
     }
   }, [pathname, servicesDropdownTimeout]);
 
-  // Check if current page is a service page
   const isServicePage = pathname?.startsWith('/services/');
   const isHomePage = pathname === '/';
 
   return (
     <div className="fixed md:relative top-0 w-full z-50 md:flex md:justify-center md:pt-2">
       
-      <div className="p-4 bg-black/[0.96] flex items-center justify-between 
+      <div className="p-3 bg-black/[0.96] flex items-center justify-between 
                  md:max-w-6xl md:w-full md:bg-black/10 md:backdrop-blur-xl 
                  md:border md:border-white/10 
-                 md:rounded-full md:px-8 md:py-3">
+                 md:rounded-full md:px-6 md:py-2">
         
-        {/* Logo */}
+        {/* Logo - Full logo with text */}
         <div className="relative z-10">
           <Link className="cursor-pointer" href="/">
-            <div className="rounded-full border-2 border-white/10 hover:border-white/40 transition-all duration-300 bg-white/50 backdrop-blur-sm">
-              <Image
-                priority
-                src="/logo/logo.png"
-                alt="Logo"
-                width={100}
-                height={100}
-                className="w-12 h-12 md:w-12 md:h-12 rounded-full"
-              />
-            </div>
+            <Image
+              priority
+              src="/logo/logo1.png"
+              alt="GenuineStack"
+              width={180}
+              height={44}
+              className="h-8 w-auto object-contain"
+            />
           </Link>
         </div>
 
@@ -168,12 +162,12 @@ const Navbar = ({
 
         {/* Contact Button (Desktop) */}
         <div className="hidden md:flex">
-        <LoadingLink
-  href="/contact"
-  className="inline-flex items-center justify-center px-6 py-2 rounded-full font-medium text-slate-300 transition-colors animate-shimmer border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] hover:text-white"
->
-  Contact
-</LoadingLink>
+          <LoadingLink
+            href="/contact"
+            className="inline-flex items-center justify-center px-6 py-2 rounded-full font-medium text-slate-300 transition-colors animate-shimmer border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] hover:text-white"
+          >
+            Contact
+          </LoadingLink>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -193,4 +187,3 @@ const Navbar = ({
 };
  
 export default Navbar;
-
