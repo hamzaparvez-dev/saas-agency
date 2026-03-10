@@ -108,7 +108,7 @@ const Navbar = ({
                  md:rounded-full md:px-4 md:py-2">
         
         {/* Logo */}
-        <div className="relative z-10">
+        {/* <div className="relative z-10">
           <Link className="cursor-pointer" href="/">
             <div className="rounded-full border-2 border-white/10 hover:border-white/40 transition-all duration-300 bg-white/50 backdrop-blur-sm">
               <Image
@@ -121,7 +121,20 @@ const Navbar = ({
               />
             </div>
           </Link>
-        </div>
+        </div> */}
+
+        <Link className="cursor-pointer" href="/">
+  <div className="rounded-full border-2 border-white/10 hover:border-white/40 transition-all duration-300">
+    <Image
+      priority
+      src="/logo/icon.png"  // ← use the gradient icon, not logo.png
+      alt="GenuineStack"
+      width={48}
+      height={48}
+      className="w-10 h-10 rounded-full"
+    />
+  </div>
+</Link>
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center space-x-10 text-gray-300">
